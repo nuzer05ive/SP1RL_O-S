@@ -24,3 +24,5 @@ Run `scripts/quickstart.sh` to install deps and start the dev server:
 ```
 
 The microsite will be available at http://localhost:4321 with the `/api/letter` edge function proxied locally.
+
+Run `pnpm test` to run all tests.
