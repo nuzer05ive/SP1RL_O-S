@@ -10,5 +10,5 @@
     "types": ["node", "jest"],
     "outDir": "dist"
   },
-  "include": ["apps/**/*", "libs/**/*", "scripts/**/*"]
+  "include": ["apps/**/*", "libs/**/*", "scripts/**/*", "global.d.ts"]
 }

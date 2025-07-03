@@ -5,3 +5,8 @@
 [[edge_functions]]
   path = "/api/letter"
   function = "letter"
+
+[[redirects]]
+  from = "/api/letter"
+  to = "https://sp1rl-os.vercel.app/api/letter"
+  status = 200
