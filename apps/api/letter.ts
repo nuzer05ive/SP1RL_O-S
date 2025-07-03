@@ -2,15 +2,28 @@ import { birthdateToNode, calcHarmonicEvents } from '../../libs/spiral-math';
 import Mustache from 'mustache';
 import OpenAI from 'openai-edge';
 import Redis from 'ioredis-edge';
-import { readFileSync } from 'fs';
 import { parse } from 'csv-parse/sync';
 import letterTemplate from '../../templates/letter.hbs?raw';
+import eventsCSV from '../../data/world_events.csv?raw';
+import factsMD from '../../docs/spiral-facts.md?raw';
 
 const openai = new OpenAI(process.env.OPENAI_API_KEY!);
 const redis = new Redis(process.env.REDIS_URL!);
-const events = parse(readFileSync('data/world_events.csv'), { columns: true });
+const events = parse(eventsCSV, { columns: true });
+const facts = factsMD
+  .split('\n')
+  .filter(l => l.startsWith('-'))
+  .map(l => l.replace(/^\-\s*/, ''));
 
 export default async (req: Request) => {
+  const ip = req.headers.get('x-forwarded-for') ?? 'local';
+  const hits = await redis.incr(`rate:${ip}`);
+  await redis.expire(`rate:${ip}`, 10);
+  if (hits > 5) {
+    return new Response('Whoa, slow down, the spiral needs time to breathe!', {
+      status: 429
+    });
+  }
   const url = new URL(req.url);
   const bd = url.searchParams.get('birthdate');
   if (!bd) return new Response('birthdate required', { status: 400 });
@@ -21,7 +34,8 @@ export default async (req: Request) => {
 
   const node = birthdateToNode(new Date(bd));
   const evWin = calcHarmonicEvents(new Date(bd), events);
-  const prompt = Mustache.render(letterTemplate, { node, events: evWin });
+  const fact = facts[Math.floor(Math.random() * facts.length)];
+  const prompt = Mustache.render(letterTemplate, { node, events: evWin, fact });
 
   const ai = await openai.chat.completions.create({
     model: 'gpt-4o-mini-preview',

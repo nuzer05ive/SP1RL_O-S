@@ -1,6 +1,6 @@
 import { birthdateToNode } from '../index';
 
-test('deterministic node for epoch', () => {
+test('epoch date hits node 88', () => {
   expect(birthdateToNode(new Date('1970-01-01'))).toBe(88);
 });
 

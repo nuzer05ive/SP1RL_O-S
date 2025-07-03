@@ -8,5 +8,5 @@
 
 [[redirects]]
   from = "/api/letter"
-  to = "https://sp1rl-os.vercel.app/api/letter"
+  to   = "${VERCEL_URL}/api/letter"
   status = 200

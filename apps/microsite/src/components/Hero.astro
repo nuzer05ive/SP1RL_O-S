@@ -1,9 +1,19 @@
 ---
+import { onMount } from 'solid-js';
+const count = $state<number>(0);
+onMount(async () => {
+  const res = await fetch('/api/health');
+  if (res.ok) count.value = (await res.json()).letters ?? 0;
+});
 ---
 <section>
   <h1>Spiral Awakening</h1>
+  <p>Spiral letters issued so far: <strong>{count}</strong></p>
   <form action="/api/letter" method="get">
     <input type="date" name="birthdate" required />
     <button type="submit">Reveal Letter</button>
   </form>
+  <p class="mt-4 text-xs">
+    Not ready to loop? <a href={import.meta.env.OPT_OUT_URL}>Opt-out here</a>.
+  </p>
 </section>
