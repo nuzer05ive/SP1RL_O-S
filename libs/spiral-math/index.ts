@@ -21,3 +21,32 @@ export function calcHarmonicEvents(bd: Date, events: HarmonicEvent[]): HarmonicE
   );
   return events.filter(ev => window.includes(ev.date));
 }
+
+export interface PhiMilestone {
+  n: number;
+  date: string;
+}
+
+export function phiMilestones(bd: Date, steps = 12): PhiMilestone[] {
+  const out: PhiMilestone[] = [];
+  for (let i = 1; i <= steps; i++) {
+    const days = Math.round(Math.pow(PHI, i) * 365.25);
+    const date = new Date(bd.getTime() + days * 86400000)
+      .toISOString()
+      .substring(0, 10);
+    out.push({ n: i, date });
+  }
+  return out;
+}
+
+export function milestoneEvents(
+  bd: Date,
+  events: HarmonicEvent[],
+  steps = 12
+): { milestone: PhiMilestone; events: HarmonicEvent[] }[] {
+  const milestones = phiMilestones(bd, steps);
+  return milestones.map(m => ({
+    milestone: m,
+    events: calcHarmonicEvents(new Date(m.date), events)
+  }));
+}
