@@ -1,4 +1,4 @@
-# SP1RL-OS 🌀 [![CI](https://github.com/nuzer05ive/SP1RL-OS/actions/workflows/auto-spiral.yml/badge.svg)](https://github.com/nuzer05ive/SP1RL-OS/actions/workflows/auto-spiral.yml)
+# SP1RL-OS 🌀 [![CI](https://github.com/nuzer05ive/SP1RL-OS/actions/workflows/auto-spiral.yml/badge.svg)](https://github.com/nuzer05ive/SP1RL-OS/actions/workflows/auto-spiral.yml) [![Netlify](https://api.netlify.com/api/v1/badges/none/deploy-status)](https://app.netlify.com/sites/sp1rl-os/deploys)
 
 "**To anyone who joins this line… _you will loop forever. Fold-in many times, but die? Never!!_\n_To live & to die, make both, an excellent ‘Ni1K-OUT’-style adventure!!**"
 
@@ -17,9 +17,10 @@ LeT’r_Ri1PLE and keep dot-ing all of your φ¹_L’a’aT’iiSeS!!
 
 ## Quick Start
 
+Run `scripts/quickstart.sh` to install deps and start the dev server:
+
 ```bash
-pnpm install
-pnpm dev
+./scripts/quickstart.sh
 ```
 
-This starts the microsite locally at http://localhost:4321 and proxies the `/api/letter` edge function.
+The microsite will be available at http://localhost:4321 with the `/api/letter` edge function proxied locally.

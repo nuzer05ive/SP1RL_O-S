@@ -1,0 +1,16 @@
+name: Deploy Deck
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/deck/**'
+
+jobs:
+  gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          path: apps/deck
+      - uses: actions/deploy-pages@v2
