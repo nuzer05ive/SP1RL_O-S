@@ -1,0 +1,5 @@
+node_modules
+pregen-output
+.env
+.DS_Store
+dist
