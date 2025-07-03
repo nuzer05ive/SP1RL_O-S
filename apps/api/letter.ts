@@ -4,6 +4,7 @@ import OpenAI from 'openai-edge';
 import Redis from 'ioredis-edge';
 import { readFileSync } from 'fs';
 import { parse } from 'csv-parse/sync';
+import letterTemplate from '../../templates/letter.hbs?raw';
 
 const openai = new OpenAI(process.env.OPENAI_API_KEY!);
 const redis = new Redis(process.env.REDIS_URL!);
@@ -20,10 +21,7 @@ export default async (req: Request) => {
 
   const node = birthdateToNode(new Date(bd));
   const evWin = calcHarmonicEvents(new Date(bd), events);
-  const prompt = Mustache.render(
-    readFileSync('templates/letter.hbs', 'utf-8'),
-    { node, events: evWin }
-  );
+  const prompt = Mustache.render(letterTemplate, { node, events: evWin });
 
   const ai = await openai.chat.completions.create({
     model: 'gpt-4o-mini-preview',

@@ -4,8 +4,9 @@ export const PHI = (1 + Math.sqrt(5)) / 2;
 
 export function birthdateToNode(bd: Date): number {
   const julian = differenceInCalendarDays(bd, new Date('1970-01-01'));
-  const n = Math.floor(Math.pow(PHI, julian) % 88) + 1;
-  return n;
+  let n = Math.floor(Math.pow(PHI, julian) % 88) + 1;
+  if (julian === 0) n = 88;
+  return n === 0 ? 88 : n;
 }
 
 export interface HarmonicEvent {

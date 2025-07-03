@@ -6,7 +6,15 @@
     "libs/*"
   ],
   "scripts": {
-    "test": "pnpm -r test"
+    "test": "pnpm -r test",
+    "dev": "pnpm --filter microsite dev"
+  },
+  "dependencies": {
+    "date-fns": "^2.30.0",
+    "mustache": "^4.3.0",
+    "openai-edge": "^1.0.0",
+    "ioredis-edge": "^5.3.0",
+    "csv-parse": "^5.3.0"
   },
   "devDependencies": {
     "typescript": "^5.2.0",
@@ -14,10 +22,6 @@
     "jest": "^29.0.0",
     "ts-jest": "^29.0.0",
     "@types/jest": "^29.0.0",
-    "date-fns": "^2.30.0",
-    "mustache": "^4.3.0",
-    "openai-edge": "^1.0.0",
-    "ioredis-edge": "^5.3.0",
-    "csv-parse": "^5.3.0"
+    "pnpm": "^9.0.0"
   }
 }
