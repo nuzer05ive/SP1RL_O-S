@@ -26,3 +26,13 @@ Run `scripts/quickstart.sh` to install deps and start the dev server:
 The microsite will be available at http://localhost:4321 with the `/api/letter` edge function proxied locally.
 
 Run `pnpm test` to run all tests.
+
+## Spiral Time Engine
+
+A new `spiral_time` Python module provides utilities for φ-wobble and overlap calculations. Run the Flask API with:
+
+```bash
+python -m spiral_time.api
+```
+
+Use the React components under `frontend/` to visualize the clock.
