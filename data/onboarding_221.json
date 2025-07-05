@@ -1,2000 +1,2212 @@
 [
   {
-    "episode_num": 0,
-    "phi_power": 0,
+    "episode": 1,
+    "phi_power": 0.0,
+    "clock": "00:00:00.217",
+    "seconds": 0.21707446433256386,
     "node": 0,
     "lap": 0,
-    "dt": 0.48539299999999996,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.0,
+    "\u03c4_multiple": 0.002
   },
   {
-    "episode_num": 1,
-    "phi_power": 1,
+    "episode": 2,
+    "phi_power": 0.618034,
+    "clock": "00:26:10.982",
+    "seconds": 1570.982654554118,
     "node": 1,
     "lap": 0,
-    "dt": 1571.2501368025553,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6180339887498949,
+    "\u03c4_multiple": 16.183
   },
   {
-    "episode_num": 2,
-    "phi_power": 2,
+    "episode": 3,
+    "phi_power": 1.236068,
+    "clock": "00:36:10.961",
+    "seconds": 2170.961717789971,
     "node": 2,
     "lap": 0,
-    "dt": 2542.0361368025556,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.2360679774997898,
+    "\u03c4_multiple": 22.363
   },
   {
-    "episode_num": 3,
-    "phi_power": 3,
+    "episode": 4,
+    "phi_power": 1.854102,
+    "clock": "01:02:21.727",
+    "seconds": 3741.7272978797564,
     "node": 3,
     "lap": 0,
-    "dt": 3142.014880605111,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8541019662496847,
+    "\u03c4_multiple": 38.543
   },
   {
-    "episode_num": 4,
-    "phi_power": 4,
+    "episode": 5,
+    "phi_power": 2.472136,
+    "clock": "01:12:21.706",
+    "seconds": 4341.70636111561,
     "node": 4,
     "lap": 0,
-    "dt": 4712.779624407667,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.4721359549995796,
+    "\u03c4_multiple": 44.724
   },
   {
-    "episode_num": 5,
-    "phi_power": 5,
+    "episode": 6,
+    "phi_power": 3.09017,
+    "clock": "01:22:21.685",
+    "seconds": 4941.685424351463,
     "node": 5,
     "lap": 0,
-    "dt": 4941.951112012778,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.09016994374947451,
+    "\u03c4_multiple": 50.904
   },
   {
-    "episode_num": 6,
-    "phi_power": 6,
+    "episode": 7,
+    "phi_power": 3.708204,
+    "clock": "01:48:32.451",
+    "seconds": 6512.451004441248,
     "node": 6,
     "lap": 0,
-    "dt": 6741.887343420447,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7082039324993694,
+    "\u03c4_multiple": 67.084
   },
   {
-    "episode_num": 7,
-    "phi_power": 7,
+    "episode": 8,
+    "phi_power": 4.326238,
+    "clock": "01:58:32.430",
+    "seconds": 7112.430067677101,
     "node": 7,
     "lap": 0,
-    "dt": 6829.423062433226,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.3262379212492643,
+    "\u03c4_multiple": 73.265
   },
   {
-    "episode_num": 8,
-    "phi_power": 8,
+    "episode": 9,
+    "phi_power": 4.944272,
+    "clock": "02:24:43.195",
+    "seconds": 8683.195647766886,
     "node": 8,
     "lap": 0,
-    "dt": 8716.895012853676,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9442719099991592,
+    "\u03c4_multiple": 89.445
   },
   {
-    "episode_num": 9,
-    "phi_power": 9,
+    "episode": 10,
+    "phi_power": 5.562306,
+    "clock": "02:34:43.174",
+    "seconds": 9283.174711002739,
     "node": 9,
     "lap": 0,
-    "dt": 8750.33068228691,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5623058987490541,
+    "\u03c4_multiple": 95.625
   },
   {
-    "episode_num": 10,
-    "phi_power": 10,
+    "episode": 11,
+    "phi_power": 6.18034,
+    "clock": "02:44:43.153",
+    "seconds": 9883.153774238594,
     "node": 10,
     "lap": 0,
-    "dt": 10671.238302140588,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.18033988749894903,
+    "\u03c4_multiple": 101.806
   },
   {
-    "episode_num": 11,
-    "phi_power": 11,
+    "episode": 12,
+    "phi_power": 6.798374,
+    "clock": "03:10:53.919",
+    "seconds": 11453.91935432838,
     "node": 11,
     "lap": 0,
-    "dt": 10684.009591427497,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7983738762488457,
+    "\u03c4_multiple": 117.986
   },
   {
-    "episode_num": 12,
-    "phi_power": 12,
+    "episode": 13,
+    "phi_power": 7.416408,
+    "clock": "03:20:53.898",
+    "seconds": 12053.89841756423,
     "node": 12,
     "lap": 0,
-    "dt": 12617.688500568125,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.41640786499873883,
+    "\u03c4_multiple": 124.166
   },
   {
-    "episode_num": 13,
-    "phi_power": 13,
+    "episode": 14,
+    "phi_power": 8.034442,
+    "clock": "03:30:53.877",
+    "seconds": 12653.877480800082,
     "node": 13,
     "lap": 0,
-    "dt": 12622.566698995595,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.034441853748631956,
+    "\u03c4_multiple": 130.347
   },
   {
-    "episode_num": 14,
-    "phi_power": 14,
+    "episode": 15,
+    "phi_power": 8.652476,
+    "clock": "03:57:04.643",
+    "seconds": 14224.64306088987,
     "node": 14,
     "lap": 0,
-    "dt": 14561.123806563777,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6524758424985286,
+    "\u03c4_multiple": 146.527
   },
   {
-    "episode_num": 15,
-    "phi_power": 15,
+    "episode": 16,
+    "phi_power": 9.27051,
+    "clock": "04:07:04.622",
+    "seconds": 14824.622124125724,
     "node": 15,
     "lap": 0,
-    "dt": 14562.987112559484,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.2705098312484253,
+    "\u03c4_multiple": 152.707
   },
   {
-    "episode_num": 16,
-    "phi_power": 16,
+    "episode": 17,
+    "phi_power": 9.888544,
+    "clock": "04:33:15.387",
+    "seconds": 16395.387704215507,
     "node": 16,
     "lap": 0,
-    "dt": 16503.40752612337,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8885438199983184,
+    "\u03c4_multiple": 168.888
   },
   {
-    "episode_num": 17,
-    "phi_power": 17,
+    "episode": 18,
+    "phi_power": 10.506578,
+    "clock": "04:43:15.366",
+    "seconds": 16995.36676745136,
     "node": 17,
     "lap": 0,
-    "dt": 16504.119245683072,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5065778087482116,
+    "\u03c4_multiple": 175.068
   },
   {
-    "episode_num": 18,
-    "phi_power": 18,
+    "episode": 19,
+    "phi_power": 11.124612,
+    "clock": "04:53:15.345",
+    "seconds": 17595.345830687213,
     "node": 18,
     "lap": 0,
-    "dt": 18445.251378806886,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.12461179749810825,
+    "\u03c4_multiple": 181.248
   },
   {
-    "episode_num": 19,
-    "phi_power": 19,
+    "episode": 20,
+    "phi_power": 11.742646,
+    "clock": "05:19:26.111",
+    "seconds": 19166.111410777,
     "node": 19,
     "lap": 0,
-    "dt": 18445.52323148996,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7426457862480049,
+    "\u03c4_multiple": 197.429
   },
   {
-    "episode_num": 20,
-    "phi_power": 20,
+    "episode": 21,
+    "phi_power": 12.36068,
+    "clock": "05:29:26.090",
+    "seconds": 19766.090474012854,
     "node": 20,
     "lap": 0,
-    "dt": 20386.92721729685,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.36067977499789805,
+    "\u03c4_multiple": 203.609
   },
   {
-    "episode_num": 21,
-    "phi_power": 21,
+    "episode": 22,
+    "phi_power": 12.978714,
+    "clock": "05:55:36.856",
+    "seconds": 21336.856054102638,
     "node": 21,
     "lap": 0,
-    "dt": 20387.03105578681,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9787137637477912,
+    "\u03c4_multiple": 219.789
   },
   {
-    "episode_num": 22,
-    "phi_power": 22,
+    "episode": 23,
+    "phi_power": 13.596748,
+    "clock": "06:05:36.835",
+    "seconds": 21936.835117338494,
     "node": 22,
     "lap": 0,
-    "dt": 22328.538880085423,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5967477524976914,
+    "\u03c4_multiple": 225.97
   },
   {
-    "episode_num": 23,
-    "phi_power": 23,
+    "episode": 24,
+    "phi_power": 14.214782,
+    "clock": "06:15:36.814",
+    "seconds": 22536.814180574347,
     "node": 23,
     "lap": 0,
-    "dt": 22328.5785428793,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.21478174124758453,
+    "\u03c4_multiple": 232.15
   },
   {
-    "episode_num": 24,
-    "phi_power": 24,
+    "episode": 25,
+    "phi_power": 14.832816,
+    "clock": "06:41:47.579",
+    "seconds": 24107.579760664128,
     "node": 24,
     "lap": 0,
-    "dt": 24270.12602997179,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8328157299974777,
+    "\u03c4_multiple": 248.33
   },
   {
-    "episode_num": 25,
-    "phi_power": 25,
+    "episode": 26,
+    "phi_power": 15.45085,
+    "clock": "06:51:47.558",
+    "seconds": 24707.55882389998,
     "node": 25,
     "lap": 0,
-    "dt": 24270.14117984403,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.4508497187473708,
+    "\u03c4_multiple": 254.511
   },
   {
-    "episode_num": 26,
-    "phi_power": 26,
+    "episode": 27,
+    "phi_power": 16.068884,
+    "clock": "07:01:47.537",
+    "seconds": 25307.537887135833,
     "node": 26,
     "lap": 0,
-    "dt": 26211.70381682995,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.06888370749726391,
+    "\u03c4_multiple": 260.691
   },
   {
-    "episode_num": 27,
-    "phi_power": 27,
+    "episode": 28,
+    "phi_power": 16.686918,
+    "clock": "07:27:58.303",
+    "seconds": 26878.30346722562,
     "node": 27,
     "lap": 0,
-    "dt": 26211.70960373049,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6869176962471641,
+    "\u03c4_multiple": 276.871
   },
   {
-    "episode_num": 28,
-    "phi_power": 28,
+    "episode": 29,
+    "phi_power": 17.304952,
+    "clock": "07:37:58.282",
+    "seconds": 27478.282530461474,
     "node": 28,
     "lap": 0,
-    "dt": 28153.278027560445,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.30495168499705727,
+    "\u03c4_multiple": 283.052
   },
   {
-    "episode_num": 29,
-    "phi_power": 29,
+    "episode": 30,
+    "phi_power": 17.922986,
+    "clock": "08:04:09.048",
+    "seconds": 29049.04811055126,
     "node": 29,
     "lap": 0,
-    "dt": 28153.280238347445,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9229856737469504,
+    "\u03c4_multiple": 299.232
   },
   {
-    "episode_num": 30,
-    "phi_power": 30,
+    "episode": 31,
+    "phi_power": 18.54102,
+    "clock": "08:14:09.027",
+    "seconds": 29649.027173787115,
     "node": 30,
     "lap": 0,
-    "dt": 30094.85087313392,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5410196624968506,
+    "\u03c4_multiple": 305.412
   },
   {
-    "episode_num": 31,
-    "phi_power": 31,
+    "episode": 32,
+    "phi_power": 19.159054,
+    "clock": "08:24:09.006",
+    "seconds": 30249.006237022968,
     "node": 31,
     "lap": 0,
-    "dt": 30094.851718481368,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.15905365124674375,
+    "\u03c4_multiple": 311.593
   },
   {
-    "episode_num": 32,
-    "phi_power": 32,
+    "episode": 33,
+    "phi_power": 19.777088,
+    "clock": "08:50:19.771",
+    "seconds": 31819.771817112756,
     "node": 32,
     "lap": 0,
-    "dt": 32036.42319861529,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7770876399966369,
+    "\u03c4_multiple": 327.773
   },
   {
-    "episode_num": 33,
-    "phi_power": 33,
+    "episode": 34,
+    "phi_power": 20.395122,
+    "clock": "09:00:19.750",
+    "seconds": 32419.750880348605,
     "node": 33,
     "lap": 0,
-    "dt": 32036.423525000777,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.39512162874653,
+    "\u03c4_multiple": 333.953
   },
   {
-    "episode_num": 34,
-    "phi_power": 34,
+    "episode": 35,
+    "phi_power": 21.013156,
+    "clock": "09:10:19.729",
+    "seconds": 33019.729943584454,
     "node": 34,
     "lap": 0,
-    "dt": 33977.995331520186,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.013155617496423133,
+    "\u03c4_multiple": 340.134
   },
   {
-    "episode_num": 35,
-    "phi_power": 35,
+    "episode": 36,
+    "phi_power": 21.63119,
+    "clock": "09:36:30.495",
+    "seconds": 34590.495523674246,
     "node": 35,
     "lap": 0,
-    "dt": 33977.99546532919,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6311896062463234,
+    "\u03c4_multiple": 356.314
   },
   {
-    "episode_num": 36,
-    "phi_power": 36,
+    "episode": 37,
+    "phi_power": 22.249224,
+    "clock": "09:46:30.474",
+    "seconds": 35190.4745869101,
     "node": 36,
     "lap": 0,
-    "dt": 34948.78140384938,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.2492235949962165,
+    "\u03c4_multiple": 362.494
   },
   {
-    "episode_num": 37,
-    "phi_power": 37,
+    "episode": 38,
+    "phi_power": 22.867258,
+    "clock": "10:12:41.240",
+    "seconds": 36761.24016699988,
     "node": 37,
     "lap": 0,
-    "dt": 35919.567472562114,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8672575837461096,
+    "\u03c4_multiple": 378.675
   },
   {
-    "episode_num": 38,
-    "phi_power": 38,
+    "episode": 39,
+    "phi_power": 23.485292,
+    "clock": "10:22:41.219",
+    "seconds": 37361.21923023574,
     "node": 38,
     "lap": 0,
-    "dt": 36890.35349426087,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.48529157249600985,
+    "\u03c4_multiple": 384.855
   },
   {
-    "episode_num": 39,
-    "phi_power": 39,
+    "episode": 40,
+    "phi_power": 24.103326,
+    "clock": "10:32:41.198",
+    "seconds": 37961.19829347159,
     "node": 39,
     "lap": 0,
-    "dt": 37861.13956659006,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.10332556124590297,
+    "\u03c4_multiple": 391.035
   },
   {
-    "episode_num": 40,
-    "phi_power": 40,
+    "episode": 41,
+    "phi_power": 24.72136,
+    "clock": "10:58:51.963",
+    "seconds": 39531.96387356138,
     "node": 40,
     "lap": 0,
-    "dt": 38831.925682316774,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7213595499957961,
+    "\u03c4_multiple": 407.216
   },
   {
-    "episode_num": 41,
-    "phi_power": 41,
+    "episode": 42,
+    "phi_power": 25.339394,
+    "clock": "11:08:51.942",
+    "seconds": 40131.94293679723,
     "node": 41,
     "lap": 0,
-    "dt": 39802.711913770196,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.33939353874569633,
+    "\u03c4_multiple": 413.396
   },
   {
-    "episode_num": 42,
-    "phi_power": 42,
+    "episode": 43,
+    "phi_power": 25.957428,
+    "clock": "11:35:02.708",
+    "seconds": 41702.70851688701,
     "node": 42,
     "lap": 0,
-    "dt": 40773.498203086965,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9574275274955824,
+    "\u03c4_multiple": 429.577
   },
   {
-    "episode_num": 43,
-    "phi_power": 43,
+    "episode": 44,
+    "phi_power": 26.575462,
+    "clock": "11:45:02.687",
+    "seconds": 42302.68758012287,
     "node": 43,
     "lap": 0,
-    "dt": 41744.28478172051,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5754615162454826,
+    "\u03c4_multiple": 435.757
   },
   {
-    "episode_num": 44,
-    "phi_power": 44,
+    "episode": 45,
+    "phi_power": 27.193496,
+    "clock": "11:55:02.666",
+    "seconds": 42902.66664335873,
     "node": 44,
     "lap": 0,
-    "dt": 42715.07170753419,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.19349550499538282,
+    "\u03c4_multiple": 441.937
   },
   {
-    "episode_num": 45,
-    "phi_power": 45,
+    "episode": 46,
+    "phi_power": 27.811529,
+    "clock": "12:21:13.432",
+    "seconds": 44473.43222344851,
     "node": 45,
     "lap": 0,
-    "dt": 43685.8590962547,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8115294937452688,
+    "\u03c4_multiple": 458.118
   },
   {
-    "episode_num": 46,
-    "phi_power": 46,
+    "episode": 47,
+    "phi_power": 28.429563,
+    "clock": "12:31:13.411",
+    "seconds": 45073.411286684364,
     "node": 46,
     "lap": 0,
-    "dt": 44656.647410788886,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.42956348249516907,
+    "\u03c4_multiple": 464.298
   },
   {
-    "episode_num": 47,
-    "phi_power": 47,
+    "episode": 48,
+    "phi_power": 29.047597,
+    "clock": "12:41:13.390",
+    "seconds": 45673.390349920206,
     "node": 47,
     "lap": 0,
-    "dt": 45627.437576950426,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.04759747124505509,
+    "\u03c4_multiple": 470.478
   },
   {
-    "episode_num": 48,
-    "phi_power": 48,
+    "episode": 49,
+    "phi_power": 29.665631,
+    "clock": "13:07:24.155",
+    "seconds": 47244.15593001,
     "node": 48,
     "lap": 0,
-    "dt": 46598.23005764615,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6656314599949553,
+    "\u03c4_multiple": 486.659
   },
   {
-    "episode_num": 49,
-    "phi_power": 49,
+    "episode": 50,
+    "phi_power": 30.283665,
+    "clock": "13:17:24.134",
+    "seconds": 47844.134993245854,
     "node": 49,
     "lap": 0,
-    "dt": 47569.029019037596,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.28366544874485555,
+    "\u03c4_multiple": 492.839
   },
   {
-    "episode_num": 50,
-    "phi_power": 50,
+    "episode": 51,
+    "phi_power": 30.901699,
+    "clock": "13:43:34.900",
+    "seconds": 49414.90057333563,
     "node": 50,
     "lap": 0,
-    "dt": 48539.8298320564,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9016994374947416,
+    "\u03c4_multiple": 509.019
   },
   {
-    "episode_num": 51,
-    "phi_power": 51,
+    "episode": 52,
+    "phi_power": 31.519733,
+    "clock": "13:53:34.879",
+    "seconds": 50014.87963657149,
     "node": 51,
     "lap": 0,
-    "dt": 49510.645458094,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5197334262446418,
+    "\u03c4_multiple": 515.2
   },
   {
-    "episode_num": 52,
-    "phi_power": 52,
+    "episode": 53,
+    "phi_power": 32.137767,
+    "clock": "14:03:34.858",
+    "seconds": 50614.85869980734,
     "node": 52,
     "lap": 0,
-    "dt": 50481.47589715039,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.13776741499452783,
+    "\u03c4_multiple": 521.38
   },
   {
-    "episode_num": 53,
-    "phi_power": 53,
+    "episode": 54,
+    "phi_power": 32.755801,
+    "clock": "14:29:45.624",
+    "seconds": 52185.62427989713,
     "node": 53,
     "lap": 0,
-    "dt": 51452.350775263185,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7558014037444281,
+    "\u03c4_multiple": 537.56
   },
   {
-    "episode_num": 54,
-    "phi_power": 54,
+    "episode": 55,
+    "phi_power": 33.373835,
+    "clock": "14:39:45.603",
+    "seconds": 52785.603343132985,
     "node": 54,
     "lap": 0,
-    "dt": 52423.25527941357,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.3738353924943283,
+    "\u03c4_multiple": 543.741
   },
   {
-    "episode_num": 55,
-    "phi_power": 55,
+    "episode": 56,
+    "phi_power": 33.991869,
+    "clock": "15:05:56.368",
+    "seconds": 54356.36892322276,
     "node": 55,
     "lap": 0,
-    "dt": 53394.24866167676,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9918693812442143,
+    "\u03c4_multiple": 559.921
   },
   {
-    "episode_num": 56,
-    "phi_power": 56,
+    "episode": 57,
+    "phi_power": 34.609903,
+    "clock": "15:15:56.347",
+    "seconds": 54956.34798645862,
     "node": 56,
     "lap": 0,
-    "dt": 54365.44942620312,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6099033699941145,
+    "\u03c4_multiple": 566.101
   },
   {
-    "episode_num": 57,
-    "phi_power": 57,
+    "episode": 58,
+    "phi_power": 35.227937,
+    "clock": "15:25:56.327",
+    "seconds": 55556.327049694475,
     "node": 57,
     "lap": 0,
-    "dt": 55336.827946955076,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.22793735874401477,
+    "\u03c4_multiple": 572.282
   },
   {
-    "episode_num": 58,
-    "phi_power": 58,
+    "episode": 59,
+    "phi_power": 35.845971,
+    "clock": "15:52:07.092",
+    "seconds": 57127.09262978425,
     "node": 58,
     "lap": 0,
-    "dt": 56308.68048430859,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8459713474939008,
+    "\u03c4_multiple": 588.462
   },
   {
-    "episode_num": 59,
-    "phi_power": 59,
+    "episode": 60,
+    "phi_power": 36.464005,
+    "clock": "16:02:07.071",
+    "seconds": 57727.071693020116,
     "node": 59,
     "lap": 0,
-    "dt": 57280.88853411328,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.464005336243801,
+    "\u03c4_multiple": 594.642
   },
   {
-    "episode_num": 60,
-    "phi_power": 60,
+    "episode": 61,
+    "phi_power": 37.082039,
+    "clock": "16:12:07.050",
+    "seconds": 58327.05075625597,
     "node": 60,
     "lap": 0,
-    "dt": 58254.28162542187,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.08203932499370126,
+    "\u03c4_multiple": 600.823
   },
   {
-    "episode_num": 61,
-    "phi_power": 61,
+    "episode": 62,
+    "phi_power": 37.700073,
+    "clock": "16:38:17.816",
+    "seconds": 59897.81633634575,
     "node": 61,
     "lap": 0,
-    "dt": 59229.807791437495,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7000733137435873,
+    "\u03c4_multiple": 617.003
   },
   {
-    "episode_num": 62,
-    "phi_power": 62,
+    "episode": 63,
+    "phi_power": 38.318107,
+    "clock": "16:48:17.795",
+    "seconds": 60497.795399581606,
     "node": 62,
     "lap": 0,
-    "dt": 60208.1780570625,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.3181073024934875,
+    "\u03c4_multiple": 623.183
   },
   {
-    "episode_num": 63,
-    "phi_power": 63,
+    "episode": 64,
+    "phi_power": 38.936141,
+    "clock": "17:14:28.560",
+    "seconds": 62068.56097967138,
     "node": 63,
     "lap": 0,
-    "dt": 61190.3404555,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9361412912433735,
+    "\u03c4_multiple": 639.364
   },
   {
-    "episode_num": 64,
-    "phi_power": 64,
+    "episode": 65,
+    "phi_power": 39.554175,
+    "clock": "17:24:28.540",
+    "seconds": 62668.54004290723,
     "node": 64,
     "lap": 0,
-    "dt": 62180.0871195625,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5541752799932738,
+    "\u03c4_multiple": 645.544
   },
   {
-    "episode_num": 65,
-    "phi_power": 65,
+    "episode": 66,
+    "phi_power": 40.172209,
+    "clock": "17:34:28.519",
+    "seconds": 63268.519106143096,
     "node": 65,
     "lap": 0,
-    "dt": 63185.002314875,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.172209268743174,
+    "\u03c4_multiple": 651.724
   },
   {
-    "episode_num": 66,
-    "phi_power": 66,
+    "episode": 67,
+    "phi_power": 40.790243,
+    "clock": "18:00:39.284",
+    "seconds": 64839.284686232866,
     "node": 66,
     "lap": 0,
-    "dt": 64208.87817425,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.79024325749306,
+    "\u03c4_multiple": 667.905
   },
   {
-    "episode_num": 67,
-    "phi_power": 67,
+    "episode": 68,
+    "phi_power": 41.408277,
+    "clock": "18:10:39.263",
+    "seconds": 65439.26374946873,
     "node": 67,
     "lap": 0,
-    "dt": 65255.506830499995,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.40827724624296025,
+    "\u03c4_multiple": 674.085
   },
   {
-    "episode_num": 68,
-    "phi_power": 68,
+    "episode": 69,
+    "phi_power": 42.026311,
+    "clock": "18:20:39.242",
+    "seconds": 66039.24281270457,
     "node": 68,
     "lap": 0,
-    "dt": 66377.978143,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.026311234992846266,
+    "\u03c4_multiple": 680.265
   },
   {
-    "episode_num": 69,
-    "phi_power": 69,
+    "episode": 70,
+    "phi_power": 42.644345,
+    "clock": "18:46:50.008",
+    "seconds": 67610.00839279436,
     "node": 69,
     "lap": 0,
-    "dt": 67591.460643,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6443452237427465,
+    "\u03c4_multiple": 696.446
   },
   {
-    "episode_num": 70,
-    "phi_power": 70,
+    "episode": 71,
+    "phi_power": 43.262379,
+    "clock": "18:56:49.987",
+    "seconds": 68209.98745603023,
     "node": 70,
     "lap": 0,
-    "dt": 67955.505393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.26237921249264673,
+    "\u03c4_multiple": 702.626
   },
   {
-    "episode_num": 71,
-    "phi_power": 71,
+    "episode": 72,
+    "phi_power": 43.880413,
+    "clock": "19:23:00.753",
+    "seconds": 69780.75303612,
     "node": 71,
     "lap": 0,
-    "dt": 69533.032643,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8804132012425328,
+    "\u03c4_multiple": 718.806
   },
   {
-    "episode_num": 72,
-    "phi_power": 72,
+    "episode": 73,
+    "phi_power": 44.498447,
+    "clock": "19:33:00.732",
+    "seconds": 70380.73209935585,
     "node": 72,
     "lap": 0,
-    "dt": 70625.166893,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.498447189992433,
+    "\u03c4_multiple": 724.987
   },
   {
-    "episode_num": 73,
-    "phi_power": 73,
+    "episode": 74,
+    "phi_power": 45.116481,
+    "clock": "19:43:00.711",
+    "seconds": 70980.71116259172,
     "node": 73,
     "lap": 0,
-    "dt": 71353.256393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.11648117874233321,
+    "\u03c4_multiple": 731.167
   },
   {
-    "episode_num": 74,
-    "phi_power": 74,
+    "episode": 75,
+    "phi_power": 45.734515,
+    "clock": "20:09:11.476",
+    "seconds": 72551.4767426815,
     "node": 74,
     "lap": 0,
-    "dt": 71838.649393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7345151674922192,
+    "\u03c4_multiple": 747.347
   },
   {
-    "episode_num": 75,
-    "phi_power": 75,
+    "episode": 76,
+    "phi_power": 46.352549,
+    "clock": "20:19:11.455",
+    "seconds": 73151.45580591734,
     "node": 75,
     "lap": 0,
-    "dt": 72809.43539299999,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.35254915624211947,
+    "\u03c4_multiple": 753.528
   },
   {
-    "episode_num": 76,
-    "phi_power": 76,
+    "episode": 77,
+    "phi_power": 46.970583,
+    "clock": "20:45:22.221",
+    "seconds": 74722.22138600714,
     "node": 76,
     "lap": 0,
-    "dt": 73780.221393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9705831449920197,
+    "\u03c4_multiple": 769.708
   },
   {
-    "episode_num": 77,
-    "phi_power": 77,
+    "episode": 78,
+    "phi_power": 47.588617,
+    "clock": "20:55:22.200",
+    "seconds": 75322.20044924298,
     "node": 77,
     "lap": 0,
-    "dt": 74751.00739299999,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5886171337419057,
+    "\u03c4_multiple": 775.888
   },
   {
-    "episode_num": 78,
-    "phi_power": 78,
+    "episode": 79,
+    "phi_power": 48.206651,
+    "clock": "21:05:22.179",
+    "seconds": 75922.17951247885,
     "node": 78,
     "lap": 0,
-    "dt": 75721.793393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.20665112249180595,
+    "\u03c4_multiple": 782.069
   },
   {
-    "episode_num": 79,
-    "phi_power": 79,
+    "episode": 80,
+    "phi_power": 48.824685,
+    "clock": "21:31:32.945",
+    "seconds": 77492.94509256863,
     "node": 79,
     "lap": 0,
-    "dt": 76692.57939299999,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.824685111241692,
+    "\u03c4_multiple": 798.249
   },
   {
-    "episode_num": 80,
-    "phi_power": 80,
+    "episode": 81,
+    "phi_power": 49.442719,
+    "clock": "21:41:32.924",
+    "seconds": 78092.92415580447,
     "node": 80,
     "lap": 0,
-    "dt": 77663.365393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.4427190999915922,
+    "\u03c4_multiple": 804.429
   },
   {
-    "episode_num": 81,
-    "phi_power": 81,
+    "episode": 82,
+    "phi_power": 50.060753,
+    "clock": "21:51:32.903",
+    "seconds": 78692.90321904032,
     "node": 81,
     "lap": 0,
-    "dt": 78634.151393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.06075308874147822,
+    "\u03c4_multiple": 810.61
   },
   {
-    "episode_num": 82,
-    "phi_power": 82,
+    "episode": 83,
+    "phi_power": 50.678787,
+    "clock": "22:17:43.668",
+    "seconds": 80263.66879913013,
     "node": 82,
     "lap": 0,
-    "dt": 79604.937393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6787870774913927,
+    "\u03c4_multiple": 826.79
   },
   {
-    "episode_num": 83,
-    "phi_power": 83,
+    "episode": 84,
+    "phi_power": 51.296821,
+    "clock": "22:27:43.647",
+    "seconds": 80863.64786236596,
     "node": 83,
     "lap": 0,
-    "dt": 80575.723393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.2968210662412787,
+    "\u03c4_multiple": 832.97
   },
   {
-    "episode_num": 84,
-    "phi_power": 84,
+    "episode": 85,
+    "phi_power": 51.914855,
+    "clock": "22:53:54.413",
+    "seconds": 82434.41344245574,
     "node": 84,
     "lap": 0,
-    "dt": 81546.509393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9148550549911647,
+    "\u03c4_multiple": 849.151
   },
   {
-    "episode_num": 85,
-    "phi_power": 85,
+    "episode": 86,
+    "phi_power": 52.532889,
+    "clock": "23:03:54.392",
+    "seconds": 83034.39250569162,
     "node": 85,
     "lap": 0,
-    "dt": 82517.295393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5328890437410791,
+    "\u03c4_multiple": 855.331
   },
   {
-    "episode_num": 86,
-    "phi_power": 86,
+    "episode": 87,
+    "phi_power": 53.150923,
+    "clock": "23:13:54.371",
+    "seconds": 83634.37156892747,
     "node": 86,
     "lap": 0,
-    "dt": 83488.081393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.15092303249096517,
+    "\u03c4_multiple": 861.511
   },
   {
-    "episode_num": 87,
-    "phi_power": 87,
+    "episode": 88,
+    "phi_power": 53.768957,
+    "clock": "23:40:05.137",
+    "seconds": 85205.13714901725,
     "node": 87,
     "lap": 0,
-    "dt": 84458.867393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7689570212408512,
+    "\u03c4_multiple": 877.692
   },
   {
-    "episode_num": 88,
-    "phi_power": 88,
+    "episode": 89,
+    "phi_power": 54.386991,
+    "clock": "23:50:05.116",
+    "seconds": 85805.11621225311,
     "node": 88,
     "lap": 0,
-    "dt": 85429.653393,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.38699100999076563,
+    "\u03c4_multiple": 883.872
   },
   {
-    "episode_num": 89,
-    "phi_power": 89,
+    "episode": 90,
+    "phi_power": 55.005025,
+    "clock": "23:56:15.840",
+    "seconds": 86175.84075080391,
     "node": 0,
     "lap": 1,
-    "dt": -228.87149823320954,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.005024998740651654,
+    "\u03c4_multiple": 887.691
   },
   {
-    "episode_num": 90,
-    "phi_power": 90,
+    "episode": 91,
+    "phi_power": 55.623059,
+    "clock": "00:22:26.606",
+    "seconds": 1346.6063308936834,
     "node": 1,
     "lap": 1,
-    "dt": 741.9145017667904,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6230589874905377,
+    "\u03c4_multiple": 13.871
   },
   {
-    "episode_num": 91,
-    "phi_power": 91,
+    "episode": 92,
+    "phi_power": 56.241093,
+    "clock": "00:32:26.585",
+    "seconds": 1946.5853941295275,
     "node": 2,
     "lap": 1,
-    "dt": 1712.7005017667905,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.2410929762404237,
+    "\u03c4_multiple": 20.052
   },
   {
-    "episode_num": 92,
-    "phi_power": 92,
+    "episode": 93,
+    "phi_power": 56.859127,
+    "clock": "00:58:37.350",
+    "seconds": 3517.350974219332,
     "node": 3,
     "lap": 1,
-    "dt": 2683.4865017667903,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8591269649903381,
+    "\u03c4_multiple": 36.232
   },
   {
-    "episode_num": 93,
-    "phi_power": 93,
+    "episode": 94,
+    "phi_power": 57.477161,
+    "clock": "01:08:37.330",
+    "seconds": 4117.330037455177,
     "node": 4,
     "lap": 1,
-    "dt": 3654.27250176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.47716095374022416,
+    "\u03c4_multiple": 42.412
   },
   {
-    "episode_num": 94,
-    "phi_power": 94,
+    "episode": 95,
+    "phi_power": 58.095195,
+    "clock": "01:18:37.309",
+    "seconds": 4717.309100691021,
     "node": 5,
     "lap": 1,
-    "dt": 4625.058501766791,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.09519494249011018,
+    "\u03c4_multiple": 48.593
   },
   {
-    "episode_num": 95,
-    "phi_power": 95,
+    "episode": 96,
+    "phi_power": 58.713229,
+    "clock": "01:44:48.074",
+    "seconds": 6288.0746807808255,
     "node": 6,
     "lap": 1,
-    "dt": 5595.84450176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7132289312400246,
+    "\u03c4_multiple": 64.773
   },
   {
-    "episode_num": 96,
-    "phi_power": 96,
+    "episode": 97,
+    "phi_power": 59.331263,
+    "clock": "01:54:48.053",
+    "seconds": 6888.05374401667,
     "node": 7,
     "lap": 1,
-    "dt": 6566.63050176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.33126291998991064,
+    "\u03c4_multiple": 70.953
   },
   {
-    "episode_num": 97,
-    "phi_power": 97,
+    "episode": 98,
+    "phi_power": 59.949297,
+    "clock": "02:20:58.819",
+    "seconds": 8458.819324106445,
     "node": 8,
     "lap": 1,
-    "dt": 7537.41650176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9492969087397967,
+    "\u03c4_multiple": 87.134
   },
   {
-    "episode_num": 98,
-    "phi_power": 98,
+    "episode": 99,
+    "phi_power": 60.567331,
+    "clock": "02:30:58.798",
+    "seconds": 9058.798387342318,
     "node": 9,
     "lap": 1,
-    "dt": 8508.202501766791,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5673308974897111,
+    "\u03c4_multiple": 93.314
   },
   {
-    "episode_num": 99,
-    "phi_power": 99,
+    "episode": 100,
+    "phi_power": 61.185365,
+    "clock": "02:40:58.777",
+    "seconds": 9658.777450578162,
     "node": 10,
     "lap": 1,
-    "dt": 9478.98850176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.18536488623959713,
+    "\u03c4_multiple": 99.494
   },
   {
-    "episode_num": 100,
-    "phi_power": 100,
+    "episode": 101,
+    "phi_power": 61.803399,
+    "clock": "03:08:46.621",
+    "seconds": 11326.621682353332,
     "node": 11,
     "lap": 1,
-    "dt": 10546.85310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8033988749894831,
+    "\u03c4_multiple": 116.675
   },
   {
-    "episode_num": 101,
-    "phi_power": 101,
+    "episode": 102,
+    "phi_power": 62.421433,
+    "clock": "03:18:46.600",
+    "seconds": 11926.600745589205,
     "node": 12,
     "lap": 1,
-    "dt": 11517.63910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.4214328637393976,
+    "\u03c4_multiple": 122.855
   },
   {
-    "episode_num": 102,
-    "phi_power": 102,
+    "episode": 103,
+    "phi_power": 63.039467,
+    "clock": "03:28:46.579",
+    "seconds": 12526.579808825049,
     "node": 13,
     "lap": 1,
-    "dt": 12488.42510176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.03946685248928361,
+    "\u03c4_multiple": 129.035
   },
   {
-    "episode_num": 103,
-    "phi_power": 103,
+    "episode": 104,
+    "phi_power": 63.657501,
+    "clock": "03:54:57.345",
+    "seconds": 14097.345388914826,
     "node": 14,
     "lap": 1,
-    "dt": 13459.21110176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6575008412391696,
+    "\u03c4_multiple": 145.216
   },
   {
-    "episode_num": 104,
-    "phi_power": 104,
+    "episode": 105,
+    "phi_power": 64.275535,
+    "clock": "04:04:57.324",
+    "seconds": 14697.32445215067,
     "node": 15,
     "lap": 1,
-    "dt": 14429.99710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.27553482998905565,
+    "\u03c4_multiple": 151.396
   },
   {
-    "episode_num": 105,
-    "phi_power": 105,
+    "episode": 106,
+    "phi_power": 64.893569,
+    "clock": "04:31:08.090",
+    "seconds": 16268.090032240476,
     "node": 16,
     "lap": 1,
-    "dt": 15400.78310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8935688187389701,
+    "\u03c4_multiple": 167.576
   },
   {
-    "episode_num": 106,
-    "phi_power": 106,
+    "episode": 107,
+    "phi_power": 65.511603,
+    "clock": "04:41:08.069",
+    "seconds": 16868.06909547632,
     "node": 17,
     "lap": 1,
-    "dt": 16371.56910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5116028074888561,
+    "\u03c4_multiple": 173.757
   },
   {
-    "episode_num": 107,
-    "phi_power": 107,
+    "episode": 108,
+    "phi_power": 66.129637,
+    "clock": "04:51:08.048",
+    "seconds": 17468.048158712165,
     "node": 18,
     "lap": 1,
-    "dt": 17342.355101766792,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.12963679623874214,
+    "\u03c4_multiple": 179.937
   },
   {
-    "episode_num": 108,
-    "phi_power": 108,
+    "episode": 109,
+    "phi_power": 66.747671,
+    "clock": "05:17:18.813",
+    "seconds": 19038.81373880197,
     "node": 19,
     "lap": 1,
-    "dt": 18313.141101766792,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7476707849886566,
+    "\u03c4_multiple": 196.117
   },
   {
-    "episode_num": 109,
-    "phi_power": 109,
+    "episode": 110,
+    "phi_power": 67.365705,
+    "clock": "05:27:18.792",
+    "seconds": 19638.792802037813,
     "node": 20,
     "lap": 1,
-    "dt": 19283.927101766792,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.3657047737385426,
+    "\u03c4_multiple": 202.298
   },
   {
-    "episode_num": 110,
-    "phi_power": 110,
+    "episode": 111,
+    "phi_power": 67.983739,
+    "clock": "05:53:29.558",
+    "seconds": 21209.55838212759,
     "node": 21,
     "lap": 1,
-    "dt": 20254.713101766793,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9837387624884286,
+    "\u03c4_multiple": 218.478
   },
   {
-    "episode_num": 111,
-    "phi_power": 111,
+    "episode": 112,
+    "phi_power": 68.601773,
+    "clock": "06:03:29.537",
+    "seconds": 21809.53744536346,
     "node": 22,
     "lap": 1,
-    "dt": 21225.499101766793,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6017727512383431,
+    "\u03c4_multiple": 224.658
   },
   {
-    "episode_num": 112,
-    "phi_power": 112,
+    "episode": 113,
+    "phi_power": 69.219807,
+    "clock": "06:13:29.516",
+    "seconds": 22409.516508599307,
     "node": 23,
     "lap": 1,
-    "dt": 22196.285101766793,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.21980673998822908,
+    "\u03c4_multiple": 230.839
   },
   {
-    "episode_num": 113,
-    "phi_power": 113,
+    "episode": 114,
+    "phi_power": 69.837841,
+    "clock": "06:39:40.282",
+    "seconds": 23980.282088689084,
     "node": 24,
     "lap": 1,
-    "dt": 23167.07110176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8378407287381151,
+    "\u03c4_multiple": 247.019
   },
   {
-    "episode_num": 114,
-    "phi_power": 114,
+    "episode": 115,
+    "phi_power": 70.455875,
+    "clock": "06:49:40.261",
+    "seconds": 24580.261151924955,
     "node": 25,
     "lap": 1,
-    "dt": 24137.85710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.45587471748802955,
+    "\u03c4_multiple": 253.199
   },
   {
-    "episode_num": 115,
-    "phi_power": 115,
+    "episode": 116,
+    "phi_power": 71.073909,
+    "clock": "06:59:40.240",
+    "seconds": 25180.2402151608,
     "node": 26,
     "lap": 1,
-    "dt": 25108.64310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.07390870623791557,
+    "\u03c4_multiple": 259.38
   },
   {
-    "episode_num": 116,
-    "phi_power": 116,
+    "episode": 117,
+    "phi_power": 71.691943,
+    "clock": "07:25:51.005",
+    "seconds": 26751.005795250578,
     "node": 27,
     "lap": 1,
-    "dt": 26079.42910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6919426949878016,
+    "\u03c4_multiple": 275.56
   },
   {
-    "episode_num": 117,
-    "phi_power": 117,
+    "episode": 118,
+    "phi_power": 72.309977,
+    "clock": "07:35:50.984",
+    "seconds": 27350.98485848645,
     "node": 28,
     "lap": 1,
-    "dt": 27050.21510176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.30997668373771603,
+    "\u03c4_multiple": 281.74
   },
   {
-    "episode_num": 118,
-    "phi_power": 118,
+    "episode": 119,
+    "phi_power": 72.928011,
+    "clock": "08:02:01.750",
+    "seconds": 28921.750438576226,
     "node": 29,
     "lap": 1,
-    "dt": 28021.00110176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.928010672487602,
+    "\u03c4_multiple": 297.921
   },
   {
-    "episode_num": 119,
-    "phi_power": 119,
+    "episode": 120,
+    "phi_power": 73.546045,
+    "clock": "08:12:01.729",
+    "seconds": 29521.72950181207,
     "node": 30,
     "lap": 1,
-    "dt": 28991.78710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5460446612374881,
+    "\u03c4_multiple": 304.101
   },
   {
-    "episode_num": 120,
-    "phi_power": 120,
+    "episode": 121,
+    "phi_power": 74.164079,
+    "clock": "08:22:01.708",
+    "seconds": 30121.708565047942,
     "node": 31,
     "lap": 1,
-    "dt": 29962.57310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.16407864998740251,
+    "\u03c4_multiple": 310.281
   },
   {
-    "episode_num": 121,
-    "phi_power": 121,
+    "episode": 122,
+    "phi_power": 74.782113,
+    "clock": "08:48:12.474",
+    "seconds": 31692.474145137727,
     "node": 32,
     "lap": 1,
-    "dt": 30933.35910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7821126387372885,
+    "\u03c4_multiple": 326.462
   },
   {
-    "episode_num": 122,
-    "phi_power": 122,
+    "episode": 123,
+    "phi_power": 75.400147,
+    "clock": "08:58:12.453",
+    "seconds": 32292.453208373572,
     "node": 33,
     "lap": 1,
-    "dt": 31904.14510176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.40014662748717456,
+    "\u03c4_multiple": 332.642
   },
   {
-    "episode_num": 123,
-    "phi_power": 123,
+    "episode": 124,
+    "phi_power": 76.018181,
+    "clock": "09:08:12.432",
+    "seconds": 32892.43227160942,
     "node": 34,
     "lap": 1,
-    "dt": 32874.93110176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.018180616237060576,
+    "\u03c4_multiple": 338.823
   },
   {
-    "episode_num": 124,
-    "phi_power": 124,
+    "episode": 125,
+    "phi_power": 76.636215,
+    "clock": "09:34:23.197",
+    "seconds": 34463.19785169922,
     "node": 35,
     "lap": 1,
-    "dt": 33845.71710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.636214604986975,
+    "\u03c4_multiple": 355.003
   },
   {
-    "episode_num": 125,
-    "phi_power": 125,
+    "episode": 126,
+    "phi_power": 77.254249,
+    "clock": "09:44:23.176",
+    "seconds": 35063.176914935066,
     "node": 36,
     "lap": 1,
-    "dt": 34816.50310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.25424859373686104,
+    "\u03c4_multiple": 361.183
   },
   {
-    "episode_num": 126,
-    "phi_power": 126,
+    "episode": 127,
+    "phi_power": 77.872283,
+    "clock": "10:10:33.942",
+    "seconds": 36633.94249502484,
     "node": 37,
     "lap": 1,
-    "dt": 35787.28910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8722825824867471,
+    "\u03c4_multiple": 377.364
   },
   {
-    "episode_num": 127,
-    "phi_power": 127,
+    "episode": 128,
+    "phi_power": 78.490317,
+    "clock": "10:20:33.921",
+    "seconds": 37233.921558260714,
     "node": 38,
     "lap": 1,
-    "dt": 36758.07510176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.4903165712366615,
+    "\u03c4_multiple": 383.544
   },
   {
-    "episode_num": 128,
-    "phi_power": 128,
+    "episode": 129,
+    "phi_power": 79.108351,
+    "clock": "10:30:33.900",
+    "seconds": 37833.900621496556,
     "node": 39,
     "lap": 1,
-    "dt": 37728.86110176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.10835055998654752,
+    "\u03c4_multiple": 389.724
   },
   {
-    "episode_num": 129,
-    "phi_power": 129,
+    "episode": 130,
+    "phi_power": 79.726385,
+    "clock": "10:56:44.666",
+    "seconds": 39404.66620158633,
     "node": 40,
     "lap": 1,
-    "dt": 38699.64710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7263845487364335,
+    "\u03c4_multiple": 405.905
   },
   {
-    "episode_num": 130,
-    "phi_power": 130,
+    "episode": 131,
+    "phi_power": 80.344419,
+    "clock": "11:06:44.645",
+    "seconds": 40004.645264822204,
     "node": 41,
     "lap": 1,
-    "dt": 39670.43310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.344418537486348,
+    "\u03c4_multiple": 412.085
   },
   {
-    "episode_num": 131,
-    "phi_power": 131,
+    "episode": 132,
+    "phi_power": 80.962453,
+    "clock": "11:32:55.410",
+    "seconds": 41575.41084491198,
     "node": 42,
     "lap": 1,
-    "dt": 40641.21910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.962452526236234,
+    "\u03c4_multiple": 428.265
   },
   {
-    "episode_num": 132,
-    "phi_power": 132,
+    "episode": 133,
+    "phi_power": 81.580487,
+    "clock": "11:42:55.389",
+    "seconds": 42175.38990814783,
     "node": 43,
     "lap": 1,
-    "dt": 41612.00510176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.58048651498612,
+    "\u03c4_multiple": 434.446
   },
   {
-    "episode_num": 133,
-    "phi_power": 133,
+    "episode": 134,
+    "phi_power": 82.198521,
+    "clock": "11:52:55.368",
+    "seconds": 42775.3689713837,
     "node": 44,
     "lap": 1,
-    "dt": 42582.79110176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.19852050373603447,
+    "\u03c4_multiple": 440.626
   },
   {
-    "episode_num": 134,
-    "phi_power": 134,
+    "episode": 135,
+    "phi_power": 82.816554,
+    "clock": "12:19:06.134",
+    "seconds": 44346.13455147348,
     "node": 45,
     "lap": 1,
-    "dt": 43553.57710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8165544924859205,
+    "\u03c4_multiple": 456.806
   },
   {
-    "episode_num": 135,
-    "phi_power": 135,
+    "episode": 136,
+    "phi_power": 83.434588,
+    "clock": "12:29:06.113",
+    "seconds": 44946.11361470932,
     "node": 46,
     "lap": 1,
-    "dt": 44524.36310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.4345884812358065,
+    "\u03c4_multiple": 462.987
   },
   {
-    "episode_num": 136,
-    "phi_power": 136,
+    "episode": 137,
+    "phi_power": 84.052622,
+    "clock": "12:39:06.092",
+    "seconds": 45546.09267794516,
     "node": 47,
     "lap": 1,
-    "dt": 45495.14910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.05262246998569253,
+    "\u03c4_multiple": 469.167
   },
   {
-    "episode_num": 137,
-    "phi_power": 137,
+    "episode": 138,
+    "phi_power": 84.670656,
+    "clock": "13:05:16.858",
+    "seconds": 47116.85825803497,
     "node": 48,
     "lap": 1,
-    "dt": 46465.93510176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.670656458735607,
+    "\u03c4_multiple": 485.347
   },
   {
-    "episode_num": 138,
-    "phi_power": 138,
+    "episode": 139,
+    "phi_power": 85.28869,
+    "clock": "13:15:16.837",
+    "seconds": 47716.83732127082,
     "node": 49,
     "lap": 1,
-    "dt": 47436.72110176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.288690447485493,
+    "\u03c4_multiple": 491.528
   },
   {
-    "episode_num": 139,
-    "phi_power": 139,
+    "episode": 140,
+    "phi_power": 85.906724,
+    "clock": "13:41:27.602",
+    "seconds": 49287.60290136059,
     "node": 50,
     "lap": 1,
-    "dt": 48407.50710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.906724436235379,
+    "\u03c4_multiple": 507.708
   },
   {
-    "episode_num": 140,
-    "phi_power": 140,
+    "episode": 141,
+    "phi_power": 86.524758,
+    "clock": "13:51:27.581",
+    "seconds": 49887.581964596466,
     "node": 51,
     "lap": 1,
-    "dt": 49378.29310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5247584249852935,
+    "\u03c4_multiple": 513.888
   },
   {
-    "episode_num": 141,
-    "phi_power": 141,
+    "episode": 142,
+    "phi_power": 87.142792,
+    "clock": "14:01:27.561",
+    "seconds": 50487.56102783231,
     "node": 52,
     "lap": 1,
-    "dt": 50349.07910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.14279241373517948,
+    "\u03c4_multiple": 520.069
   },
   {
-    "episode_num": 142,
-    "phi_power": 142,
+    "episode": 143,
+    "phi_power": 87.760826,
+    "clock": "14:27:38.326",
+    "seconds": 52058.326607922085,
     "node": 53,
     "lap": 1,
-    "dt": 51319.86510176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7608264024850655,
+    "\u03c4_multiple": 536.249
   },
   {
-    "episode_num": 143,
-    "phi_power": 143,
+    "episode": 144,
+    "phi_power": 88.37886,
+    "clock": "14:37:38.305",
+    "seconds": 52658.305671157956,
     "node": 54,
     "lap": 1,
-    "dt": 52290.65110176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.37886039123497994,
+    "\u03c4_multiple": 542.429
   },
   {
-    "episode_num": 144,
-    "phi_power": 144,
+    "episode": 145,
+    "phi_power": 88.996894,
+    "clock": "15:03:49.071",
+    "seconds": 54229.07125124773,
     "node": 55,
     "lap": 1,
-    "dt": 53261.43710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.996894379984866,
+    "\u03c4_multiple": 558.61
   },
   {
-    "episode_num": 145,
-    "phi_power": 145,
+    "episode": 146,
+    "phi_power": 89.614928,
+    "clock": "15:13:49.050",
+    "seconds": 54829.050314483575,
     "node": 56,
     "lap": 1,
-    "dt": 54232.22310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.614928368734752,
+    "\u03c4_multiple": 564.79
   },
   {
-    "episode_num": 146,
-    "phi_power": 146,
+    "episode": 147,
+    "phi_power": 90.232962,
+    "clock": "15:23:49.029",
+    "seconds": 55429.02937771945,
     "node": 57,
     "lap": 1,
-    "dt": 55203.00910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.23296235748466643,
+    "\u03c4_multiple": 570.97
   },
   {
-    "episode_num": 147,
-    "phi_power": 147,
+    "episode": 148,
+    "phi_power": 90.850996,
+    "clock": "15:49:59.794",
+    "seconds": 56999.79495780922,
     "node": 58,
     "lap": 1,
-    "dt": 56173.79510176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8509963462345524,
+    "\u03c4_multiple": 587.151
   },
   {
-    "episode_num": 148,
-    "phi_power": 148,
+    "episode": 149,
+    "phi_power": 91.46903,
+    "clock": "15:59:59.774",
+    "seconds": 57599.77402104507,
     "node": 59,
     "lap": 1,
-    "dt": 57144.58110176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.46903033498443847,
+    "\u03c4_multiple": 593.331
   },
   {
-    "episode_num": 149,
-    "phi_power": 149,
+    "episode": 150,
+    "phi_power": 92.087064,
+    "clock": "16:09:59.753",
+    "seconds": 58199.75308428094,
     "node": 60,
     "lap": 1,
-    "dt": 58115.36710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.08706432373435291,
+    "\u03c4_multiple": 599.511
   },
   {
-    "episode_num": 150,
-    "phi_power": 150,
+    "episode": 151,
+    "phi_power": 92.705098,
+    "clock": "16:36:10.518",
+    "seconds": 59770.51866437072,
     "node": 61,
     "lap": 1,
-    "dt": 59086.15310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7050983124842389,
+    "\u03c4_multiple": 615.692
   },
   {
-    "episode_num": 151,
-    "phi_power": 151,
+    "episode": 152,
+    "phi_power": 93.323132,
+    "clock": "16:46:10.497",
+    "seconds": 60370.49772760656,
     "node": 62,
     "lap": 1,
-    "dt": 60056.93910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.32313230123412495,
+    "\u03c4_multiple": 621.872
   },
   {
-    "episode_num": 152,
-    "phi_power": 152,
+    "episode": 153,
+    "phi_power": 93.941166,
+    "clock": "17:12:21.263",
+    "seconds": 61941.26330769636,
     "node": 63,
     "lap": 1,
-    "dt": 61027.72510176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9411662899840394,
+    "\u03c4_multiple": 638.052
   },
   {
-    "episode_num": 153,
-    "phi_power": 153,
+    "episode": 154,
+    "phi_power": 94.5592,
+    "clock": "17:22:21.242",
+    "seconds": 62541.2423709322,
     "node": 64,
     "lap": 1,
-    "dt": 61998.51110176678,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5592002787339254,
+    "\u03c4_multiple": 644.233
   },
   {
-    "episode_num": 154,
-    "phi_power": 154,
+    "episode": 155,
+    "phi_power": 95.177234,
+    "clock": "17:32:21.221",
+    "seconds": 63141.22143416805,
     "node": 65,
     "lap": 1,
-    "dt": 62969.29710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.17723426748381144,
+    "\u03c4_multiple": 650.413
   },
   {
-    "episode_num": 155,
-    "phi_power": 155,
+    "episode": 156,
+    "phi_power": 95.795268,
+    "clock": "17:58:31.987",
+    "seconds": 64711.98701425783,
     "node": 66,
     "lap": 1,
-    "dt": 63940.08310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7952682562336975,
+    "\u03c4_multiple": 666.593
   },
   {
-    "episode_num": 156,
-    "phi_power": 156,
+    "episode": 157,
+    "phi_power": 96.413302,
+    "clock": "18:08:31.966",
+    "seconds": 65311.9660774937,
     "node": 67,
     "lap": 1,
-    "dt": 64910.86910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.4133022449836119,
+    "\u03c4_multiple": 672.774
   },
   {
-    "episode_num": 157,
-    "phi_power": 157,
+    "episode": 158,
+    "phi_power": 97.031336,
+    "clock": "18:18:31.945",
+    "seconds": 65911.94514072954,
     "node": 68,
     "lap": 1,
-    "dt": 65881.6551017668,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.03133623373349792,
+    "\u03c4_multiple": 678.954
   },
   {
-    "episode_num": 158,
-    "phi_power": 158,
+    "episode": 159,
+    "phi_power": 97.64937,
+    "clock": "18:44:42.710",
+    "seconds": 67482.71072081932,
     "node": 69,
     "lap": 1,
-    "dt": 66852.44110176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6493702224833839,
+    "\u03c4_multiple": 695.134
   },
   {
-    "episode_num": 159,
-    "phi_power": 159,
+    "episode": 160,
+    "phi_power": 98.267404,
+    "clock": "18:54:42.689",
+    "seconds": 68082.68978405517,
     "node": 70,
     "lap": 1,
-    "dt": 67823.2271017668,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.26740421123326996,
+    "\u03c4_multiple": 701.315
   },
   {
-    "episode_num": 160,
-    "phi_power": 160,
+    "episode": 161,
+    "phi_power": 98.885438,
+    "clock": "19:20:53.455",
+    "seconds": 69653.45536414497,
     "node": 71,
     "lap": 1,
-    "dt": 68794.01310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8854381999831844,
+    "\u03c4_multiple": 717.495
   },
   {
-    "episode_num": 161,
-    "phi_power": 161,
+    "episode": 162,
+    "phi_power": 99.503472,
+    "clock": "19:30:53.434",
+    "seconds": 70253.43442738084,
     "node": 72,
     "lap": 1,
-    "dt": 69764.79910176678,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5034721887330988,
+    "\u03c4_multiple": 723.675
   },
   {
-    "episode_num": 162,
-    "phi_power": 162,
+    "episode": 163,
+    "phi_power": 100.121506,
+    "clock": "19:40:53.413",
+    "seconds": 70853.41349061666,
     "node": 73,
     "lap": 1,
-    "dt": 70735.58510176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.12150617748295645,
+    "\u03c4_multiple": 729.856
   },
   {
-    "episode_num": 163,
-    "phi_power": 163,
+    "episode": 164,
+    "phi_power": 100.73954,
+    "clock": "20:07:04.179",
+    "seconds": 72424.17907070646,
     "node": 74,
     "lap": 1,
-    "dt": 71706.37110176678,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7395401662328709,
+    "\u03c4_multiple": 746.036
   },
   {
-    "episode_num": 164,
-    "phi_power": 164,
+    "episode": 165,
+    "phi_power": 101.357574,
+    "clock": "20:17:04.158",
+    "seconds": 73024.15813394233,
     "node": 75,
     "lap": 1,
-    "dt": 72677.15710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.35757415498278533,
+    "\u03c4_multiple": 752.216
   },
   {
-    "episode_num": 165,
-    "phi_power": 165,
+    "episode": 166,
+    "phi_power": 101.975608,
+    "clock": "20:43:14.923",
+    "seconds": 74594.92371403209,
     "node": 76,
     "lap": 1,
-    "dt": 73647.94310176678,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9756081437326429,
+    "\u03c4_multiple": 768.397
   },
   {
-    "episode_num": 166,
-    "phi_power": 166,
+    "episode": 167,
+    "phi_power": 102.593642,
+    "clock": "20:53:14.902",
+    "seconds": 75194.90277726795,
     "node": 77,
     "lap": 1,
-    "dt": 74618.72910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5936421324825574,
+    "\u03c4_multiple": 774.577
   },
   {
-    "episode_num": 167,
-    "phi_power": 167,
+    "episode": 168,
+    "phi_power": 103.211676,
+    "clock": "21:03:14.881",
+    "seconds": 75794.88184050383,
     "node": 78,
     "lap": 1,
-    "dt": 75589.51510176678,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.21167612123247181,
+    "\u03c4_multiple": 780.757
   },
   {
-    "episode_num": 168,
-    "phi_power": 168,
+    "episode": 169,
+    "phi_power": 103.82971,
+    "clock": "21:29:25.647",
+    "seconds": 77365.64742059358,
     "node": 79,
     "lap": 1,
-    "dt": 76560.30110176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8297101099823294,
+    "\u03c4_multiple": 796.938
   },
   {
-    "episode_num": 169,
-    "phi_power": 169,
+    "episode": 170,
+    "phi_power": 104.447744,
+    "clock": "21:39:25.626",
+    "seconds": 77965.62648382944,
     "node": 80,
     "lap": 1,
-    "dt": 77531.08710176678,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.44774409873224386,
+    "\u03c4_multiple": 803.118
   },
   {
-    "episode_num": 170,
-    "phi_power": 170,
+    "episode": 171,
+    "phi_power": 105.065778,
+    "clock": "21:49:25.605",
+    "seconds": 78565.60554706532,
     "node": 81,
     "lap": 1,
-    "dt": 78501.87310176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.0657780874821583,
+    "\u03c4_multiple": 809.298
   },
   {
-    "episode_num": 171,
-    "phi_power": 171,
+    "episode": 172,
+    "phi_power": 105.683812,
+    "clock": "22:15:36.371",
+    "seconds": 80136.37112715507,
     "node": 82,
     "lap": 1,
-    "dt": 79472.65910176678,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6838120762320159,
+    "\u03c4_multiple": 825.479
   },
   {
-    "episode_num": 172,
-    "phi_power": 172,
+    "episode": 173,
+    "phi_power": 106.301846,
+    "clock": "22:25:36.350",
+    "seconds": 80736.35019039095,
     "node": 83,
     "lap": 1,
-    "dt": 80443.44510176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.30184606498193034,
+    "\u03c4_multiple": 831.659
   },
   {
-    "episode_num": 173,
-    "phi_power": 173,
+    "episode": 174,
+    "phi_power": 106.91988,
+    "clock": "22:51:47.115",
+    "seconds": 82307.11577048074,
     "node": 84,
     "lap": 1,
-    "dt": 81414.23110176678,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9198800537318448,
+    "\u03c4_multiple": 847.84
   },
   {
-    "episode_num": 174,
-    "phi_power": 174,
+    "episode": 175,
+    "phi_power": 107.537914,
+    "clock": "23:01:47.094",
+    "seconds": 82907.09483371656,
     "node": 85,
     "lap": 1,
-    "dt": 82385.01710176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5379140424817024,
+    "\u03c4_multiple": 854.02
   },
   {
-    "episode_num": 175,
-    "phi_power": 175,
+    "episode": 176,
+    "phi_power": 108.155948,
+    "clock": "23:11:47.073",
+    "seconds": 83507.07389695244,
     "node": 86,
     "lap": 1,
-    "dt": 83355.80310176678,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.15594803123161682,
+    "\u03c4_multiple": 860.2
   },
   {
-    "episode_num": 176,
-    "phi_power": 176,
+    "episode": 177,
+    "phi_power": 108.773982,
+    "clock": "23:37:57.839",
+    "seconds": 85077.83947704225,
     "node": 87,
     "lap": 1,
-    "dt": 84326.58910176679,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7739820199815313,
+    "\u03c4_multiple": 876.381
   },
   {
-    "episode_num": 177,
-    "phi_power": 177,
+    "episode": 178,
+    "phi_power": 109.392016,
+    "clock": "23:47:57.818",
+    "seconds": 85677.81854027805,
     "node": 88,
     "lap": 1,
-    "dt": 85297.37510176678,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.39201600873138887,
+    "\u03c4_multiple": 882.561
   },
   {
-    "episode_num": 178,
-    "phi_power": 178,
+    "episode": 179,
+    "phi_power": 110.01005,
+    "clock": "23:54:08.574",
+    "seconds": 86048.5747495664,
     "node": 0,
     "lap": 2,
-    "dt": -361.07897158212285,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.010049997481303308,
+    "\u03c4_multiple": 886.38
   },
   {
-    "episode_num": 179,
-    "phi_power": 179,
+    "episode": 180,
+    "phi_power": 110.628084,
+    "clock": "00:20:19.340",
+    "seconds": 1219.3403296561467,
     "node": 1,
     "lap": 2,
-    "dt": 609.707028417877,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6280839862311609,
+    "\u03c4_multiple": 12.56
   },
   {
-    "episode_num": 180,
-    "phi_power": 180,
+    "episode": 181,
+    "phi_power": 111.246118,
+    "clock": "00:30:19.319",
+    "seconds": 1819.3193928920186,
     "node": 2,
     "lap": 2,
-    "dt": 1580.493028417877,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.24611797498107535,
+    "\u03c4_multiple": 18.741
   },
   {
-    "episode_num": 181,
-    "phi_power": 181,
+    "episode": 182,
+    "phi_power": 111.864152,
+    "clock": "00:56:30.084",
+    "seconds": 3390.0849729818233,
     "node": 3,
     "lap": 2,
-    "dt": 2551.2790284178773,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8641519637309898,
+    "\u03c4_multiple": 34.921
   },
   {
-    "episode_num": 182,
-    "phi_power": 182,
+    "episode": 183,
+    "phi_power": 112.482186,
+    "clock": "01:06:30.064",
+    "seconds": 3990.0640362176387,
     "node": 4,
     "lap": 2,
-    "dt": 3522.065028417877,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.4821859524808474,
+    "\u03c4_multiple": 41.101
   },
   {
-    "episode_num": 183,
-    "phi_power": 183,
+    "episode": 184,
+    "phi_power": 113.10022,
+    "clock": "01:16:30.043",
+    "seconds": 4590.043099453511,
     "node": 5,
     "lap": 2,
-    "dt": 4492.8510284178765,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.10021994123076183,
+    "\u03c4_multiple": 47.282
   },
   {
-    "episode_num": 184,
-    "phi_power": 184,
+    "episode": 185,
+    "phi_power": 113.718254,
+    "clock": "01:42:40.808",
+    "seconds": 6160.8086795433155,
     "node": 6,
     "lap": 2,
-    "dt": 5463.6370284178765,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7182539299806763,
+    "\u03c4_multiple": 63.462
   },
   {
-    "episode_num": 185,
-    "phi_power": 185,
+    "episode": 186,
+    "phi_power": 114.336288,
+    "clock": "01:52:40.787",
+    "seconds": 6760.787742779132,
     "node": 7,
     "lap": 2,
-    "dt": 6434.423028417877,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.3362879187305339,
+    "\u03c4_multiple": 69.642
   },
   {
-    "episode_num": 186,
-    "phi_power": 186,
+    "episode": 187,
+    "phi_power": 114.954322,
+    "clock": "02:18:51.553",
+    "seconds": 8331.553322868938,
     "node": 8,
     "lap": 2,
-    "dt": 7405.209028417877,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9543219074804483,
+    "\u03c4_multiple": 85.823
   },
   {
-    "episode_num": 187,
-    "phi_power": 187,
+    "episode": 188,
+    "phi_power": 115.572356,
+    "clock": "02:28:51.532",
+    "seconds": 8931.53238610481,
     "node": 9,
     "lap": 2,
-    "dt": 8375.995028417876,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5723558962303628,
+    "\u03c4_multiple": 92.003
   },
   {
-    "episode_num": 188,
-    "phi_power": 188,
+    "episode": 189,
+    "phi_power": 116.19039,
+    "clock": "02:38:51.511",
+    "seconds": 9531.511449340625,
     "node": 10,
     "lap": 2,
-    "dt": 9346.781028417876,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.19038988498022036,
+    "\u03c4_multiple": 98.183
   },
   {
-    "episode_num": 189,
-    "phi_power": 189,
+    "episode": 190,
+    "phi_power": 116.808424,
+    "clock": "03:05:02.277",
+    "seconds": 11102.27702943043,
     "node": 11,
     "lap": 2,
-    "dt": 10317.567028417876,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8084238737301348,
+    "\u03c4_multiple": 114.364
   },
   {
-    "episode_num": 190,
-    "phi_power": 190,
+    "episode": 191,
+    "phi_power": 117.426458,
+    "clock": "03:15:02.256",
+    "seconds": 11702.256092666303,
     "node": 12,
     "lap": 2,
-    "dt": 11288.353028417876,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.42645786248004924,
+    "\u03c4_multiple": 120.544
   },
   {
-    "episode_num": 191,
-    "phi_power": 191,
+    "episode": 192,
+    "phi_power": 118.044492,
+    "clock": "03:25:02.235",
+    "seconds": 12302.235155902119,
     "node": 13,
     "lap": 2,
-    "dt": 12259.139028417876,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.04449185122990684,
+    "\u03c4_multiple": 126.724
   },
   {
-    "episode_num": 192,
-    "phi_power": 192,
+    "episode": 193,
+    "phi_power": 118.662526,
+    "clock": "03:51:13.000",
+    "seconds": 13873.000735991924,
     "node": 14,
     "lap": 2,
-    "dt": 13229.925028417876,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6625258399798213,
+    "\u03c4_multiple": 142.905
   },
   {
-    "episode_num": 193,
-    "phi_power": 193,
+    "episode": 194,
+    "phi_power": 119.28056,
+    "clock": "04:01:12.979",
+    "seconds": 14472.979799227796,
     "node": 15,
     "lap": 2,
-    "dt": 14200.711028417876,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.2805598287297357,
+    "\u03c4_multiple": 149.085
   },
   {
-    "episode_num": 194,
-    "phi_power": 194,
+    "episode": 195,
+    "phi_power": 119.898594,
+    "clock": "04:27:23.745",
+    "seconds": 16043.745379317546,
     "node": 16,
     "lap": 2,
-    "dt": 15171.497028417878,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8985938174795933,
+    "\u03c4_multiple": 165.265
   },
   {
-    "episode_num": 195,
-    "phi_power": 195,
+    "episode": 196,
+    "phi_power": 120.516628,
+    "clock": "04:37:23.724",
+    "seconds": 16643.72444255342,
     "node": 17,
     "lap": 2,
-    "dt": 16142.283028417876,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5166278062295078,
+    "\u03c4_multiple": 171.446
   },
   {
-    "episode_num": 196,
-    "phi_power": 196,
+    "episode": 197,
+    "phi_power": 121.134662,
+    "clock": "04:47:23.703",
+    "seconds": 17243.70350578929,
     "node": 18,
     "lap": 2,
-    "dt": 17113.069028417875,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.1346617949794222,
+    "\u03c4_multiple": 177.626
   },
   {
-    "episode_num": 197,
-    "phi_power": 197,
+    "episode": 198,
+    "phi_power": 121.752696,
+    "clock": "05:13:34.469",
+    "seconds": 18814.46908587904,
     "node": 19,
     "lap": 2,
-    "dt": 18083.855028417875,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7526957837292798,
+    "\u03c4_multiple": 193.806
   },
   {
-    "episode_num": 198,
-    "phi_power": 198,
+    "episode": 199,
+    "phi_power": 122.37073,
+    "clock": "05:23:34.448",
+    "seconds": 19414.448149114913,
     "node": 20,
     "lap": 2,
-    "dt": 19054.641028417875,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.37072977247919425,
+    "\u03c4_multiple": 199.987
   },
   {
-    "episode_num": 199,
-    "phi_power": 199,
+    "episode": 200,
+    "phi_power": 122.988764,
+    "clock": "05:49:45.213",
+    "seconds": 20985.213729204715,
     "node": 21,
     "lap": 2,
-    "dt": 20025.427028417875,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9887637612291087,
+    "\u03c4_multiple": 216.167
   },
   {
-    "episode_num": 200,
-    "phi_power": 200,
+    "episode": 201,
+    "phi_power": 123.606798,
+    "clock": "06:01:22.271",
+    "seconds": 21682.271444125923,
     "node": 22,
     "lap": 2,
-    "dt": 21093.291628417872,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6067977499789663,
+    "\u03c4_multiple": 223.347
   },
   {
-    "episode_num": 201,
-    "phi_power": 201,
+    "episode": 202,
+    "phi_power": 124.224832,
+    "clock": "06:11:22.250",
+    "seconds": 22282.250507361798,
     "node": 23,
     "lap": 2,
-    "dt": 22064.077628417872,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.22483173872888074,
+    "\u03c4_multiple": 229.528
   },
   {
-    "episode_num": 202,
-    "phi_power": 202,
+    "episode": 203,
+    "phi_power": 124.842866,
+    "clock": "06:37:33.016",
+    "seconds": 23853.0160874516,
     "node": 24,
     "lap": 2,
-    "dt": 23034.863628417872,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8428657274787952,
+    "\u03c4_multiple": 245.708
   },
   {
-    "episode_num": 203,
-    "phi_power": 203,
+    "episode": 204,
+    "phi_power": 125.4609,
+    "clock": "06:47:32.995",
+    "seconds": 24452.995150687417,
     "node": 25,
     "lap": 2,
-    "dt": 24005.649628417872,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.4608997162286528,
+    "\u03c4_multiple": 251.888
   },
   {
-    "episode_num": 204,
-    "phi_power": 204,
+    "episode": 205,
+    "phi_power": 126.078934,
+    "clock": "06:57:32.974",
+    "seconds": 25052.97421392329,
     "node": 26,
     "lap": 2,
-    "dt": 24976.435628417872,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.07893370497856722,
+    "\u03c4_multiple": 258.069
   },
   {
-    "episode_num": 205,
-    "phi_power": 205,
+    "episode": 206,
+    "phi_power": 126.696968,
+    "clock": "07:23:43.739",
+    "seconds": 26623.739794013094,
     "node": 27,
     "lap": 2,
-    "dt": 25947.221628417872,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6969676937284817,
+    "\u03c4_multiple": 274.249
   },
   {
-    "episode_num": 206,
-    "phi_power": 206,
+    "episode": 207,
+    "phi_power": 127.315002,
+    "clock": "07:33:43.718",
+    "seconds": 27223.71885724891,
     "node": 28,
     "lap": 2,
-    "dt": 26918.007628417872,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.31500168247833926,
+    "\u03c4_multiple": 280.43
   },
   {
-    "episode_num": 207,
-    "phi_power": 207,
+    "episode": 208,
+    "phi_power": 127.933036,
+    "clock": "07:59:54.484",
+    "seconds": 28794.484437338717,
     "node": 29,
     "lap": 2,
-    "dt": 27888.793628417872,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9330356712282537,
+    "\u03c4_multiple": 296.61
   },
   {
-    "episode_num": 208,
-    "phi_power": 208,
+    "episode": 209,
+    "phi_power": 128.55107,
+    "clock": "08:09:54.463",
+    "seconds": 29394.463500574533,
     "node": 30,
     "lap": 2,
-    "dt": 28859.579628417872,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.5510696599781113,
+    "\u03c4_multiple": 302.79
   },
   {
-    "episode_num": 209,
-    "phi_power": 209,
+    "episode": 210,
+    "phi_power": 129.169104,
+    "clock": "08:19:54.442",
+    "seconds": 29994.442563810404,
     "node": 31,
     "lap": 2,
-    "dt": 29830.365628417872,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.16910364872802575,
+    "\u03c4_multiple": 308.971
   },
   {
-    "episode_num": 210,
-    "phi_power": 210,
+    "episode": 211,
+    "phi_power": 129.787138,
+    "clock": "08:46:05.208",
+    "seconds": 31565.208143900214,
     "node": 32,
     "lap": 2,
-    "dt": 30801.151628417876,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7871376374779402,
+    "\u03c4_multiple": 325.151
   },
   {
-    "episode_num": 211,
-    "phi_power": 211,
+    "episode": 212,
+    "phi_power": 130.405172,
+    "clock": "08:56:05.187",
+    "seconds": 32165.18720713603,
     "node": 33,
     "lap": 2,
-    "dt": 31771.937628417876,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.4051716262277978,
+    "\u03c4_multiple": 331.331
   },
   {
-    "episode_num": 212,
-    "phi_power": 212,
+    "episode": 213,
+    "phi_power": 131.023206,
+    "clock": "09:06:05.166",
+    "seconds": 32765.1662703719,
     "node": 34,
     "lap": 2,
-    "dt": 32742.723628417876,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.02320561497771223,
+    "\u03c4_multiple": 337.512
   },
   {
-    "episode_num": 213,
-    "phi_power": 213,
+    "episode": 214,
+    "phi_power": 131.64124,
+    "clock": "09:32:15.931",
+    "seconds": 34335.931850461704,
     "node": 35,
     "lap": 2,
-    "dt": 33713.50962841787,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.6412396037276267,
+    "\u03c4_multiple": 353.692
   },
   {
-    "episode_num": 214,
-    "phi_power": 214,
+    "episode": 215,
+    "phi_power": 132.259274,
+    "clock": "09:42:15.910",
+    "seconds": 34935.910913697524,
     "node": 36,
     "lap": 2,
-    "dt": 34684.29562841787,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.25927359247748427,
+    "\u03c4_multiple": 359.872
   },
   {
-    "episode_num": 215,
-    "phi_power": 215,
+    "episode": 216,
+    "phi_power": 132.877308,
+    "clock": "10:08:26.676",
+    "seconds": 36506.67649378733,
     "node": 37,
     "lap": 2,
-    "dt": 35655.08162841787,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.8773075812273987,
+    "\u03c4_multiple": 376.053
   },
   {
-    "episode_num": 216,
-    "phi_power": 216,
+    "episode": 217,
+    "phi_power": 133.495342,
+    "clock": "10:18:26.655",
+    "seconds": 37106.6555570232,
     "node": 38,
     "lap": 2,
-    "dt": 36625.86762841787,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.49534156997731316,
+    "\u03c4_multiple": 382.233
   },
   {
-    "episode_num": 217,
-    "phi_power": 217,
+    "episode": 218,
+    "phi_power": 134.113376,
+    "clock": "10:28:26.634",
+    "seconds": 37706.634620259014,
     "node": 39,
     "lap": 2,
-    "dt": 37596.65362841787,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.11337555872717076,
+    "\u03c4_multiple": 388.413
   },
   {
-    "episode_num": 218,
-    "phi_power": 218,
+    "episode": 219,
+    "phi_power": 134.73141,
+    "clock": "10:54:37.400",
+    "seconds": 39277.40020034882,
     "node": 40,
     "lap": 2,
-    "dt": 38567.43962841787,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.7314095474770852,
+    "\u03c4_multiple": 404.594
   },
   {
-    "episode_num": 219,
-    "phi_power": 219,
+    "episode": 220,
+    "phi_power": 135.349444,
+    "clock": "11:04:37.379",
+    "seconds": 39877.37926358469,
     "node": 41,
     "lap": 2,
-    "dt": 39538.22562841787,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.34944353622699964,
+    "\u03c4_multiple": 410.774
   },
   {
-    "episode_num": 220,
-    "phi_power": 220,
+    "episode": 221,
+    "phi_power": 135.967478,
+    "clock": "11:30:48.144",
+    "seconds": 41448.14484367444,
     "node": 42,
     "lap": 2,
-    "dt": 40509.01162841787,
-    "glyph": "",
-    "lore": ""
-  },
-  {
-    "episode_num": 221,
-    "phi_power": 221,
-    "node": 43,
-    "lap": 2,
-    "dt": 41479.79762841787,
-    "glyph": "",
-    "lore": ""
+    "\u03bc": 0.9674775249768572,
+    "\u03c4_multiple": 426.954
   }
 ]

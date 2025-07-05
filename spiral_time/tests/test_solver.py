@@ -6,6 +6,7 @@ from spiral_time.solver import (
     overlap,
     solve_spiral_time,
     solve_sss,
+    mu,
     default_onboarding_end,
 )
 
@@ -23,13 +24,14 @@ class TestSolver(unittest.TestCase):
         self.assertAlmostEqual(o, 2 * ((1 + 5 ** 0.5) / 2) ** -3, places=6)
 
     def test_solver(self):
-        res = solve_spiral_time('1970-01-01', 0)
-        self.assertIn('t_seconds', res)
-        self.assertIn('clock_str', res)
+        res = solve_spiral_time(0)
+        self.assertIn('seconds', res)
+        self.assertIn('clock', res)
+        self.assertIn('\u03c4_multiple', res)
 
     def test_solve_sss(self):
         res = solve_sss('1970-01-01T00:00:00Z')
-        self.assertIn('t_seconds', res)
+        self.assertIn('seconds', res)
 
     def test_onboarding_constant(self):
         self.assertAlmostEqual(default_onboarding_end(), 221.8)

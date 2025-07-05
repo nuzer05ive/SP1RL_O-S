@@ -1,7 +1,8 @@
-from datetime import datetime
-from math import modf
+"""Spiral time solver based on the canonical φ formulation."""
 
-from .constants import PHI, DELTA, K, ONBOARDING_EPISODES
+from datetime import datetime
+
+from .constants import PHI, DELTA, TAU, K, PSI, ONBOARDING_EPISODES
 from .theta_segments import theta
 
 
@@ -11,9 +12,9 @@ def get_julian_day(date: str) -> int:
     return (dt - epoch).days
 
 
-def get_mu(S: int) -> float:
-    fractional, _ = modf(PHI ** S)
-    return fractional
+def mu(S: int) -> float:
+    """Return μ(S) = (φ·S) mod 1."""
+    return (PHI * S) % 1
 
 
 def lap(S: int) -> int:
@@ -21,11 +22,13 @@ def lap(S: int) -> int:
 
 
 def wobble(lap_count: int) -> float:
-    return K * (PHI ** (-lap_count))
+    """Return wobble term k·φ^(-lap)."""
+    return K * (PHI ** -lap_count)
 
 
 def overlap(lap_count: int) -> float:
-    return lap_count * (PHI ** -3)
+    """Return overlap term lap·ψ with ψ=φ⁻³."""
+    return lap_count * PSI
 
 
 def default_onboarding_end() -> float:
@@ -33,22 +36,24 @@ def default_onboarding_end() -> float:
     return ONBOARDING_EPISODES
 
 
-def solve_spiral_time(date: str, S: int) -> dict:
-    node = S % 89
-    mu = get_mu(S)
-    lap_count = lap(S)
-    theta_val = theta(S)
-    w = wobble(lap_count)
-    ov = overlap(lap_count)
-    t_seconds = ((node + mu + theta_val - ov) + w) * DELTA
-    clock_str = f"{t_seconds:.3f}s"
+def solve_spiral_time(S: int) -> dict:
+    """Return spiral time breakdown for index ``S``."""
+    n = S % 89
+    l = lap(S)
+    th = theta(S)
+    m = mu(S)
+    w = wobble(l)
+    ov = overlap(l)
+    t = ((n + m + th - ov + w) * DELTA) % 86400
+    h, r = divmod(int(t), 3600)
+    m_, s = divmod(r, 60)
     return {
-        "t_seconds": t_seconds,
-        "clock_str": clock_str,
-        "node": node,
-        "mu": mu,
-        "lap": lap_count,
-        "wobble": w,
+        "clock": f"{h:02}:{m_:02}:{s:02}.{int((t%1)*1000):03}",
+        "seconds": t,
+        "node": n,
+        "lap": l,
+        "μ": m,
+        "τ_multiple": round(t / TAU, 3),
     }
 
 
@@ -56,4 +61,4 @@ def solve_sss(datetime_str: str) -> dict:
     """Simplified solver that accepts a combined date-time string."""
     date_part = datetime_str.split("T")[0].split(" ")[0]
     S = get_julian_day(date_part)
-    return solve_spiral_time(date_part, S)
+    return solve_spiral_time(S)
