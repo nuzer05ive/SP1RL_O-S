@@ -45,3 +45,10 @@ def solve_spiral_time(date: str, S: int) -> dict:
         "lap": lap_count,
         "wobble": w,
     }
+
+
+def solve_sss(datetime_str: str) -> dict:
+    """Simplified solver that accepts a combined date-time string."""
+    date_part = datetime_str.split("T")[0].split(" ")[0]
+    S = get_julian_day(date_part)
+    return solve_spiral_time(date_part, S)

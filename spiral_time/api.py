@@ -3,7 +3,7 @@
 from flask import Flask, request, jsonify
 
 from datetime import datetime
-from .solver import solve_spiral_time, get_julian_day
+from .solver import solve_spiral_time, get_julian_day, solve_sss
 
 app = Flask(__name__)
 
@@ -20,6 +20,16 @@ def solve_time_endpoint():
     if date is None:
         date = datetime.utcnow().strftime('%Y-%m-%d')
     result = solve_spiral_time(date, int(S))
+    return jsonify(result)
+
+
+@app.route('/solve_sss', methods=['POST'])
+def solve_sss_endpoint():
+    data = request.get_json() or {}
+    dt = data.get('datetime')
+    if not dt:
+        return jsonify({'error': 'datetime required'}), 400
+    result = solve_sss(dt)
     return jsonify(result)
 
 
