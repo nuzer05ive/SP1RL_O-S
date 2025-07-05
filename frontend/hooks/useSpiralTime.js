@@ -4,11 +4,10 @@ export default function useSpiralTime(date, S) {
   const [time, setTime] = useState(null);
 
   useEffect(() => {
-    fetch('/solve_time', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ date, S }),
-    })
+    const params = new URLSearchParams();
+    if (date) params.set('date', date);
+    if (S !== undefined) params.set('S', S);
+    fetch(`/api/sss/solve?${params.toString()}`)
       .then(res => res.json())
       .then(setTime);
   }, [date, S]);
