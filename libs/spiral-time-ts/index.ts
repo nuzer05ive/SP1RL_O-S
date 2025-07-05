@@ -1,6 +1,6 @@
-import { PHI, DELTA, K, THETA_SEGMENTS } from './constants';
+import { PHI, DELTA, TAU, K, PSI, THETA_SEGMENTS } from './constants';
 
-export { PHI, DELTA, K, THETA_SEGMENTS };
+export { PHI, DELTA, TAU, K, PSI, THETA_SEGMENTS };
 
 export function getJulianDay(dateStr: string): number {
   const date = new Date(dateStr + 'T00:00:00Z');
@@ -9,8 +9,8 @@ export function getJulianDay(dateStr: string): number {
   return Math.floor(diff / 86400000);
 }
 
-export function getMu(S: number): number {
-  return Math.pow(PHI, S) % 1;
+export function mu(S: number): number {
+  return (PHI * S) % 1;
 }
 
 export function lap(S: number): number {
@@ -22,7 +22,7 @@ export function wobble(lapCount: number): number {
 }
 
 export function overlap(lapCount: number): number {
-  return lapCount * Math.pow(PHI, -3);
+  return lapCount * PSI;
 }
 
 export function theta(S: number): number {
@@ -36,30 +36,44 @@ export function theta(S: number): number {
 }
 
 export interface SpiralTime {
-  t_seconds: number;
-  clock_str: string;
+  clock: string;
+  seconds: number;
   node: number;
-  mu: number;
   lap: number;
-  wobble: number;
+  μ: number;
+  τ_multiple: number;
 }
 
-export function solveSpiralTime(date: string, S?: number): SpiralTime & { episode: number } {
-  const julian = S !== undefined ? S : getJulianDay(date);
-  const node = julian % 89;
-  const mu = getMu(julian);
-  const lapCount = lap(julian);
-  const thetaVal = theta(julian);
-  const w = wobble(lapCount);
-  const ov = overlap(lapCount);
-  const t_seconds = ((node + mu + thetaVal - ov) + w) * DELTA;
+export function solveSpiralTime(S: number): {
+  clock: string;
+  seconds: number;
+  node: number;
+  lap: number;
+  μ: number;
+  τ_multiple: number;
+} {
+  const n = S % 89;
+  const l = lap(S);
+  const th = theta(S);
+  const mVal = mu(S);
+  const w = wobble(l);
+  const ov = overlap(l);
+  const t = ((n + mVal + th - ov + w) * DELTA) % 86400;
+  const h = Math.floor(t / 3600);
+  const r = t % 3600;
+  const m = Math.floor(r / 60);
+  const s = Math.floor(r % 60);
+  const ms = Math.floor((t % 1) * 1000);
   return {
-    t_seconds,
-    clock_str: `${t_seconds.toFixed(3)}s`,
-    node,
-    mu,
-    lap: lapCount,
-    wobble: w,
-    episode: julian
+    clock: `${h.toString().padStart(2, '0')}:${m
+      .toString()
+      .padStart(2, '0')}:${s.toString().padStart(2, '0')}.${ms
+      .toString()
+      .padStart(3, '0')}`,
+    seconds: t,
+    node: n,
+    lap: l,
+    μ: mVal,
+    τ_multiple: parseFloat((t / TAU).toFixed(3))
   };
 }

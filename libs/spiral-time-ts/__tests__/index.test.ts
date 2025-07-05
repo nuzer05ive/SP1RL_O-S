@@ -16,7 +16,7 @@ test('wobble and overlap positive', () => {
 });
 
 test('solver output', () => {
-  const res = solveSpiralTime('1970-01-01', 0);
-  expect(res).toHaveProperty('t_seconds');
-  expect(res).toHaveProperty('clock_str');
+  const res = solveSpiralTime(0);
+  expect(res).toHaveProperty('seconds');
+  expect(res).toHaveProperty('clock');
 });

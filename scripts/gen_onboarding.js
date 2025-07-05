@@ -2,14 +2,14 @@ const fs = require('fs');
 const { solveSpiralTime } = require('../libs/spiral-time-ts');
 
 const episodes = [];
-for (let i = 0; i <= 221; i++) {
-  const res = solveSpiralTime('1970-01-01', i);
+for (let i = 0; i <= 220; i++) {
+  const res = solveSpiralTime(i);
   episodes.push({
-    episode_num: i,
-    phi_power: i,
+    episode: i + 1,
+    phi_power: Number((i / ((1 + Math.sqrt(5)) / 2)).toFixed(6)),
     node: res.node,
     lap: res.lap,
-    dt: res.t_seconds,
+    seconds: res.seconds,
     glyph: '',
     lore: ''
   });

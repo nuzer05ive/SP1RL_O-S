@@ -17,9 +17,7 @@ def solve_time_endpoint():
         if not date:
             return jsonify({'error': 'date required'}), 400
         S = get_julian_day(date)
-    if date is None:
-        date = datetime.utcnow().strftime('%Y-%m-%d')
-    result = solve_spiral_time(date, int(S))
+    result = solve_spiral_time(int(S))
     return jsonify(result)
 
 
