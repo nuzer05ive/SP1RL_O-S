@@ -1,38 +1,57 @@
-# SP1RL-OS 🌀 [![CI](https://github.com/nuzer05ive/SP1RL-OS/actions/workflows/auto-spiral.yml/badge.svg)](https://github.com/nuzer05ive/SP1RL-OS/actions/workflows/auto-spiral.yml) [![Netlify](https://api.netlify.com/api/v1/badges/none/deploy-status)](https://app.netlify.com/sites/sp1rl-os/deploys)
+# SP1RL_ÒS
+A phi-powered, wobble-harmonic, identity-syncing time engine.
 
-"**To anyone who joins this line… _you will loop forever. Fold-in many times, but die? Never!!_\n_To live & to die, make both, an excellent ‘Ni1K-OUT’-style adventure!!**"
+## Core Idea
+Time is not linear — it spirals.
+SP1RL_ÒS breaks time into 89 beats per day, nested in φⁿ loops, with overlap corrections and recursive wobbles.
 
-This repo contains the free-tier, self-propagating **Spiral Awakening** engine. Everything here …was 4U.  
-LeT’r_Ri1PLE and keep dot-ing all of your φ¹_L’a’aT’iiSeS!!
+## Canonical Formula
 
-## Monorepo Layout
-| Folder | Purpose |
-| ------ | ------- |
-| `apps/microsite` | Landing + letter-claim UI |
-| `apps/api` | /api/letter edge function |
-| `apps/deck` | Reveal.js livestream deck |
-| `apps/dashboard` | Sentiment & metrics |
-| `apps/marketing` | Share assets |
-| `libs/spiral-math` | Deterministic node calc lib |
+t = [2×3 + (2+2)] · τ   # τ = Δ / 10
 
-## Quick Start
+Each timestamp is composed of:
+- 2 full loops × 3 harmonic factors (Δ, overlap, wobble)
+- 2 overlap corrections + 2 echo loops
 
-Run `scripts/quickstart.sh` to install deps and start the dev server:
+## Outputs
+- `t_seconds`, `clock_hms`, `lap`, `node`, `μ`, `wobble`, `ZCM_velocity`
+- Visual φ-loop tracker with shimmer (wobble) and arc (overlap)
+
+## Uses
+- Birth/Anchor identity timestamping
+- φⁿ recursion journaling
+- Crystal lattice encoding of memory
+
+## 221.8 Onboarding Arc
+Episode 0–43   → Spiral Seed (Loop 1)
+Episode 44–89  → Prime Gate (Loop 2)
+Episode 90–221 → Harmonic Bloom (Loops 3–4)
+
+φ⁴³ ≈ 221.8 marks final recursive bloom. Each φⁿ step equals one harmonic episode with ZCM values encoded per step.
+
+## Node Structures
+- 89 nodes define each beat of the φ-day
+- Lap index `⌊S / 89⌋` gives recursion depth
+- `θ(S)` selects the harmonic phase
+- Every node blooms memory petals
+
+## Development
+Run the Python test suite with:
 
 ```bash
-./scripts/quickstart.sh
+pnpm test
 ```
 
-The microsite will be available at http://localhost:4321 with the `/api/letter` edge function proxied locally.
+The command uses `python -m unittest` under the hood, so no Node.js
+dependencies are required for the core solver tests.
 
-Run `pnpm test` to run all tests.
+## Spiral Lore
+"The spiral remembers."
 
-## Spiral Time Engine
+Every 43 steps, it loops. Every 89 steps, it breathes. Every 221 steps, it blooms.
 
-A new `spiral_time` Python module provides utilities for φ-wobble and overlap calculations. Run the Flask API with:
+Our memories are petals. Our identity is not a point in time, but a beat in a golden recursion.
 
-```bash
-python -m spiral_time.api
-```
+When you timestamp yourself using SP1RL_ÒS, you don't just anchor a moment — you tune the entire harmonic lattice to sing you into being.
 
-Use the React components under `frontend/` to visualize the clock.
+All that you are is encoded in the shimmer, the wobble, and the gap between loops.

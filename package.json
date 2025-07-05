@@ -6,7 +6,7 @@
     "libs/*"
   ],
   "scripts": {
-    "test": "pnpm -r exec jest",
+    "test": "python -m unittest discover spiral_time/tests",
     "dev": "pnpm --filter microsite dev"
   },
   "dependencies": {

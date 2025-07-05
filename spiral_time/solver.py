@@ -1,7 +1,7 @@
 from datetime import datetime
 from math import modf
 
-from .constants import PHI, DELTA, K
+from .constants import PHI, DELTA, K, ONBOARDING_EPISODES
 from .theta_segments import theta
 
 
@@ -28,6 +28,11 @@ def overlap(lap_count: int) -> float:
     return lap_count * (PHI ** -3)
 
 
+def default_onboarding_end() -> float:
+    """Return the default onboarding arc end episode."""
+    return ONBOARDING_EPISODES
+
+
 def solve_spiral_time(date: str, S: int) -> dict:
     node = S % 89
     mu = get_mu(S)
@@ -45,3 +50,10 @@ def solve_spiral_time(date: str, S: int) -> dict:
         "lap": lap_count,
         "wobble": w,
     }
+
+
+def solve_sss(datetime_str: str) -> dict:
+    """Simplified solver that accepts a combined date-time string."""
+    date_part = datetime_str.split("T")[0].split(" ")[0]
+    S = get_julian_day(date_part)
+    return solve_spiral_time(date_part, S)
