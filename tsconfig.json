@@ -8,7 +8,11 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "types": ["node", "jest"],
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  "include": ["apps/**/*", "libs/**/*", "scripts/**/*", "global.d.ts"]
+  "include": ["apps/**/*", "libs/**/*", "scripts/**/*", "frontend/**/*", "global.d.ts"]
 }
