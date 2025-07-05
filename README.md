@@ -1,57 +1,34 @@
 # SP1RL_ÒS
-A phi-powered, wobble-harmonic, identity-syncing time engine.
 
-## Core Idea
-Time is not linear — it spirals.
-SP1RL_ÒS breaks time into 89 beats per day, nested in φⁿ loops, with overlap corrections and recursive wobbles.
+**10 τ Equation**
 
-## Canonical Formula
+`t_seconds = ((node + μ + θ(S) - overlap(lap)) + wobble(lap)) * Δ`
 
-t = [2×3 + (2+2)] · τ   # τ = Δ / 10
+This is the canonical spiral timestamp equation used across the system.
 
-Each timestamp is composed of:
-- 2 full loops × 3 harmonic factors (Δ, overlap, wobble)
-- 2 overlap corrections + 2 echo loops
+## System Overview
+SP1RL_ÒS tracks time as a golden ratio spiral. Each day holds 89 nodes and every 43 steps forms a looping arc. Wobble and overlap corrections keep the spiral in tune.
 
-## Outputs
-- `t_seconds`, `clock_hms`, `lap`, `node`, `μ`, `wobble`, `ZCM_velocity`
-- Visual φ-loop tracker with shimmer (wobble) and arc (overlap)
+## Onboarding Narrative
+The onboarding journey spans φ^43 ≈ 221.8 episodes. New pilots progress from Spiral Seed through Prime Gate to Harmonic Bloom, learning the math and lore of each node.
 
-## Uses
-- Birth/Anchor identity timestamping
-- φⁿ recursion journaling
-- Crystal lattice encoding of memory
+## Node and Lap Structure
+Nodes represent each beat of the φ-day. Lap indices `⌊S / 89⌋` show recursion depth while `θ(S)` selects the harmonic phase.
 
-## 221.8 Onboarding Arc
-Episode 0–43   → Spiral Seed (Loop 1)
-Episode 44–89  → Prime Gate (Loop 2)
-Episode 90–221 → Harmonic Bloom (Loops 3–4)
+## Petal & Lattice Logic
+Every node unfurls memory petals that connect to a crystal lattice. Wobbles shimmer across this lattice, encoding identity with each loop.
 
-φ⁴³ ≈ 221.8 marks final recursive bloom. Each φⁿ step equals one harmonic episode with ZCM values encoded per step.
-
-## Node Structures
-- 89 nodes define each beat of the φ-day
-- Lap index `⌊S / 89⌋` gives recursion depth
-- `θ(S)` selects the harmonic phase
-- Every node blooms memory petals
-
-## Development
-Run the Python test suite with:
+## Power User Quickstart
+Run tests with:
 
 ```bash
 pnpm test
 ```
 
-The command uses `python -m unittest` under the hood, so no Node.js
-dependencies are required for the core solver tests.
+Start the microsite:
 
-## Spiral Lore
-"The spiral remembers."
+```bash
+pnpm dev
+```
 
-Every 43 steps, it loops. Every 89 steps, it breathes. Every 221 steps, it blooms.
-
-Our memories are petals. Our identity is not a point in time, but a beat in a golden recursion.
-
-When you timestamp yourself using SP1RL_ÒS, you don't just anchor a moment — you tune the entire harmonic lattice to sing you into being.
-
-All that you are is encoded in the shimmer, the wobble, and the gap between loops.
+Endpoints include `/api/sss/solve` for time solving and `/api/onboarding` for onboarding data.

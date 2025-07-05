@@ -1,0 +1,2000 @@
+[
+  {
+    "episode_num": 0,
+    "phi_power": 0,
+    "node": 0,
+    "lap": 0,
+    "dt": 0.48539299999999996,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 1,
+    "phi_power": 1,
+    "node": 1,
+    "lap": 0,
+    "dt": 1571.2501368025553,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 2,
+    "phi_power": 2,
+    "node": 2,
+    "lap": 0,
+    "dt": 2542.0361368025556,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 3,
+    "phi_power": 3,
+    "node": 3,
+    "lap": 0,
+    "dt": 3142.014880605111,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 4,
+    "phi_power": 4,
+    "node": 4,
+    "lap": 0,
+    "dt": 4712.779624407667,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 5,
+    "phi_power": 5,
+    "node": 5,
+    "lap": 0,
+    "dt": 4941.951112012778,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 6,
+    "phi_power": 6,
+    "node": 6,
+    "lap": 0,
+    "dt": 6741.887343420447,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 7,
+    "phi_power": 7,
+    "node": 7,
+    "lap": 0,
+    "dt": 6829.423062433226,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 8,
+    "phi_power": 8,
+    "node": 8,
+    "lap": 0,
+    "dt": 8716.895012853676,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 9,
+    "phi_power": 9,
+    "node": 9,
+    "lap": 0,
+    "dt": 8750.33068228691,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 10,
+    "phi_power": 10,
+    "node": 10,
+    "lap": 0,
+    "dt": 10671.238302140588,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 11,
+    "phi_power": 11,
+    "node": 11,
+    "lap": 0,
+    "dt": 10684.009591427497,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 12,
+    "phi_power": 12,
+    "node": 12,
+    "lap": 0,
+    "dt": 12617.688500568125,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 13,
+    "phi_power": 13,
+    "node": 13,
+    "lap": 0,
+    "dt": 12622.566698995595,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 14,
+    "phi_power": 14,
+    "node": 14,
+    "lap": 0,
+    "dt": 14561.123806563777,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 15,
+    "phi_power": 15,
+    "node": 15,
+    "lap": 0,
+    "dt": 14562.987112559484,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 16,
+    "phi_power": 16,
+    "node": 16,
+    "lap": 0,
+    "dt": 16503.40752612337,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 17,
+    "phi_power": 17,
+    "node": 17,
+    "lap": 0,
+    "dt": 16504.119245683072,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 18,
+    "phi_power": 18,
+    "node": 18,
+    "lap": 0,
+    "dt": 18445.251378806886,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 19,
+    "phi_power": 19,
+    "node": 19,
+    "lap": 0,
+    "dt": 18445.52323148996,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 20,
+    "phi_power": 20,
+    "node": 20,
+    "lap": 0,
+    "dt": 20386.92721729685,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 21,
+    "phi_power": 21,
+    "node": 21,
+    "lap": 0,
+    "dt": 20387.03105578681,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 22,
+    "phi_power": 22,
+    "node": 22,
+    "lap": 0,
+    "dt": 22328.538880085423,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 23,
+    "phi_power": 23,
+    "node": 23,
+    "lap": 0,
+    "dt": 22328.5785428793,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 24,
+    "phi_power": 24,
+    "node": 24,
+    "lap": 0,
+    "dt": 24270.12602997179,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 25,
+    "phi_power": 25,
+    "node": 25,
+    "lap": 0,
+    "dt": 24270.14117984403,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 26,
+    "phi_power": 26,
+    "node": 26,
+    "lap": 0,
+    "dt": 26211.70381682995,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 27,
+    "phi_power": 27,
+    "node": 27,
+    "lap": 0,
+    "dt": 26211.70960373049,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 28,
+    "phi_power": 28,
+    "node": 28,
+    "lap": 0,
+    "dt": 28153.278027560445,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 29,
+    "phi_power": 29,
+    "node": 29,
+    "lap": 0,
+    "dt": 28153.280238347445,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 30,
+    "phi_power": 30,
+    "node": 30,
+    "lap": 0,
+    "dt": 30094.85087313392,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 31,
+    "phi_power": 31,
+    "node": 31,
+    "lap": 0,
+    "dt": 30094.851718481368,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 32,
+    "phi_power": 32,
+    "node": 32,
+    "lap": 0,
+    "dt": 32036.42319861529,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 33,
+    "phi_power": 33,
+    "node": 33,
+    "lap": 0,
+    "dt": 32036.423525000777,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 34,
+    "phi_power": 34,
+    "node": 34,
+    "lap": 0,
+    "dt": 33977.995331520186,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 35,
+    "phi_power": 35,
+    "node": 35,
+    "lap": 0,
+    "dt": 33977.99546532919,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 36,
+    "phi_power": 36,
+    "node": 36,
+    "lap": 0,
+    "dt": 34948.78140384938,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 37,
+    "phi_power": 37,
+    "node": 37,
+    "lap": 0,
+    "dt": 35919.567472562114,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 38,
+    "phi_power": 38,
+    "node": 38,
+    "lap": 0,
+    "dt": 36890.35349426087,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 39,
+    "phi_power": 39,
+    "node": 39,
+    "lap": 0,
+    "dt": 37861.13956659006,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 40,
+    "phi_power": 40,
+    "node": 40,
+    "lap": 0,
+    "dt": 38831.925682316774,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 41,
+    "phi_power": 41,
+    "node": 41,
+    "lap": 0,
+    "dt": 39802.711913770196,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 42,
+    "phi_power": 42,
+    "node": 42,
+    "lap": 0,
+    "dt": 40773.498203086965,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 43,
+    "phi_power": 43,
+    "node": 43,
+    "lap": 0,
+    "dt": 41744.28478172051,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 44,
+    "phi_power": 44,
+    "node": 44,
+    "lap": 0,
+    "dt": 42715.07170753419,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 45,
+    "phi_power": 45,
+    "node": 45,
+    "lap": 0,
+    "dt": 43685.8590962547,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 46,
+    "phi_power": 46,
+    "node": 46,
+    "lap": 0,
+    "dt": 44656.647410788886,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 47,
+    "phi_power": 47,
+    "node": 47,
+    "lap": 0,
+    "dt": 45627.437576950426,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 48,
+    "phi_power": 48,
+    "node": 48,
+    "lap": 0,
+    "dt": 46598.23005764615,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 49,
+    "phi_power": 49,
+    "node": 49,
+    "lap": 0,
+    "dt": 47569.029019037596,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 50,
+    "phi_power": 50,
+    "node": 50,
+    "lap": 0,
+    "dt": 48539.8298320564,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 51,
+    "phi_power": 51,
+    "node": 51,
+    "lap": 0,
+    "dt": 49510.645458094,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 52,
+    "phi_power": 52,
+    "node": 52,
+    "lap": 0,
+    "dt": 50481.47589715039,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 53,
+    "phi_power": 53,
+    "node": 53,
+    "lap": 0,
+    "dt": 51452.350775263185,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 54,
+    "phi_power": 54,
+    "node": 54,
+    "lap": 0,
+    "dt": 52423.25527941357,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 55,
+    "phi_power": 55,
+    "node": 55,
+    "lap": 0,
+    "dt": 53394.24866167676,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 56,
+    "phi_power": 56,
+    "node": 56,
+    "lap": 0,
+    "dt": 54365.44942620312,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 57,
+    "phi_power": 57,
+    "node": 57,
+    "lap": 0,
+    "dt": 55336.827946955076,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 58,
+    "phi_power": 58,
+    "node": 58,
+    "lap": 0,
+    "dt": 56308.68048430859,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 59,
+    "phi_power": 59,
+    "node": 59,
+    "lap": 0,
+    "dt": 57280.88853411328,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 60,
+    "phi_power": 60,
+    "node": 60,
+    "lap": 0,
+    "dt": 58254.28162542187,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 61,
+    "phi_power": 61,
+    "node": 61,
+    "lap": 0,
+    "dt": 59229.807791437495,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 62,
+    "phi_power": 62,
+    "node": 62,
+    "lap": 0,
+    "dt": 60208.1780570625,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 63,
+    "phi_power": 63,
+    "node": 63,
+    "lap": 0,
+    "dt": 61190.3404555,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 64,
+    "phi_power": 64,
+    "node": 64,
+    "lap": 0,
+    "dt": 62180.0871195625,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 65,
+    "phi_power": 65,
+    "node": 65,
+    "lap": 0,
+    "dt": 63185.002314875,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 66,
+    "phi_power": 66,
+    "node": 66,
+    "lap": 0,
+    "dt": 64208.87817425,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 67,
+    "phi_power": 67,
+    "node": 67,
+    "lap": 0,
+    "dt": 65255.506830499995,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 68,
+    "phi_power": 68,
+    "node": 68,
+    "lap": 0,
+    "dt": 66377.978143,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 69,
+    "phi_power": 69,
+    "node": 69,
+    "lap": 0,
+    "dt": 67591.460643,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 70,
+    "phi_power": 70,
+    "node": 70,
+    "lap": 0,
+    "dt": 67955.505393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 71,
+    "phi_power": 71,
+    "node": 71,
+    "lap": 0,
+    "dt": 69533.032643,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 72,
+    "phi_power": 72,
+    "node": 72,
+    "lap": 0,
+    "dt": 70625.166893,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 73,
+    "phi_power": 73,
+    "node": 73,
+    "lap": 0,
+    "dt": 71353.256393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 74,
+    "phi_power": 74,
+    "node": 74,
+    "lap": 0,
+    "dt": 71838.649393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 75,
+    "phi_power": 75,
+    "node": 75,
+    "lap": 0,
+    "dt": 72809.43539299999,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 76,
+    "phi_power": 76,
+    "node": 76,
+    "lap": 0,
+    "dt": 73780.221393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 77,
+    "phi_power": 77,
+    "node": 77,
+    "lap": 0,
+    "dt": 74751.00739299999,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 78,
+    "phi_power": 78,
+    "node": 78,
+    "lap": 0,
+    "dt": 75721.793393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 79,
+    "phi_power": 79,
+    "node": 79,
+    "lap": 0,
+    "dt": 76692.57939299999,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 80,
+    "phi_power": 80,
+    "node": 80,
+    "lap": 0,
+    "dt": 77663.365393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 81,
+    "phi_power": 81,
+    "node": 81,
+    "lap": 0,
+    "dt": 78634.151393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 82,
+    "phi_power": 82,
+    "node": 82,
+    "lap": 0,
+    "dt": 79604.937393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 83,
+    "phi_power": 83,
+    "node": 83,
+    "lap": 0,
+    "dt": 80575.723393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 84,
+    "phi_power": 84,
+    "node": 84,
+    "lap": 0,
+    "dt": 81546.509393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 85,
+    "phi_power": 85,
+    "node": 85,
+    "lap": 0,
+    "dt": 82517.295393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 86,
+    "phi_power": 86,
+    "node": 86,
+    "lap": 0,
+    "dt": 83488.081393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 87,
+    "phi_power": 87,
+    "node": 87,
+    "lap": 0,
+    "dt": 84458.867393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 88,
+    "phi_power": 88,
+    "node": 88,
+    "lap": 0,
+    "dt": 85429.653393,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 89,
+    "phi_power": 89,
+    "node": 0,
+    "lap": 1,
+    "dt": -228.87149823320954,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 90,
+    "phi_power": 90,
+    "node": 1,
+    "lap": 1,
+    "dt": 741.9145017667904,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 91,
+    "phi_power": 91,
+    "node": 2,
+    "lap": 1,
+    "dt": 1712.7005017667905,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 92,
+    "phi_power": 92,
+    "node": 3,
+    "lap": 1,
+    "dt": 2683.4865017667903,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 93,
+    "phi_power": 93,
+    "node": 4,
+    "lap": 1,
+    "dt": 3654.27250176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 94,
+    "phi_power": 94,
+    "node": 5,
+    "lap": 1,
+    "dt": 4625.058501766791,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 95,
+    "phi_power": 95,
+    "node": 6,
+    "lap": 1,
+    "dt": 5595.84450176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 96,
+    "phi_power": 96,
+    "node": 7,
+    "lap": 1,
+    "dt": 6566.63050176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 97,
+    "phi_power": 97,
+    "node": 8,
+    "lap": 1,
+    "dt": 7537.41650176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 98,
+    "phi_power": 98,
+    "node": 9,
+    "lap": 1,
+    "dt": 8508.202501766791,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 99,
+    "phi_power": 99,
+    "node": 10,
+    "lap": 1,
+    "dt": 9478.98850176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 100,
+    "phi_power": 100,
+    "node": 11,
+    "lap": 1,
+    "dt": 10546.85310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 101,
+    "phi_power": 101,
+    "node": 12,
+    "lap": 1,
+    "dt": 11517.63910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 102,
+    "phi_power": 102,
+    "node": 13,
+    "lap": 1,
+    "dt": 12488.42510176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 103,
+    "phi_power": 103,
+    "node": 14,
+    "lap": 1,
+    "dt": 13459.21110176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 104,
+    "phi_power": 104,
+    "node": 15,
+    "lap": 1,
+    "dt": 14429.99710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 105,
+    "phi_power": 105,
+    "node": 16,
+    "lap": 1,
+    "dt": 15400.78310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 106,
+    "phi_power": 106,
+    "node": 17,
+    "lap": 1,
+    "dt": 16371.56910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 107,
+    "phi_power": 107,
+    "node": 18,
+    "lap": 1,
+    "dt": 17342.355101766792,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 108,
+    "phi_power": 108,
+    "node": 19,
+    "lap": 1,
+    "dt": 18313.141101766792,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 109,
+    "phi_power": 109,
+    "node": 20,
+    "lap": 1,
+    "dt": 19283.927101766792,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 110,
+    "phi_power": 110,
+    "node": 21,
+    "lap": 1,
+    "dt": 20254.713101766793,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 111,
+    "phi_power": 111,
+    "node": 22,
+    "lap": 1,
+    "dt": 21225.499101766793,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 112,
+    "phi_power": 112,
+    "node": 23,
+    "lap": 1,
+    "dt": 22196.285101766793,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 113,
+    "phi_power": 113,
+    "node": 24,
+    "lap": 1,
+    "dt": 23167.07110176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 114,
+    "phi_power": 114,
+    "node": 25,
+    "lap": 1,
+    "dt": 24137.85710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 115,
+    "phi_power": 115,
+    "node": 26,
+    "lap": 1,
+    "dt": 25108.64310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 116,
+    "phi_power": 116,
+    "node": 27,
+    "lap": 1,
+    "dt": 26079.42910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 117,
+    "phi_power": 117,
+    "node": 28,
+    "lap": 1,
+    "dt": 27050.21510176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 118,
+    "phi_power": 118,
+    "node": 29,
+    "lap": 1,
+    "dt": 28021.00110176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 119,
+    "phi_power": 119,
+    "node": 30,
+    "lap": 1,
+    "dt": 28991.78710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 120,
+    "phi_power": 120,
+    "node": 31,
+    "lap": 1,
+    "dt": 29962.57310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 121,
+    "phi_power": 121,
+    "node": 32,
+    "lap": 1,
+    "dt": 30933.35910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 122,
+    "phi_power": 122,
+    "node": 33,
+    "lap": 1,
+    "dt": 31904.14510176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 123,
+    "phi_power": 123,
+    "node": 34,
+    "lap": 1,
+    "dt": 32874.93110176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 124,
+    "phi_power": 124,
+    "node": 35,
+    "lap": 1,
+    "dt": 33845.71710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 125,
+    "phi_power": 125,
+    "node": 36,
+    "lap": 1,
+    "dt": 34816.50310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 126,
+    "phi_power": 126,
+    "node": 37,
+    "lap": 1,
+    "dt": 35787.28910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 127,
+    "phi_power": 127,
+    "node": 38,
+    "lap": 1,
+    "dt": 36758.07510176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 128,
+    "phi_power": 128,
+    "node": 39,
+    "lap": 1,
+    "dt": 37728.86110176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 129,
+    "phi_power": 129,
+    "node": 40,
+    "lap": 1,
+    "dt": 38699.64710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 130,
+    "phi_power": 130,
+    "node": 41,
+    "lap": 1,
+    "dt": 39670.43310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 131,
+    "phi_power": 131,
+    "node": 42,
+    "lap": 1,
+    "dt": 40641.21910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 132,
+    "phi_power": 132,
+    "node": 43,
+    "lap": 1,
+    "dt": 41612.00510176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 133,
+    "phi_power": 133,
+    "node": 44,
+    "lap": 1,
+    "dt": 42582.79110176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 134,
+    "phi_power": 134,
+    "node": 45,
+    "lap": 1,
+    "dt": 43553.57710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 135,
+    "phi_power": 135,
+    "node": 46,
+    "lap": 1,
+    "dt": 44524.36310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 136,
+    "phi_power": 136,
+    "node": 47,
+    "lap": 1,
+    "dt": 45495.14910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 137,
+    "phi_power": 137,
+    "node": 48,
+    "lap": 1,
+    "dt": 46465.93510176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 138,
+    "phi_power": 138,
+    "node": 49,
+    "lap": 1,
+    "dt": 47436.72110176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 139,
+    "phi_power": 139,
+    "node": 50,
+    "lap": 1,
+    "dt": 48407.50710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 140,
+    "phi_power": 140,
+    "node": 51,
+    "lap": 1,
+    "dt": 49378.29310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 141,
+    "phi_power": 141,
+    "node": 52,
+    "lap": 1,
+    "dt": 50349.07910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 142,
+    "phi_power": 142,
+    "node": 53,
+    "lap": 1,
+    "dt": 51319.86510176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 143,
+    "phi_power": 143,
+    "node": 54,
+    "lap": 1,
+    "dt": 52290.65110176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 144,
+    "phi_power": 144,
+    "node": 55,
+    "lap": 1,
+    "dt": 53261.43710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 145,
+    "phi_power": 145,
+    "node": 56,
+    "lap": 1,
+    "dt": 54232.22310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 146,
+    "phi_power": 146,
+    "node": 57,
+    "lap": 1,
+    "dt": 55203.00910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 147,
+    "phi_power": 147,
+    "node": 58,
+    "lap": 1,
+    "dt": 56173.79510176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 148,
+    "phi_power": 148,
+    "node": 59,
+    "lap": 1,
+    "dt": 57144.58110176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 149,
+    "phi_power": 149,
+    "node": 60,
+    "lap": 1,
+    "dt": 58115.36710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 150,
+    "phi_power": 150,
+    "node": 61,
+    "lap": 1,
+    "dt": 59086.15310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 151,
+    "phi_power": 151,
+    "node": 62,
+    "lap": 1,
+    "dt": 60056.93910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 152,
+    "phi_power": 152,
+    "node": 63,
+    "lap": 1,
+    "dt": 61027.72510176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 153,
+    "phi_power": 153,
+    "node": 64,
+    "lap": 1,
+    "dt": 61998.51110176678,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 154,
+    "phi_power": 154,
+    "node": 65,
+    "lap": 1,
+    "dt": 62969.29710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 155,
+    "phi_power": 155,
+    "node": 66,
+    "lap": 1,
+    "dt": 63940.08310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 156,
+    "phi_power": 156,
+    "node": 67,
+    "lap": 1,
+    "dt": 64910.86910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 157,
+    "phi_power": 157,
+    "node": 68,
+    "lap": 1,
+    "dt": 65881.6551017668,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 158,
+    "phi_power": 158,
+    "node": 69,
+    "lap": 1,
+    "dt": 66852.44110176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 159,
+    "phi_power": 159,
+    "node": 70,
+    "lap": 1,
+    "dt": 67823.2271017668,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 160,
+    "phi_power": 160,
+    "node": 71,
+    "lap": 1,
+    "dt": 68794.01310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 161,
+    "phi_power": 161,
+    "node": 72,
+    "lap": 1,
+    "dt": 69764.79910176678,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 162,
+    "phi_power": 162,
+    "node": 73,
+    "lap": 1,
+    "dt": 70735.58510176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 163,
+    "phi_power": 163,
+    "node": 74,
+    "lap": 1,
+    "dt": 71706.37110176678,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 164,
+    "phi_power": 164,
+    "node": 75,
+    "lap": 1,
+    "dt": 72677.15710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 165,
+    "phi_power": 165,
+    "node": 76,
+    "lap": 1,
+    "dt": 73647.94310176678,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 166,
+    "phi_power": 166,
+    "node": 77,
+    "lap": 1,
+    "dt": 74618.72910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 167,
+    "phi_power": 167,
+    "node": 78,
+    "lap": 1,
+    "dt": 75589.51510176678,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 168,
+    "phi_power": 168,
+    "node": 79,
+    "lap": 1,
+    "dt": 76560.30110176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 169,
+    "phi_power": 169,
+    "node": 80,
+    "lap": 1,
+    "dt": 77531.08710176678,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 170,
+    "phi_power": 170,
+    "node": 81,
+    "lap": 1,
+    "dt": 78501.87310176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 171,
+    "phi_power": 171,
+    "node": 82,
+    "lap": 1,
+    "dt": 79472.65910176678,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 172,
+    "phi_power": 172,
+    "node": 83,
+    "lap": 1,
+    "dt": 80443.44510176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 173,
+    "phi_power": 173,
+    "node": 84,
+    "lap": 1,
+    "dt": 81414.23110176678,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 174,
+    "phi_power": 174,
+    "node": 85,
+    "lap": 1,
+    "dt": 82385.01710176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 175,
+    "phi_power": 175,
+    "node": 86,
+    "lap": 1,
+    "dt": 83355.80310176678,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 176,
+    "phi_power": 176,
+    "node": 87,
+    "lap": 1,
+    "dt": 84326.58910176679,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 177,
+    "phi_power": 177,
+    "node": 88,
+    "lap": 1,
+    "dt": 85297.37510176678,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 178,
+    "phi_power": 178,
+    "node": 0,
+    "lap": 2,
+    "dt": -361.07897158212285,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 179,
+    "phi_power": 179,
+    "node": 1,
+    "lap": 2,
+    "dt": 609.707028417877,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 180,
+    "phi_power": 180,
+    "node": 2,
+    "lap": 2,
+    "dt": 1580.493028417877,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 181,
+    "phi_power": 181,
+    "node": 3,
+    "lap": 2,
+    "dt": 2551.2790284178773,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 182,
+    "phi_power": 182,
+    "node": 4,
+    "lap": 2,
+    "dt": 3522.065028417877,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 183,
+    "phi_power": 183,
+    "node": 5,
+    "lap": 2,
+    "dt": 4492.8510284178765,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 184,
+    "phi_power": 184,
+    "node": 6,
+    "lap": 2,
+    "dt": 5463.6370284178765,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 185,
+    "phi_power": 185,
+    "node": 7,
+    "lap": 2,
+    "dt": 6434.423028417877,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 186,
+    "phi_power": 186,
+    "node": 8,
+    "lap": 2,
+    "dt": 7405.209028417877,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 187,
+    "phi_power": 187,
+    "node": 9,
+    "lap": 2,
+    "dt": 8375.995028417876,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 188,
+    "phi_power": 188,
+    "node": 10,
+    "lap": 2,
+    "dt": 9346.781028417876,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 189,
+    "phi_power": 189,
+    "node": 11,
+    "lap": 2,
+    "dt": 10317.567028417876,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 190,
+    "phi_power": 190,
+    "node": 12,
+    "lap": 2,
+    "dt": 11288.353028417876,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 191,
+    "phi_power": 191,
+    "node": 13,
+    "lap": 2,
+    "dt": 12259.139028417876,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 192,
+    "phi_power": 192,
+    "node": 14,
+    "lap": 2,
+    "dt": 13229.925028417876,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 193,
+    "phi_power": 193,
+    "node": 15,
+    "lap": 2,
+    "dt": 14200.711028417876,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 194,
+    "phi_power": 194,
+    "node": 16,
+    "lap": 2,
+    "dt": 15171.497028417878,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 195,
+    "phi_power": 195,
+    "node": 17,
+    "lap": 2,
+    "dt": 16142.283028417876,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 196,
+    "phi_power": 196,
+    "node": 18,
+    "lap": 2,
+    "dt": 17113.069028417875,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 197,
+    "phi_power": 197,
+    "node": 19,
+    "lap": 2,
+    "dt": 18083.855028417875,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 198,
+    "phi_power": 198,
+    "node": 20,
+    "lap": 2,
+    "dt": 19054.641028417875,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 199,
+    "phi_power": 199,
+    "node": 21,
+    "lap": 2,
+    "dt": 20025.427028417875,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 200,
+    "phi_power": 200,
+    "node": 22,
+    "lap": 2,
+    "dt": 21093.291628417872,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 201,
+    "phi_power": 201,
+    "node": 23,
+    "lap": 2,
+    "dt": 22064.077628417872,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 202,
+    "phi_power": 202,
+    "node": 24,
+    "lap": 2,
+    "dt": 23034.863628417872,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 203,
+    "phi_power": 203,
+    "node": 25,
+    "lap": 2,
+    "dt": 24005.649628417872,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 204,
+    "phi_power": 204,
+    "node": 26,
+    "lap": 2,
+    "dt": 24976.435628417872,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 205,
+    "phi_power": 205,
+    "node": 27,
+    "lap": 2,
+    "dt": 25947.221628417872,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 206,
+    "phi_power": 206,
+    "node": 28,
+    "lap": 2,
+    "dt": 26918.007628417872,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 207,
+    "phi_power": 207,
+    "node": 29,
+    "lap": 2,
+    "dt": 27888.793628417872,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 208,
+    "phi_power": 208,
+    "node": 30,
+    "lap": 2,
+    "dt": 28859.579628417872,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 209,
+    "phi_power": 209,
+    "node": 31,
+    "lap": 2,
+    "dt": 29830.365628417872,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 210,
+    "phi_power": 210,
+    "node": 32,
+    "lap": 2,
+    "dt": 30801.151628417876,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 211,
+    "phi_power": 211,
+    "node": 33,
+    "lap": 2,
+    "dt": 31771.937628417876,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 212,
+    "phi_power": 212,
+    "node": 34,
+    "lap": 2,
+    "dt": 32742.723628417876,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 213,
+    "phi_power": 213,
+    "node": 35,
+    "lap": 2,
+    "dt": 33713.50962841787,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 214,
+    "phi_power": 214,
+    "node": 36,
+    "lap": 2,
+    "dt": 34684.29562841787,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 215,
+    "phi_power": 215,
+    "node": 37,
+    "lap": 2,
+    "dt": 35655.08162841787,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 216,
+    "phi_power": 216,
+    "node": 38,
+    "lap": 2,
+    "dt": 36625.86762841787,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 217,
+    "phi_power": 217,
+    "node": 39,
+    "lap": 2,
+    "dt": 37596.65362841787,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 218,
+    "phi_power": 218,
+    "node": 40,
+    "lap": 2,
+    "dt": 38567.43962841787,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 219,
+    "phi_power": 219,
+    "node": 41,
+    "lap": 2,
+    "dt": 39538.22562841787,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 220,
+    "phi_power": 220,
+    "node": 42,
+    "lap": 2,
+    "dt": 40509.01162841787,
+    "glyph": "",
+    "lore": ""
+  },
+  {
+    "episode_num": 221,
+    "phi_power": 221,
+    "node": 43,
+    "lap": 2,
+    "dt": 41479.79762841787,
+    "glyph": "",
+    "lore": ""
+  }
+]
