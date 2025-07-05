@@ -5,3 +5,6 @@ PHI = (1 + sqrt(5)) / 2
 DELTA = 970.786
 # Wobble scaling coefficient
 K = 0.0005
+
+# Default onboarding arc end episode (φ^43 ≈ 221.8)
+ONBOARDING_EPISODES = 221.8

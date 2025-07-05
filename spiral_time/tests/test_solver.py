@@ -1,5 +1,13 @@
 import unittest
-from spiral_time.solver import get_julian_day, lap, wobble, overlap, solve_spiral_time
+from spiral_time.solver import (
+    get_julian_day,
+    lap,
+    wobble,
+    overlap,
+    solve_spiral_time,
+    solve_sss,
+    default_onboarding_end,
+)
 
 class TestSolver(unittest.TestCase):
     def test_julian_day(self):
@@ -18,6 +26,13 @@ class TestSolver(unittest.TestCase):
         res = solve_spiral_time('1970-01-01', 0)
         self.assertIn('t_seconds', res)
         self.assertIn('clock_str', res)
+
+    def test_solve_sss(self):
+        res = solve_sss('1970-01-01T00:00:00Z')
+        self.assertIn('t_seconds', res)
+
+    def test_onboarding_constant(self):
+        self.assertAlmostEqual(default_onboarding_end(), 221.8)
 
 if __name__ == '__main__':
     unittest.main()
