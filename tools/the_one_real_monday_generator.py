@@ -1,9 +1,11 @@
+"""Generate assets for TH.e-1RL_MONDAY.Ng."""
+
 from scripts.asset_generator import build_all
 from datetime import datetime
 
 
 def generate_assets(seed: str = "SP1RL-PHI"):
-    """Generate all MONDAY assets and return a summary."""
+    """Generate all TH.e-1RL_MONDAY.Ng assets and return a summary."""
     manifest = build_all(seed=seed)
     summary = {
         "asset_types": len(manifest),
