@@ -18,6 +18,7 @@ class TestNarrative(unittest.TestCase):
         self.assertIn(bundle["yin_word"], text)
         self.assertIn(str(snap["moment_index"]), text)
         self.assertIn('.e.Ri2', text)
+        self.assertIn('Episode Zero', text)
 
 
 if __name__ == "__main__":

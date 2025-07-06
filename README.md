@@ -56,3 +56,5 @@ never crowd each other.
 - .e.Ri — "Ever-Ricursing"; signals that every accepted opposite–node bundle keeps regenerating richer nuance on each loop.
 
 See [privacy](public/privacy.html) and [terms](public/terms.html) for more.
+Short clips of the spiral may be shared to TikTok; remember nothing here is
+financial advice and all PW totals are symbolic.

@@ -4,11 +4,33 @@ from pathlib import Path
 from datetime import datetime
 import json
 
+DATA_DIR = Path(__file__).resolve().parents[2] / "data"
+LEDGER_FILE = DATA_DIR / "pw_ledger.json"
+
+
+def _load_ledger():
+    if LEDGER_FILE.exists():
+        with open(LEDGER_FILE) as f:
+            try:
+                return json.load(f)
+            except Exception:
+                return {}
+    return {}
+
+
+def _save_ledger(data: dict):
+    with open(LEDGER_FILE, "w") as f:
+        json.dump(data, f, indent=2)
+
 
 def handler(request):
     strokes = request.get("strokes", 1)
     user = request.get("user", "anon")
-    res = {"minted": mint_pw(strokes)}
+    mint = mint_pw(strokes)
+    ledger = _load_ledger()
+    ledger[user] = round(ledger.get(user, 0) + mint, 2)
+    _save_ledger(ledger)
+    res = {"minted": mint, "total": ledger[user]}
     if strokes >= 12:
         ts = datetime.utcnow().strftime("%Y%m%d%H%M%S")
         petal_dir = Path(f"frontend/petals/{user}")
