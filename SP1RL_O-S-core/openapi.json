@@ -1,0 +1,24 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SP1RL_O-S API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/birth/predict": {"get": {"summary": "O3 birth-time math"}},
+    "/daily/report": {"post": {"summary": "ZCM + poem", "security": [{"token": []}]}},
+    "/asset/upload": {"post": {"summary": "φ-classify asset", "security": [{"token": []}]}},
+    "/pedal/stroke": {"post": {"summary": "add stroke (+PW)", "security": [{"token": []}]}},
+    "/pedal/signoff": {"post": {"summary": "6 strokes → sign-off", "security": [{"token": []}]}},
+    "/opposite/next": {"get": {"summary": "get pair", "security": [{"token": []}]}},
+    "/opposite/vote": {"post": {"summary": "yes/no vote (+strokes)", "security": [{"token": []}]}},
+    "/ivy/mint": {"post": {"summary": "mint petal object", "security": [{"token": []}]}},
+    "/git/approve_pr": {"post": {"summary": "Serpent merge", "security": [{"serpent": []}]}}
+  },
+  "components": {
+    "securitySchemes": {
+      "token": {"type": "apiKey", "in": "header", "name": "Authorization"},
+      "serpent": {"type": "apiKey", "in": "header", "name": "Serpent-Key"}
+    }
+  }
+}
