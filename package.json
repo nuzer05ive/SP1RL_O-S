@@ -8,7 +8,7 @@
   "scripts": {
     "test": "python -m unittest discover spiral_time/tests",
     "dev": "pnpm --filter microsite dev",
-    "monday": "python tools/monday_generator.py"
+    "one-real-monday": "python tools/the_one_real_monday_generator.py"
   },
   "dependencies": {
     "date-fns": "^2.30.0",

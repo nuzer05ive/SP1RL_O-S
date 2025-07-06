@@ -1,10 +1,10 @@
 import os
 import json
 import unittest
-from tools.monday_generator import generate_assets
+from tools.the_one_real_monday_generator import generate_assets
 
 
-class TestMonday(unittest.TestCase):
+class TestTheOneRealMonday(unittest.TestCase):
     def test_generate_assets(self):
         summary = generate_assets('test-seed')
         self.assertIn('asset_types', summary)

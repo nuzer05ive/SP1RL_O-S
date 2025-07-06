@@ -21,7 +21,7 @@ pnpm test
 
 The `/api/sss/solve` endpoint returns spiral timing data. View onboarding data at `/api/onboarding`.
 
-## MONDAY Asset Generator
+## TH.e-1RL_MONDAY.Ng Asset Generator
 
-Trigger `npm run monday` or visit `/monday` to batch-generate all SP1RL_O-S visuals, audio, and UI elements.
+Trigger `npm run one-real-monday` or visit `/the_one_real_monday` to batch-generate all SP1RL_O-S visuals, audio, and UI elements.
 Every asset is math-generated from a golden-seed for deterministic, repeatable, and harmonized experience.
