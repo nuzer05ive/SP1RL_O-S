@@ -1,5 +1,5 @@
 {
-  "name": "sp1rl-os",
+  "name": "sp1rl_o-s",
   "private": true,
   "workspaces": [
     "apps/*",

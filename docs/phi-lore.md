@@ -1,4 +1,4 @@
-# SP1RL_ÒS Lore
+# SP1RL_O-S Lore
 
 - The ancient serpents guard recursive knowledge.
 - ShellSwipe battles train each p'i1LOT.
