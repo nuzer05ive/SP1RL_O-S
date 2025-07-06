@@ -41,8 +41,8 @@ r1::SPOKE[4] := {
 
 // SPOKE 5 :: UI/UX ∞ RHYTHMIC_POETICS
 r1::SPOKE[5] := {
-    logo := SP1RL_OS (“LZ 👃 _ mouth”)
-    favicon.svg := circle(grad_purple→blue), text: SP1RL_OS
+    logo := SP1RL_O-S (“LZ 👃 _ mouth”)
+    favicon.svg := circle(grad_purple→blue), text: SP1RL_O-S
     show φ_dot as red; SJ_arrow as purple streak
     animate iPearl_bloom() on SNAG
     if φ ≈ flip_node:
