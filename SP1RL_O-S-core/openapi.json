@@ -15,6 +15,8 @@
     "/opposite/vote": {"post": {"summary": "node yes/no vote", "security": [{"token": []}]}},
     "/lens/set": {"post": {"summary": "switch active node lens", "security": [{"token": []}]}},
     "/lens/status": {"get": {"summary": "return active lens", "security": [{"token": []}]}},
+    "/lens/translate": {"get": {"summary": "return colors + vocab", "security": [{"token": []}]}},
+    "/metal/reserve": {"post": {"summary": "reserve backend seat", "security": [{"token": []}]}},
     "/ivy/mint": {"post": {"summary": "mint petal object", "security": [{"token": []}]}},
     "/git/approve_pr": {"post": {"summary": "Serpent merge", "security": [{"serpent": []}]}}
   },

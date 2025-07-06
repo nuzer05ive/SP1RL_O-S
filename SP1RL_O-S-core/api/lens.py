@@ -1,6 +1,7 @@
 """Node lens activation handlers."""
 import json
 from pathlib import Path
+from ._utils.lexicon import get_assets_for_node
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 ACTIVE_FILE = DATA_DIR / "active_lens.json"
@@ -35,3 +36,9 @@ def status(_request=None):
 
 def get_active_node() -> int:
     return _load().get("active", 0)
+
+
+def translate(request):
+    """Return yin/yang color and word bundle for a given node."""
+    node = int(request.get("node", 0))
+    return get_assets_for_node(node)

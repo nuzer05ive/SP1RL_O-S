@@ -15,6 +15,7 @@ class TestPedaling(unittest.TestCase):
         sync_dir = Path('backend/sync') / res['branch'].split('/', 1)[1]
         self.assertTrue(sync_dir.exists())
         self.assertIn("branch", res)
+        self.assertGreater(res.get("total", 0), 0)
         # cleanup
         draft.unlink()
         for p in sync_dir.glob('*'):

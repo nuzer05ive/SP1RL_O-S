@@ -1,2 +1,4 @@
 [build]
   publish = "public"
+[functions]
+  directory = "api"

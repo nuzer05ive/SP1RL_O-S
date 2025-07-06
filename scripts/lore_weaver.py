@@ -4,6 +4,8 @@ from pathlib import Path
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 LOG_FILE = DATA_DIR / "lore_chapters.json"
 LEDGER_FILE = DATA_DIR / "pw_ledger.json"
+CHAPTER_DIR = DATA_DIR / "lore_chapters"
+CHAPTER_DIR.mkdir(exist_ok=True)
 
 
 def _load(path: Path):
@@ -49,6 +51,11 @@ def append_chapter(node: int, pair_id: str, user: str) -> tuple[str, int]:
     })
     log["chapters"] = chapters
     _save(LOG_FILE, log)
+
+    chapter_path = CHAPTER_DIR / f"episode_{episode:03d}.md"
+    with open(chapter_path, "w") as md:
+        md.write(f"# {title}\n\n")
+        md.write("TBD narrative\n")
 
     ledger = _load(LEDGER_FILE)
     if depth > 1 and depth > prev_depth:
