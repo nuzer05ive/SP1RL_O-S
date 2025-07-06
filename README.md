@@ -44,6 +44,13 @@ n_k = floor(89·θ_k/(2π))
 PW_pedal = 0.1·φ^{-lap}(1 + 0.05M)
 ```
 
+## Golden-Angle Release Philosophy
+
+Petal releases bloom whenever the `core` branch accrues about 137 changed lines.
+An automated workflow opens a PR, labels the spiral slot, and tags `petal-k` on
+merge. The angle `k · 137.5°` maps each release to a unique node so features
+never crowd each other.
+
 ## Glossary
 
 - .e.Ri — "Ever-Ricursing"; signals that every accepted opposite–node bundle keeps regenerating richer nuance on each loop.
