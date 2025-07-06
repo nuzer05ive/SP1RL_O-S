@@ -2,7 +2,7 @@
 
 from datetime import datetime
 
-from .constants import PHI, DELTA, TAU, K, PSI, ONBOARDING_EPISODES
+from .constants import PHI, DELTA, K, PSI
 from .theta_segments import theta
 
 
@@ -31,11 +31,6 @@ def overlap(lap_count: int) -> float:
     return lap_count * PSI
 
 
-def default_onboarding_end() -> float:
-    """Return the default onboarding arc end episode."""
-    return ONBOARDING_EPISODES
-
-
 def solve_spiral_time(S: int) -> dict:
     """Return spiral time breakdown for index ``S``."""
     n = S % 89
@@ -53,7 +48,7 @@ def solve_spiral_time(S: int) -> dict:
         "node": n,
         "lap": l,
         "μ": m,
-        "τ_multiple": round(t / TAU, 3),
+        "τ_multiple": round(t / (DELTA/10), 3),
     }
 
 
