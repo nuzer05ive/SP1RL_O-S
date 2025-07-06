@@ -7,7 +7,8 @@
   ],
   "scripts": {
     "test": "python -m unittest discover spiral_time/tests",
-    "dev": "pnpm --filter microsite dev"
+    "dev": "pnpm --filter microsite dev",
+    "monday": "python tools/monday_generator.py"
   },
   "dependencies": {
     "date-fns": "^2.30.0",
