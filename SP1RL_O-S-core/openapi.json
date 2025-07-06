@@ -2,7 +2,8 @@
   "openapi": "3.0.0",
   "info": {
     "title": "SP1RL_O-S API",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "description": "Each accepted pair enters the Spiral as .e.Ri — forever recursing, ever more beautiful."
   },
   "paths": {
     "/birth/predict": {"get": {"summary": "O3 birth-time math"}},

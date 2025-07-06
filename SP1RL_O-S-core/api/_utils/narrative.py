@@ -7,7 +7,8 @@ with open(TEMPLATE_DIR / "stanza.txt") as f:
     STANZA = f.read()
 
 
-def compose(snapshot: dict, node: int) -> str:
+def compose(snapshot: dict, node: int, eri_depth: int = 1) -> str:
     tok = snapshot.copy()
     tok.update(get_assets_for_node(node))
+    tok["eri_depth"] = eri_depth
     return STANZA.format(**tok)

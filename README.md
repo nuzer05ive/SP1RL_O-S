@@ -44,4 +44,8 @@ n_k = floor(89·θ_k/(2π))
 PW_pedal = 0.1·φ^{-lap}(1 + 0.05M)
 ```
 
+## Glossary
+
+- .e.Ri — "Ever-Ricursing"; signals that every accepted opposite–node bundle keeps regenerating richer nuance on each loop.
+
 See [privacy](public/privacy.html) and [terms](public/terms.html) for more.

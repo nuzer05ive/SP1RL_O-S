@@ -13,10 +13,11 @@ class TestNarrative(unittest.TestCase):
     def test_token_replacement(self):
         snap = {"moment_index": 1}
         node = 89
-        text = compose(snap, node)
+        text = compose(snap, node, eri_depth=2)
         bundle = get_assets_for_node(node)
         self.assertIn(bundle["yin_word"], text)
         self.assertIn(str(snap["moment_index"]), text)
+        self.assertIn('.e.Ri2', text)
 
 
 if __name__ == "__main__":
