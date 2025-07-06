@@ -3,7 +3,7 @@ import os
 import random
 from pathlib import Path
 
-PHI = (1 + 5 ** 0.5) / 2
+from spiral_time.constants import PHI
 
 
 def build_all(seed: str = "SP1RL-PHI"):

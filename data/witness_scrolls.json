@@ -1,0 +1,7 @@
+{
+  "user_id": "example",
+  "assigned_node": 23,
+  "lap0_tau_offset": 3.412,
+  "wings_earned": false,
+  "petals": { "phi^5": "", "phi^8": "", "phi^13": "" }
+}

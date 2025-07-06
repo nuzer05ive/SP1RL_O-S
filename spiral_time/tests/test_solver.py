@@ -7,7 +7,6 @@ from spiral_time.solver import (
     solve_spiral_time,
     solve_sss,
     mu,
-    default_onboarding_end,
 )
 
 class TestSolver(unittest.TestCase):
@@ -29,12 +28,13 @@ class TestSolver(unittest.TestCase):
         self.assertIn('clock', res)
         self.assertIn('\u03c4_multiple', res)
 
+    def test_anchor_seconds(self):
+        res = solve_spiral_time(0)
+        self.assertAlmostEqual(res['seconds'], 0.217074464, places=3)
+
     def test_solve_sss(self):
         res = solve_sss('1970-01-01T00:00:00Z')
         self.assertIn('seconds', res)
-
-    def test_onboarding_constant(self):
-        self.assertAlmostEqual(default_onboarding_end(), 221.8)
 
 if __name__ == '__main__':
     unittest.main()

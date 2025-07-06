@@ -1,5 +1,5 @@
 from .solver import solve_spiral_time, get_julian_day, mu, lap
-from .solver import wobble, overlap, solve_sss, default_onboarding_end
+from .solver import wobble, overlap, solve_sss
 __all__ = [
     'solve_spiral_time',
     'get_julian_day',
@@ -8,5 +8,4 @@ __all__ = [
     'wobble',
     'overlap',
     'solve_sss',
-    'default_onboarding_end',
 ]
