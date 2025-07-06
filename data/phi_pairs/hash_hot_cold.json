@@ -1,0 +1,12 @@
+{
+  "a": "hot",
+  "b": "cold",
+  "node_lens": {
+    "89": {
+      "yin_word": "hot",
+      "yang_word": "cold",
+      "yin_color": "crimson",
+      "yang_color": "indigo"
+    }
+  }
+}

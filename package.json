@@ -6,7 +6,7 @@
     "libs/*"
   ],
   "scripts": {
-    "test": "python -m unittest discover spiral_time/tests",
+    "test": "python -m unittest discover spiral_time/tests && python -m unittest discover tests",
     "dev": "pnpm --filter microsite dev",
     "one-real-monday": "python tools/the_one_real_monday_generator.py"
   },
