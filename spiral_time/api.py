@@ -4,6 +4,7 @@ from flask import Flask, request, jsonify
 
 from datetime import datetime
 from .solver import solve_spiral_time, get_julian_day, solve_sss
+from pathlib import Path
 
 app = Flask(__name__)
 
@@ -29,6 +30,17 @@ def solve_sss_endpoint():
         return jsonify({'error': 'datetime required'}), 400
     result = solve_sss(dt)
     return jsonify(result)
+
+
+@app.route('/metal/reserve', methods=['POST'])
+def reserve_petal():
+    """Create backend sync folder for front-end component."""
+    data = request.get_json() or {}
+    user = data.get('user', 'anon')
+    h = data.get('hash', '')
+    path = Path(f"backend/sync/{h}")
+    path.mkdir(parents=True, exist_ok=True)
+    return jsonify({"ok": True, "path": str(path)})
 
 
 if __name__ == '__main__':
