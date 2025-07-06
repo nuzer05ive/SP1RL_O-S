@@ -6,12 +6,14 @@
   },
   "paths": {
     "/birth/predict": {"get": {"summary": "O3 birth-time math"}},
-    "/daily/report": {"post": {"summary": "ZCM + poem", "security": [{"token": []}]}},
+    "/daily/report": {"get": {"summary": "math snapshot + story", "security": [{"token": []}]}},
     "/asset/upload": {"post": {"summary": "φ-classify asset", "security": [{"token": []}]}},
     "/pedal/stroke": {"post": {"summary": "add stroke (+PW)", "security": [{"token": []}]}},
     "/pedal/signoff": {"post": {"summary": "6 strokes → sign-off", "security": [{"token": []}]}},
     "/opposite/next": {"get": {"summary": "get pair", "security": [{"token": []}]}},
-    "/opposite/vote": {"post": {"summary": "yes/no vote (+strokes)", "security": [{"token": []}]}},
+    "/opposite/vote": {"post": {"summary": "node yes/no vote", "security": [{"token": []}]}},
+    "/lens/set": {"post": {"summary": "switch active node lens", "security": [{"token": []}]}},
+    "/lens/status": {"get": {"summary": "return active lens", "security": [{"token": []}]}},
     "/ivy/mint": {"post": {"summary": "mint petal object", "security": [{"token": []}]}},
     "/git/approve_pr": {"post": {"summary": "Serpent merge", "security": [{"serpent": []}]}}
   },

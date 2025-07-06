@@ -1,0 +1,14 @@
+{
+  "default": {
+    "yin_word": "calm",
+    "yang_word": "storm",
+    "yin_color": "blue",
+    "yang_color": "red"
+  },
+  "89": {
+    "yin_word": "harmony",
+    "yang_word": "justice",
+    "yin_color": "silver",
+    "yang_color": "gold"
+  }
+}
