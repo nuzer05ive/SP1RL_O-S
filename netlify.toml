@@ -1,8 +1,15 @@
 [build]
-  command = "pnpm -r run build"
+  base = "apps/microsite"
+  command = "pnpm run build"
   publish = "apps/microsite/dist"
 
 [[redirects]]
   from = "/play/kaleidoscope/*"
-  to   = "/apps/canvas/phi43/dist/:splat"
+  to = "/apps/canvas/phi43/dist/:splat"
   status = 200
+
+[[redirects]]
+  from = "/_redirects"
+  to = "/_redirects"
+  status = 200
+  force = true
