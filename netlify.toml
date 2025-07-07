@@ -1,0 +1,4 @@
+[context.production.environment]
+SP1RL_ENV            = "production"
+PETAL_THRESHOLD      = "137"
+PW_UNIT_COST         = "1"

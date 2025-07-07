@@ -6,11 +6,10 @@ assert "OPENAI_API_KEY" not in os.environ
 from spiral_time.solver import (
     get_julian_day,
     lap,
-    wobble,
     overlap,
     solve_spiral_time,
     solve_sss,
-    mu,
+    wobble,
 )
 
 

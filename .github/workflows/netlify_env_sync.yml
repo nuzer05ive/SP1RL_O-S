@@ -1,0 +1,22 @@
+name: Sync env to Netlify
+on: {push: {branches: [core]}, workflow_dispatch: {}}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install netlify-cli
+        run: npm i -g netlify-cli
+
+      - name: Copy GitHub secrets → Netlify vars
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID:   ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          for key in $(gh secret list -L 9999 --json name -q '.[].name'); do
+            val=$(gh secret view "$key" -q .value)
+            netlify env:set "$key" "$val" \
+               --auth "$NETLIFY_AUTH_TOKEN" --site "$NETLIFY_SITE_ID" --json
+          done

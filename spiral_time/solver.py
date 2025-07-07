@@ -2,7 +2,7 @@
 
 from datetime import datetime
 
-from .constants import PHI, DELTA, K, PSI
+from .constants import DELTA, PHI, PSI, K
 from .theta_segments import theta
 
 
@@ -34,11 +34,11 @@ def overlap(lap_count: int) -> float:
 def solve_spiral_time(S: int) -> dict:
     """Return spiral time breakdown for index ``S``."""
     n = S % 89
-    l = lap(S)
+    lap_count = lap(S)
     th = theta(S)
     m = mu(S)
-    w = wobble(l)
-    ov = overlap(l)
+    w = wobble(lap_count)
+    ov = overlap(lap_count)
     t = ((n + m + th - ov + w) * DELTA) % 86400
     h, r = divmod(int(t), 3600)
     m_, s = divmod(r, 60)
@@ -46,7 +46,7 @@ def solve_spiral_time(S: int) -> dict:
         "clock": f"{h:02}:{m_:02}:{s:02}.{int((t%1)*1000):03}",
         "seconds": t,
         "node": n,
-        "lap": l,
+        "lap": lap_count,
         "μ": m,
         "τ_multiple": round(t / (DELTA / 10), 3),
     }

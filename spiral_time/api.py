@@ -1,11 +1,11 @@
 """Simple Flask API exposing the spiral time solver."""
 
-from flask import Flask, request, jsonify
 import logging
-
-from datetime import datetime
-from .solver import solve_spiral_time, get_julian_day, solve_sss
 from pathlib import Path
+
+from flask import Flask, jsonify, request
+
+from .solver import get_julian_day, solve_spiral_time, solve_sss
 
 app = Flask(__name__)
 
@@ -37,7 +37,6 @@ def solve_sss_endpoint():
 def reserve_petal():
     """Create backend sync folder for front-end component."""
     data = request.get_json() or {}
-    user = data.get("user", "anon")
     h = data.get("hash", "")
     path = Path(f"backend/sync/{h}")
     path.mkdir(parents=True, exist_ok=True)
