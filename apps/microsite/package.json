@@ -1,10 +1,11 @@
 {
-  "name": "microsite",
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": { "build": "vite build --outDir ../../dist" },
-  "dependencies": {
-    "astro": "^4.0.0",
-    "mustache": "4.2.0"
+  "name": "sp1rl-microsite",
+  "private": true,
+  "scripts": {
+    "build": "pnpm vite build",
+    "dev": "pnpm vite"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
   }
 }
