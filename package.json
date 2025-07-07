@@ -2,13 +2,15 @@
   "name": "sp1rl_o-s",
   "private": true,
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
     "test": "python -m unittest discover spiral_time/tests && python -m unittest discover tests",
     "dev": "pnpm --filter microsite dev",
     "one-real-monday": "python tools/the_one_real_monday_generator.py",
-    "build": "pnpm -F microsite run build"
+    "build": "pnpm -r run build",
+    "test:js": "node -e \"console.log('stub tests')\""
   },
   "dependencies": {
     "date-fns": "^2.30.0",
@@ -24,7 +26,8 @@
     "ts-jest": "^29.0.0",
     "@types/jest": "^29.0.0",
     "@types/node": "^20.3.0",
-    "pnpm": "^9.0.0"
+    "pnpm": "^9.0.0",
+    "vitest": "^1.5.0"
   },
   "overrides": {},
   "resolutions": {}

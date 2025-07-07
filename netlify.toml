@@ -1,8 +1,8 @@
-# netlify.toml — production & preview config
 [build]
-  base    = "apps/microsite"    # <- exact path you set in the UI
-  publish = "dist"              # resolves to apps/microsite/dist
-  command = "pnpm run build"
+  command = "pnpm -r run build"
+  publish = "apps/microsite/dist"
 
-[functions]
-  directory = "netlify/functions"
+[[redirects]]
+  from = "/play/kaleidoscope/*"
+  to   = "/apps/canvas/phi43/dist/:splat"
+  status = 200

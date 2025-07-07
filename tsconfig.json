@@ -11,8 +11,10 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@sp1rl/core-math": ["packages/core-math/src"],
+      "@sp1rl/core-state": ["packages/core-state/src"]
     }
   },
-  "include": ["apps/**/*", "libs/**/*", "scripts/**/*", "frontend/**/*", "global.d.ts"]
+  "include": ["apps/**/*", "packages/**/*", "libs/**/*", "scripts/**/*", "frontend/**/*", "global.d.ts"]
 }
