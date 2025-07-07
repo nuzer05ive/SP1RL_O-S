@@ -1,0 +1,11 @@
+.node-ring {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+.petal-ring {
+  transition: transform 0.3s linear, color 0.3s linear;
+}
+.kaleido-bg {
+  background: radial-gradient(circle at center, #111, #000);
+}
