@@ -44,21 +44,12 @@ jobs:
       - name: Build (CI)
         run: pnpm run build
         working-directory: apps/microsite
-      - name: Netlify Deploy
-        run: npx netlify deploy --dir dist --prod
-        working-directory: apps/microsite
-
-      - run: pnpm install
-      # --- sync any new secrets ---
-      - run: python scripts/netlify_sync_env.py
-      # --- build & upload preview ---
-      - run: pnpm run build
-      - uses: nwtgck/actions-netlify@v3
+      - name: Netlify Deploy (core)
+        uses: nwtgck/actions-netlify@v3
         with:
-          publish-dir: ./apps/microsite/dist
-          production-branch: core
-          production-deploy: ${{ github.ref == 'refs/heads/core' }}
- core
-    env:
-      NETLIFY_AUTH_TOKEN: ${{ env.NETLIFY_AUTH_TOKEN }}
-      NETLIFY_SITE_ID:    ${{ env.NETLIFY_SITE_ID }}
+            publish-dir: ./apps/microsite/dist     # final build output
+            production-branch: core                # branch to push publish-ready files
+            production-deploy: true               # ← or omit; default is true on pushes 
+        env:
+            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+            NETLIFY_SITE_ID:   ${{ secrets.NETLIFY_SITE_ID }}
