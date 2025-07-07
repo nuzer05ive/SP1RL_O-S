@@ -8,8 +8,18 @@ import importlib, subprocess, sys
 try:
     importlib.import_module("ruff")
 except ModuleNotFoundError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "--quiet", "ruff==0.4.4"])
+    subprocess.check_call([
+        sys.executable,
+        "-m",
+        "pip",
+        "install",
+        "--quiet",
+        "ruff==0.4.4",
+    ])
 PY
+
+# Pin Ruff version used in CI runs
+pip install --quiet ruff==0.4.4
 
 # --- Lint & type-check sweep -----------------------------------
 echo "🔍  Ruff…"      && ruff check .
