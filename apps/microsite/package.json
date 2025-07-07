@@ -2,12 +2,7 @@
   "name": "microsite",
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "build": "astro build",
-    "dev": "astro dev",
-    "preview": "astro preview",
-    "serve": "astro preview"
-  },
+  "scripts": { "build": "vite build --outDir ../../dist" },
   "dependencies": {
     "astro": "^4.0.0",
     "mustache": "4.2.0"
