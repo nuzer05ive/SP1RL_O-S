@@ -1,4 +1,4 @@
-name: Sync .env to Netlify
+name: Sync env to Netlify
 
 on:
   push:
@@ -8,17 +8,18 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    env:
-      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      NETLIFY_SITE_ID:   ${{ secrets.NETLIFY_SITE_ID }}
     steps:
       - uses: actions/checkout@v4
 
-      # lightweight wrapper around official CLI
-      - uses: joseluisq/netlify-cli@v4
+      - name: Netlify CLI login
+        uses: netlify/actions/cli@v2
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID:    ${{ secrets.NETLIFY_SITE_ID }}
 
-      - name: Push key-value pairs from .env.example
+      - name: Upload env variables
         run: |
-          env_json=$(jq -R -s -c 'split("\n") | map(select(length>0)) |
-                     map(split("=")) | from_entries' < .env.example)
-          echo "$env_json" | npx netlify env:set --json
+          npx netlify env:set --json "$(jq -r tostring < .env.example)"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID:    ${{ secrets.NETLIFY_SITE_ID }}
