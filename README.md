@@ -94,3 +94,7 @@ NETLIFY_AUTH_TOKEN=xxx NETLIFY_SITE_ID=yyy scripts/sync_env.sh
 pnpm i && pnpm dev        # local
 git push                  # prod → sync → build
 ```
+
+### First deploy
+
+./scripts/quickstart.sh   # installs & runs local dev, exports NETLIFY vars

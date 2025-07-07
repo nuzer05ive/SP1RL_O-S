@@ -29,6 +29,16 @@ def compose(snapshot: dict, node: int, eri_depth: int = 1) -> str:
     """Return poem stanza and outro for the given snapshot and node."""
     ctx = snapshot.copy()
     ctx.update(get_assets_for_node(node))
+    if "nearest_tunnel" in snapshot:
+        ctx["nearest_tunnel"] = snapshot["nearest_tunnel"]
+        if snapshot["nearest_tunnel"] in [0, 4]:
+            ctx["tunnel_line"] = (
+                f"\n  You\u2019re gliding along the white-dragon lane (tunnel {snapshot['nearest_tunnel']}) \u2026"
+            )
+        else:
+            ctx["tunnel_line"] = ""
+    else:
+        ctx["tunnel_line"] = ""
     ctx["eri_depth"] = eri_depth
     ctx["eri_depth_plus_one"] = eri_depth + 1
     stanza = _render(STANZA_TMPL, ctx)
