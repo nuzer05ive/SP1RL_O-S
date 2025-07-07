@@ -6,7 +6,7 @@ This repository hosts the SP1RL_O-S core. The system tracks time along a golden 
 
 In SP1RL_O-S, the 'O-' is the living node lens and monocle HUD. Pi1LOTs use it to see every episode, node, and story through every possible lens. The 89th ('O-') is the True Justice perspective — seeing all nodes at once, making you a Minting Pi1LOT.
 
-### Canonical Equation
+### Canonical N'1K_Quation
 ```
 t = [(S mod 89) + μ + θ(S) – lap·φ⁻³ + k·φ⁻lap] · Δ
 Δ = 86400/89 τ = Δ/10
