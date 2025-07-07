@@ -7,7 +7,12 @@ import re
 from pathlib import Path
 
 import requests
-import tomli
+try:
+    import tomli  # type: ignore
+except ModuleNotFoundError:
+    import subprocess, sys
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "tomli"])
+    import tomli
 from requests.exceptions import RequestException
 
 PATTERN = re.compile(r"{{\s*\$([A-Z0-9_]+)\s*}}")
