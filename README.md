@@ -50,6 +50,7 @@ Petal releases bloom whenever the `core` branch accrues about 137 changed lines.
 An automated workflow opens a PR, labels the spiral slot, and tags `petal-k` on
 merge. The angle `k · 137.5°` maps each release to a unique node so features
 never crowd each other.
+Any commit touching roughly 137 lines on `core` auto-opens a 🌻 Petal PR.
 
 ## Glossary
 
@@ -80,9 +81,16 @@ if os.getenv('USE_OPENAI'):
 ![CI](https://github.com/.../actions/workflows/ci.yml/badge.svg)
 
 ### 🔄 Netlify env auto-sync
-![env-sync](https://github.com/nuzer05ive/SP1RL_O-S/actions/workflows/netlify_env_sync.yml/badge.svg)
+![env-sync](https://github.com/nuzer05ive/SP1RL_O-S/actions/workflows/netlify-sync.yml/badge.svg)
 
 ```bash
 # local one-liner
 NETLIFY_AUTH_TOKEN=xxx NETLIFY_SITE_ID=yyy scripts/sync_env.sh
+```
+
+## 🌱 Quick start (Netlify)
+
+```bash
+pnpm i && pnpm dev        # local
+git push                  # prod → sync → build
 ```

@@ -27,3 +27,15 @@ k=$k
 print(int(round((k*137.5%360)*89/360)))
 PY)
           gh pr create -t "\U0001F33B Petal $k — Node $node" -b "Golden-Angle release slot $k."
+  act:
+    if: ${{ runner.os != 'macOS' || steps.setup-node.outputs.node-version == '18' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        id: setup-node
+        with:
+          node-version: 18
+      - name: Local act
+        if: ${{ runner.os != 'macOS' || steps.setup-node.outputs.node-version == '18' }}
+        run: bash scripts/local_act.sh
