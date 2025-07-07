@@ -2,13 +2,13 @@
   "name": "sp1rl_o-s",
   "private": true,
   "workspaces": [
-    "apps/*",
-    "libs/*"
+    "apps/*"
   ],
   "scripts": {
     "test": "python -m unittest discover spiral_time/tests && python -m unittest discover tests",
     "dev": "pnpm --filter microsite dev",
-    "one-real-monday": "python tools/the_one_real_monday_generator.py"
+    "one-real-monday": "python tools/the_one_real_monday_generator.py",
+    "build": "pnpm -F microsite run build"
   },
   "dependencies": {
     "date-fns": "^2.30.0",
@@ -26,10 +26,6 @@
     "@types/node": "^20.3.0",
     "pnpm": "^9.0.0"
   },
-  "overrides": {
-    "mustache": "4.3.1"
-  },
-  "resolutions": {
-    "mustache": "4.3.1"
-  }
+  "overrides": {},
+  "resolutions": {}
 }
