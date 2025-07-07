@@ -1,6 +1,7 @@
 """Simple Flask API exposing the spiral time solver."""
 
 from flask import Flask, request, jsonify
+import logging
 
 from datetime import datetime
 from .solver import solve_spiral_time, get_julian_day, solve_sss
@@ -44,4 +45,7 @@ def reserve_petal():
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+    logger = logging.getLogger(__name__)
+    logger.info("LLM backend: OFF (local math/Jinja mode)")
     app.run()

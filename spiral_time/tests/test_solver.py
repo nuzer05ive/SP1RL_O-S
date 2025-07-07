@@ -1,4 +1,8 @@
+import os
 import unittest
+
+# Fail fast if an OpenAI key sneaks into the environment
+assert "OPENAI_API_KEY" not in os.environ
 from spiral_time.solver import (
     get_julian_day,
     lap,
