@@ -2,7 +2,7 @@ name: Deploy to Netlify
 
 on:
   pull_request:
-    paths-ignore: ["**/*.md"]
+    paths-ignore: ["**/*.md"]   # docs don't trigger build
   push:
     branches: [core]
 
@@ -10,65 +10,59 @@ permissions:
   contents: read
 
 jobs:
-# ───────────────────────── Pull-request preview ──────────────────────────
+
+  # ─── Deploy-preview for every PR ──────────────────────────────────────────── #
   preview:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    strategy:
-      # one PR → two preview URLs (sp1rl-os & sp1rlos)
-      matrix:
-        site:
-          - sp1rl-os   # ← Netlify site slug
-          - sp1rlos
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v3
-        with: { version: 9, run_install: false }
-
-      - name: Install deps
-        run: pnpm install --frozen-lockfile
-        working-directory: apps/microsite
-
-      - name: Build microsite
-        run: pnpm run build
-        working-directory: apps/microsite
-
-      - name: Netlify deploy preview
-        uses: nwtgck/actions-netlify@v3
-        with:
-          publish-dir: ./apps/microsite/dist
-          production-branch: core                 # where the preview PR lives
-          github-token:  ${{ secrets.GITHUB_TOKEN }}
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets[format('NETLIFY_AUTH_TOKEN_{0}', matrix.site)] }}
-          NETLIFY_SITE_ID:    ${{ secrets[format('NETLIFY_SITE_ID_{0}',    matrix.site)] }}
-
-# ───────────────────────── Push → production deploy ──────────────────────
-  deploy:
-    if: github.event_name == 'push'
+    if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v3
-        with: { version: 9, run_install: false }
+        with: {version: 9, run_install: false}
 
       - name: Install deps
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
         working-directory: apps/microsite
 
-      - name: Build microsite
+      - name: Build site
         run: pnpm run build
         working-directory: apps/microsite
 
-      - name: Netlify production deploy (core branch)
+      - name: Netlify Deploy Preview
         uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: ./apps/microsite/dist
-          production-branch: core           # push output into /core
-          production-deploy: true           # mark this as the live site
+          production-deploy: false
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID:    ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_SITE_ID:   ${{ secrets.NETLIFY_SITE_ID }}
+
+  # ─── Live deploy on pushes to core ───────────────────────────────────────── #
+  deploy:
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: {version: 9, run_install: false}
+
+      - name: Install deps
+        run: pnpm install --no-frozen-lockfile
+        working-directory: apps/microsite
+
+      - name: Build site
+        run: pnpm run build
+        working-directory: apps/microsite
+
+      - name: Netlify Production Deploy
+        uses: nwtgck/actions-netlify@v3
+        with:
+          publish-dir: ./apps/microsite/dist
+          production-branch: core
+          production-deploy: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID:   ${{ secrets.NETLIFY_SITE_ID }}

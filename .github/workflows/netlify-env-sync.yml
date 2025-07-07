@@ -1,24 +1,24 @@
-# .github/workflows/sync-env.yml
-name: Sync env to Netlify
+name: Sync .env to Netlify
 
 on:
   push:
-    branches: [core]        # run on every push to core
-  workflow_dispatch:        # allow manual trigger
+    branches: [core]
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID:   ${{ secrets.NETLIFY_SITE_ID }}
     steps:
-      # 1️⃣ Check out repository
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      # 2️⃣ Netlify CLI (latest published tag = v3)
-      - uses: netlify/actions/cli@v3      # ← fixed («/cli», not plain /actions)
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID:    ${{ secrets.NETLIFY_SITE_ID }}
+      # lightweight wrapper around official CLI
+      - uses: joseluisq/netlify-cli@v4
 
-      # 3️⃣ Push everything in .env.example to Netlify in one shot
-      - name: Sync variables
-        run: npx netlify env:set --json "$(jq -r tojson < .env.example)"
+      - name: Push key-value pairs from .env.example
+        run: |
+          env_json=$(jq -R -s -c 'split("\n") | map(select(length>0)) |
+                     map(split("=")) | from_entries' < .env.example)
+          echo "$env_json" | npx netlify env:set --json
