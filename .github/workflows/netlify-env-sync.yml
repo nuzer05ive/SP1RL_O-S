@@ -1,0 +1,15 @@
+name: Sync env to Netlify
+on:
+  push:
+    branches: [core]
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: netlify/actions/cli@v4
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID:   ${{ secrets.NETLIFY_SITE_ID }}
+    - run: npx netlify env:set --json "$(jq -r tojson < .env.example)"

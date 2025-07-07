@@ -1,11 +1,14 @@
 [build]
-  command   = "npm run build"
-  publish   = "dist"
-[build.environment]
-  PYTHON_VERSION = "3.11"
-  # auto-pull GH secrets
-  NETLIFY_AUTH_TOKEN = "${{NETLIFY_AUTH_TOKEN}}"
-  NETLIFY_SITE_ID    = "${{NETLIFY_SITE_ID}}"
-  SP1RL_ENV         = "production"
-[[functions]]
+  base = "apps/microsite"
+  publish = "dist"
+  command = "pnpm --filter microsite... run build"
+
+[functions]
   directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[template.environment]
+  SUPABASE_URL = ""
+  SUPABASE_ANON_KEY = ""
+  OPENAI_API_BASE = ""
+  OPENAI_API_KEY = ""

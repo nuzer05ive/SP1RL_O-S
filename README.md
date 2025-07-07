@@ -81,12 +81,11 @@ if os.getenv('USE_OPENAI'):
 ![CI](https://github.com/.../actions/workflows/ci.yml/badge.svg)
 
 ### 🔄 Netlify env auto-sync
-![env-sync](https://github.com/nuzer05ive/SP1RL_O-S/actions/workflows/netlify-sync.yml/badge.svg)
+![env-sync](https://github.com/nuzer05ive/SP1RL_O-S/actions/workflows/netlify-env-sync.yml/badge.svg)
 
-```bash
-# local one-liner
-NETLIFY_AUTH_TOKEN=xxx NETLIFY_SITE_ID=yyy scripts/sync_env.sh
-```
+The `netlify-env-sync` workflow keeps Netlify variables in sync with
+`.env.example`. Push to the `core` branch or trigger the action manually to
+set all variables.
 
 ## 🌱 Quick start (Netlify)
 
@@ -98,3 +97,7 @@ git push                  # prod → sync → build
 ### First deploy
 
 ./scripts/quickstart.sh   # installs & runs local dev, exports NETLIFY vars
+
+## Deploy → Netlify
+
+`npm run build` must succeed locally before pushing.
