@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# ---- lint deps ---------------------------------------------------------
+python -m pip install --quiet ruff==0.4.4 black==24.4.2
+
 # --- Lint & type-check sweep -----------------------------------
 echo "🔍 Ruff…"
 ruff check .
 
 echo "🧹 Black…"
-# Ensure Black is available even in fresh runners
-python -m pip install --quiet black==24.4.2
-black --check .
+python -m black --check .
 
 echo "🔤 MyPy…"
 python -m pip install --quiet mypy==1.10.0
