@@ -67,4 +67,14 @@ docker compose up db redis  # if using containers
 ./scripts/quickstart.sh     # installs, formats, runs tests
 ```
 
+## 🔌 LLM plug-in path
+
+The default runtime uses pure math and Jinja templates. To swap in a cloud model,
+set an API key and call OpenAI behind an env flag:
+
+```python
+if os.getenv('USE_OPENAI'):
+    text = openai.Completion.create(model='gpt-4o', prompt=prompt)['choices'][0]['text']
+```
+
 ![CI](https://github.com/.../actions/workflows/ci.yml/badge.svg)
