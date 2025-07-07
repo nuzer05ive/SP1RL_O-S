@@ -1,6 +1,8 @@
 """Node lens activation handlers."""
+
 import json
 from pathlib import Path
+
 from ._utils.lexicon import get_assets_for_node
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"

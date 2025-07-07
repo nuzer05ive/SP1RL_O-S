@@ -1,7 +1,8 @@
 """Math helpers for phi rotation."""
+
 import math
 
-phi = (1 + 5 ** 0.5) / 2
+phi = (1 + 5**0.5) / 2
 
 
 def golden_rotation(k: int) -> float:

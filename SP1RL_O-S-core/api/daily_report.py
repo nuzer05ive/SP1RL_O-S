@@ -1,4 +1,5 @@
 """Daily report handler returning math snapshot and node-flavored poem."""
+
 from ._utils.math import build_snapshot
 from ._utils.narrative import compose
 from .lens import get_active_node

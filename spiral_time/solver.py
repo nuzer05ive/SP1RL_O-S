@@ -23,7 +23,7 @@ def lap(S: int) -> int:
 
 def wobble(lap_count: int) -> float:
     """Return wobble term k·φ^(-lap)."""
-    return K * (PHI ** -lap_count)
+    return K * (PHI**-lap_count)
 
 
 def overlap(lap_count: int) -> float:
@@ -48,7 +48,7 @@ def solve_spiral_time(S: int) -> dict:
         "node": n,
         "lap": l,
         "μ": m,
-        "τ_multiple": round(t / (DELTA/10), 3),
+        "τ_multiple": round(t / (DELTA / 10), 3),
     }
 
 

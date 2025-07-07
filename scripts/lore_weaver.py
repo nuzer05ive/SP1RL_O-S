@@ -36,19 +36,22 @@ def append_chapter(node: int, pair_id: str, user: str) -> tuple[str, int]:
     depth = prev_depth + 1
     episode = len(chapters) + 1
     supers = "\u2070\u00b9\u00b2\u00b3\u2074\u2075\u2076\u2077\u2078\u2079"
+
     def sup(n: int) -> str:
         return "".join(supers[int(d)] for d in str(n))
 
     eri_suffix = "" if depth == 1 else sup(depth)
     title = f"Episode {episode:03d} — Node-{node} Bloom .e.Ri{eri_suffix}"
 
-    chapters.append({
-        "episode": episode,
-        "node": node,
-        "pair_id": pair_id,
-        "depth": depth,
-        "title": title,
-    })
+    chapters.append(
+        {
+            "episode": episode,
+            "node": node,
+            "pair_id": pair_id,
+            "depth": depth,
+            "title": title,
+        }
+    )
     log["chapters"] = chapters
     _save(LOG_FILE, log)
 

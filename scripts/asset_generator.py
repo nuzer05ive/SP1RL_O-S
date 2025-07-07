@@ -1,9 +1,6 @@
 import json
-import os
 import random
 from pathlib import Path
-
-from spiral_time.constants import PHI
 
 
 def build_all(seed: str = "SP1RL-PHI"):

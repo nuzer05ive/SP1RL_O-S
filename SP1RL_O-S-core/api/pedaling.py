@@ -1,8 +1,10 @@
 """Pedal stroke handler."""
-from ._utils.pw import mint_pw
-from pathlib import Path
-from datetime import datetime
+
 import json
+from datetime import datetime
+from pathlib import Path
+
+from ._utils.pw import mint_pw
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 LEDGER_FILE = DATA_DIR / "pw_ledger.json"

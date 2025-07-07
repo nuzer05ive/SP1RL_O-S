@@ -58,3 +58,13 @@ never crowd each other.
 See [privacy](public/privacy.html) and [terms](public/terms.html) for more.
 Short clips of the spiral may be shared to TikTok; remember nothing here is
 financial advice and all PW totals are symbolic.
+
+## Getting Started
+
+```bash
+cp .env.example .env
+docker compose up db redis  # if using containers
+./scripts/quickstart.sh     # installs, formats, runs tests
+```
+
+![CI](https://github.com/.../actions/workflows/ci.yml/badge.svg)
