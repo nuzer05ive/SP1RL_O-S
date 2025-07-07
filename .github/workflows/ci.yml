@@ -17,7 +17,8 @@ jobs:
       - run: pip install -r requirements-test.txt
       - uses: pnpm/action-setup@v3
         with: {version: 9, run_install: false}
-      - run: pnpm install
+      - name: Install JS deps (no lockfile strictness)
+        run: pnpm install --no-frozen-lockfile
       - run: ./scripts/ci_sweep.sh
 
   deploy:

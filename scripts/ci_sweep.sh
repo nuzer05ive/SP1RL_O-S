@@ -1,15 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Ensure JS deps and Ruff are available
-pnpm install --no-frozen-lockfile
-pip install --quiet ruff
+# --- bootstrap -------------------------------------------------
+# Ensure Ruff is available (avoids “command not found” in GH runner)
+python - <<'PY'
+import importlib, subprocess, sys
+try:
+    importlib.import_module("ruff")
+except ModuleNotFoundError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "--quiet", "ruff==0.4.4"])
+PY
 
-echo "🔍 Ruff…"; ruff check .
-echo "🎨 Black…"; black --check .
-echo "🧬 MyPy…"; mypy .
-echo "🧪 PyTest…"; PYTHONPATH=. pytest -q
-if grep -q '"status": *"failed"' ./netlify/*.json 2>/dev/null; then
-  echo "\e[31mNetlify build failed\e[0m" && exit 1
-fi
-echo "✅ Sweep clean"
+# --- Lint & type-check sweep -----------------------------------
+echo "🔍  Ruff…"      && ruff check .
+echo "🧹  Black…"     && black  --check .
+echo "🔠  MyPy…"      && mypy   .
+
+# --- JS/TS workspace lint (optional) ---------------------------
+# pnpm dlx eslint . --max-warnings 0

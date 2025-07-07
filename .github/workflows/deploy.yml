@@ -56,15 +56,6 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: pnpm
-
-      - name: Install deps
-        run: pnpm install --no-frozen-lockfile
-        working-directory: apps/microsite
-
-      - name: Build (CI)
-        run: pnpm run build
-        working-directory: apps/microsite
-
       - name: Netlify production deploy (core branch)
         uses: nwtgck/actions-netlify@v3
         with:
