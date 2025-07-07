@@ -6,9 +6,9 @@ from .constants import (
     DELTA,
     PHI,
     PSI,
-    K,
-    TUNNEL_COUNT,
     TUNNEL_ANGLES,
+    TUNNEL_COUNT,
+    K,
 )
 from .theta_segments import theta
 

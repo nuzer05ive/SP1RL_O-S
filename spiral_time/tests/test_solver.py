@@ -43,6 +43,9 @@ class TestSolver(unittest.TestCase):
         res = solve_sss("1970-01-01T00:00:00Z")
         self.assertIn("seconds", res)
 
+    def test_trivial(self):
+        self.assertTrue(True)
+
 
 if __name__ == "__main__":
     unittest.main()
