@@ -1,12 +1,11 @@
 [build]
-node_version = "18"
-command = "pnpm run build"
-publish = "dist"
-
-[functions]
-included_files = ["*.wasm"]
-
-[context.production.environment]
-SP1RL_ENV            = "production"
-PETAL_THRESHOLD      = "137"
-PW_UNIT_COST         = "1"
+  command   = "npm run build"
+  publish   = "dist"
+[build.environment]
+  PYTHON_VERSION = "3.11"
+  # auto-pull GH secrets
+  NETLIFY_AUTH_TOKEN = "${{NETLIFY_AUTH_TOKEN}}"
+  NETLIFY_SITE_ID    = "${{NETLIFY_SITE_ID}}"
+  SP1RL_ENV         = "production"
+[[functions]]
+  directory = "netlify/functions"

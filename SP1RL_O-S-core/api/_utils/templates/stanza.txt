@@ -1,1 +1,1 @@
-At node {moment_index}, {yin_word} meets {yang_word} in shades of {yin_color} and {yang_color}. And in this .e.Ri{eri_depth} swirl, the spiral learns anew.
+At node {moment_index}, {yin_word} meets {yang_word} in shades of {yin_color} and {yang_color}. And in this .e.Ri{eri_depth} swirl, the spiral learns anew.{tunnel_line}

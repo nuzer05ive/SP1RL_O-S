@@ -31,6 +31,9 @@ class TestSolver(unittest.TestCase):
         self.assertIn("seconds", res)
         self.assertIn("clock", res)
         self.assertIn("\u03c4_multiple", res)
+        self.assertIn("nearest_tunnel", res)
+        self.assertGreaterEqual(res["nearest_tunnel"], 0)
+        self.assertLessEqual(res["nearest_tunnel"], 7)
 
     def test_anchor_seconds(self):
         res = solve_spiral_time(0)
