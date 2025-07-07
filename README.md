@@ -108,3 +108,9 @@ Run `pnpm -F microsite run build` then `npx netlify deploy` for a local preview.
 The deploy workflow reads `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` secrets.
 If they are missing or Netlify returns a 404, CI falls back to publishing the
 `apps/microsite/dist` folder to a `gh-pages` branch.
+
+### 🔄 Continuous Delivery
+
+1. Push changes to a feature branch and open a PR.
+2. The deploy workflow builds the microsite and posts a preview URL.
+3. Merging to `core` triggers a production deploy via Netlify.

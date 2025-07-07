@@ -1,7 +1,7 @@
 name: Deploy Deck
 on:
   push:
-    branches: [main]
+    branches: [core]
     paths:
       - 'apps/deck/**'
 

@@ -34,10 +34,10 @@ def collect_vars() -> set[str]:
     return vars
 
 
-def sync_to_netlify(site_id: str, token: str, vars: set[str]) -> int:
+def sync_to_netlify(site_id: str, token: str, vars: set[str]) -> bool:
     if not vars:
         print("No env vars found")
-        return 0
+        return True
     payload = [
         {"key": name, "values": [{"value": os.getenv(name, ""), "context": "all"}]}
         for name in sorted(vars)
@@ -62,20 +62,24 @@ def sync_to_netlify(site_id: str, token: str, vars: set[str]) -> int:
         break
     if resp.status_code == 404:
         print("Netlify site not found (404) – skipping")
-        return 0
+        return True
     resp.raise_for_status()
     print(f"Synced {len(payload)} vars")
-    return 0
+    return False
 
 
 def main() -> int:
     token = os.getenv("NETLIFY_AUTH_TOKEN")
     site_id = os.getenv("NETLIFY_SITE_ID")
-    if not token or not site_id:
-        print("\033[33mNETLIFY credentials missing – skipping\033[0m")
-        return 0
-    vars = collect_vars()
-    return sync_to_netlify(site_id, token, vars)
+    skipped = False
+    if not site_id or not token:
+        print("\u26a0\ufe0f  Skipping Netlify env sync \u2013 missing credentials")
+        skipped = True
+    else:
+        vars = collect_vars()
+        skipped = sync_to_netlify(site_id, token, vars)
+    print(f"::set-output name=skipped::{str(skipped).lower()}")
+    return 0
 
 
 if __name__ == "__main__":
