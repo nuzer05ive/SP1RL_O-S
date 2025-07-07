@@ -1,0 +1,16 @@
+name: Petal Bloom
+on:
+  push:
+    branches: [core]
+    paths: ["docs/**"]
+jobs:
+  bloom:
+    if: ${{ github.event.head_commit.additions + github.event.head_commit.deletions >= 137 }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: petal-${{ github.run_number }}
+          title: "🌻 Petal bloom (auto)"
+          body: "Ignition bloom triggered by ≥137-line change."

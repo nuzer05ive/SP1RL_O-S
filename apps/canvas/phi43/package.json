@@ -1,0 +1,20 @@
+{
+  "name": "phi43-canvas",
+  "private": true,
+  "scripts": {
+    "build": "echo 'stub build'"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.158.0",
+    "@react-three/fiber": "^9.6.0",
+    "@sp1rl/core-state": "workspace:*",
+    "@sp1rl/core-math": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "cypress": "^13.7.0"
+  }
+}
