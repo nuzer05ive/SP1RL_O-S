@@ -1,6 +1,8 @@
 """API endpoints for TH.e-1RL_MONDAY.Ng asset generation."""
+
 import json
 from pathlib import Path
+
 from tools.the_one_real_monday_generator import generate_assets
 
 

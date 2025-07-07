@@ -20,4 +20,12 @@ def get_assets_for_node(node: int) -> dict:
     node_str = str(node)
     if node_str in data:
         return data[node_str]
-    return data.get("default", {"yin_word": "yin", "yang_word": "yang", "yin_color": "white", "yang_color": "black"})
+    return data.get(
+        "default",
+        {
+            "yin_word": "yin",
+            "yang_word": "yang",
+            "yin_color": "white",
+            "yang_color": "black",
+        },
+    )

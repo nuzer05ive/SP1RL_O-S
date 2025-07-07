@@ -1,6 +1,7 @@
 """Rainbow narrative engine using a tiny Jinja fallback."""
 
 from pathlib import Path
+
 from .lexicon import get_assets_for_node
 
 try:
@@ -8,9 +9,12 @@ try:
 
     def _render(tmpl: str, ctx: dict) -> str:
         return Template(tmpl).render(**ctx)
+
 except Exception:  # pragma: no cover - jinja2 not installed in tests
+
     def _render(tmpl: str, ctx: dict) -> str:
         return tmpl.format(**ctx)
+
 
 TEMPLATE_DIR = Path(__file__).resolve().parent / "templates"
 

@@ -1,4 +1,5 @@
 """Node-aware Yin/Yang vote handler."""
+
 import json
 from pathlib import Path
 
