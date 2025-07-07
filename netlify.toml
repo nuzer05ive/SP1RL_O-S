@@ -1,7 +1,6 @@
 [build]
-base    = "apps/microsite"
-publish = "dist"
-command = "pnpm --filter microsite... run build"
+publish = "apps/microsite/dist"
+command = "pnpm --filter apps/microsite... run build"
 
 [functions]
 directory = "netlify/functions"
