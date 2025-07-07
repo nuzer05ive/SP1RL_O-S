@@ -1,10 +1,11 @@
 [build]
-  command   = "pnpm -F microsite run build"
-  publish   = "apps/microsite/dist"
-  base      = "apps/microsite"
+base    = "apps/microsite"
+publish = "dist"
+command = "pnpm run build"
 
 [functions]
-  directory = "netlify/functions"
+directory = "netlify/functions"
 
+# Pass GH secrets to the runtime automatically
 [context.production.environment]
-  NODE_ENV = "production"
+SP1RL_STAGE = "prod"

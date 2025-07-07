@@ -8,6 +8,7 @@ from pathlib import Path
 
 import requests
 import tomli
+from requests.exceptions import RequestException
 
 PATTERN = re.compile(r"{{\s*\$([A-Z0-9_]+)\s*}}")
 
@@ -42,7 +43,23 @@ def sync_to_netlify(site_id: str, token: str, vars: set[str]) -> int:
         for name in sorted(vars)
     ]
     url = f"https://api.netlify.com/api/v1/sites/{site_id}/env"
-    resp = requests.put(url, json=payload, headers={"Authorization": f"Bearer {token}"})
+    for attempt in range(3):
+        try:
+            resp = requests.put(
+                url,
+                json=payload,
+                headers={"Authorization": f"Bearer {token}"},
+                timeout=10,
+            )
+        except RequestException:
+            if attempt == 2:
+                raise
+            continue
+        if resp.status_code in (502, 503):
+            if attempt == 2:
+                resp.raise_for_status()
+            continue
+        break
     if resp.status_code == 404:
         print("Netlify site not found (404) – skipping")
         return 0
@@ -55,7 +72,7 @@ def main() -> int:
     token = os.getenv("NETLIFY_AUTH_TOKEN")
     site_id = os.getenv("NETLIFY_SITE_ID")
     if not token or not site_id:
-        print("NETLIFY credentials missing – skipping")
+        print("\033[33mNETLIFY credentials missing – skipping\033[0m")
         return 0
     vars = collect_vars()
     return sync_to_netlify(site_id, token, vars)

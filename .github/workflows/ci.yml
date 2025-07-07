@@ -1,4 +1,4 @@
-name: Deploy to Netlify
+name: CI
 
 on:
   pull_request: {paths-ignore: ["**/*.md"]}
@@ -9,7 +9,19 @@ permissions:
   contents: read
 
 jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+      - run: pip install -r requirements-test.txt
+      - uses: pnpm/action-setup@v3
+        with: {version: 9, run_install: false}
+      - run: pnpm install --frozen-lockfile
+      - run: ./scripts/ci_sweep.sh
+
   deploy:
+    needs: checks
     runs-on: ubuntu-latest
     env:
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -19,9 +31,7 @@ jobs:
       - uses: pnpm/action-setup@v3
         with: {version: 9, run_install: false}
       - run: pnpm install --frozen-lockfile
-      # --- sync any new secrets ---
       - run: python scripts/netlify_sync_env.py
-      # --- build & upload preview ---
       - run: pnpm run build
       - uses: nwtgck/actions-netlify@v3
         with:
