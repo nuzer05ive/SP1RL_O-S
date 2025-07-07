@@ -14,8 +14,16 @@ env:
   PNPM_VERSION: "9"
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run lint sweep
+        run: ./scripts/ci_sweep.sh
+
   preview:
     if: github.event_name == 'pull_request'
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -40,6 +48,7 @@ jobs:
 
   deploy:
     if: github.event_name == 'push'
+    needs: lint
     runs-on: ubuntu-latest
     environment: production
     env:

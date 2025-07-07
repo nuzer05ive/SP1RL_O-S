@@ -1,30 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# --- bootstrap -------------------------------------------------
-# Ensure Ruff is available (avoids “command not found” in GH runner)
-python - <<'PY'
-import importlib, subprocess, sys
-try:
-    importlib.import_module("ruff")
-except ModuleNotFoundError:
-    subprocess.check_call([
-        sys.executable,
-        "-m",
-        "pip",
-        "install",
-        "--quiet",
-        "ruff==0.4.4",
-    ])
-PY
-
-# Pin Ruff version used in CI runs
-pip install --quiet ruff==0.4.4
-
 # --- Lint & type-check sweep -----------------------------------
-echo "🔍  Ruff…"      && ruff check .
-echo "🧹  Black…"     && black  --check .
-echo "🔠  MyPy…"      && mypy   .
+echo "🔍 Ruff…"
+ruff check .
+
+echo "🧹 Black…"
+# Ensure Black is available even in fresh runners
+python -m pip install --quiet black==24.4.2
+black --check .
+
+echo "🔤 MyPy…"
+python -m pip install --quiet mypy==1.10.0
+mypy .
+
+echo "✅ All checks passed!"
 
 # --- JS/TS workspace lint (optional) ---------------------------
 # pnpm dlx eslint . --max-warnings 0
