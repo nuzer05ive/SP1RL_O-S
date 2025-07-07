@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Ensure JS deps and Ruff are available
+pnpm install --no-frozen-lockfile
+pip install --quiet ruff
+
 echo "🔍 Ruff…"; ruff check .
 echo "🎨 Black…"; black --check .
 echo "🧬 MyPy…"; mypy .

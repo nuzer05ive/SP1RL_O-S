@@ -9,59 +9,69 @@ on:
 permissions:
   contents: read
 
+env:
+  NODE_VERSION: "20"
+  PNPM_VERSION: "9"
+
 jobs:
   preview:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        site: [sp1rl-os, sp1rlos]
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v3
-        with: {version: 9, run_install: false}
 
+      # --- Node & pnpm -------------------------------------------------------
+      - uses: pnpm/action-setup@v3
+        with:
+          version: ${{ env.PNPM_VERSION }}
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      # --- Build microsite preview ------------------------------------------
       - name: Install deps
         run: pnpm install --no-frozen-lockfile
         working-directory: apps/microsite
-
-      - name: Build (preview)
+      - name: Build (PR preview)
         run: pnpm run build
         working-directory: apps/microsite
-
-      - name: Netlify Deploy (PR preview)
-        uses: nwtgck/actions-netlify@v3
-        with:
-          publish-dir: ./apps/microsite/dist
-          deploy-message: "Preview for ${{ github.head_ref }}"
-          production-branch: core
-          production-deploy: false
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID:    ${{ secrets.NETLIFY_SITE_ID }}
 
   deploy:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
+    environment: production
+    env:
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID:    ${{ secrets.NETLIFY_SITE_ID }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: pnpm/action-setup@v3
-        with: {version: 9, run_install: false}
+        with:
+          version: ${{ env.PNPM_VERSION }}
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
 
       - name: Install deps
         run: pnpm install --no-frozen-lockfile
         working-directory: apps/microsite
 
-      - name: Build (production)
+      - name: Build (CI)
         run: pnpm run build
         working-directory: apps/microsite
 
-      - name: Netlify Deploy (core)
+      - name: Netlify production deploy (core branch)
         uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: ./apps/microsite/dist
           production-branch: core
           production-deploy: true
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID:    ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ env.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID:   ${{ env.NETLIFY_SITE_ID }}
+
