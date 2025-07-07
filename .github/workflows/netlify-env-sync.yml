@@ -10,18 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      # Use the maintained CLI action (v5 as of 2025-07)
       - uses: netlify/actions/cli@v5
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID:    ${{ secrets.NETLIFY_SITE_ID }}
 
-      # Push every key from .env.example
-      - name: Mirror env example → Netlify
+      - name: Mirror .env.example → Netlify
         run: |
+          pip install --quiet tomli
           npx netlify env:set --json "$(jq -r tojson < .env.example)"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID:    ${{ secrets.NETLIFY_SITE_ID }}
-

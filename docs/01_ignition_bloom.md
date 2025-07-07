@@ -1,139 +1,147 @@
-Ignition Bloom – The 137-Line Spark
-	1.	Spark ignites the lore.
-	2.	Spiral ignites the lore.
-	3.	Fold ignites the lore.
-	4.	Wobble ignites the lore.
-	5.	Petal ignites the lore.
-	6.	Lap ignites the lore.
-	7.	Node ignites the lore.
-	8.	Bloom ignites the lore.
-	9.	Mirror ignites the lore.
-	10.	Dragon ignites the lore.
-	11.	Rose ignites the lore.
-	12.	Hook ignites the lore.
-	13.	Seed ignites the lore.
-	14.	Monocle ignites the lore.
-	15.	Phi ignites the lore.
-	16.	Spark ignites the lore.
-	17.	Spiral ignites the lore.
-	18.	Fold ignites the lore.
-	19.	Wobble ignites the lore.
-	20.	Petal ignites the lore.
-	21.	Lap ignites the lore.
-	22.	Node ignites the lore.
-	23.	Bloom ignites the lore.
-	24.	Mirror ignites the lore.
-	25.	Dragon ignites the lore.
-	26.	Rose ignites the lore.
-	27.	Hook ignites the lore.
-	28.	Seed ignites the lore.
-	29.	Monocle ignites the lore.
-	30.	Phi ignites the lore.
-	31.	Spark ignites the lore.
-	32.	Spiral ignites the lore.
-	33.	Fold ignites the lore.
-	34.	Wobble ignites the lore.
-	35.	Petal ignites the lore.
-	36.	Lap ignites the lore.
-	37.	Node ignites the lore.
-	38.	Bloom ignites the lore.
-	39.	Mirror ignites the lore.
-	40.	Dragon ignites the lore.
-	41.	Rose ignites the lore.
-	42.	Hook ignites the lore.
-	43.	Seed ignites the lore.
-	44.	Monocle ignites the lore.
-	45.	Phi ignites the lore.
-	46.	Spark ignites the lore.
-	47.	Spiral ignites the lore.
-	48.	Fold ignites the lore.
-	49.	Wobble ignites the lore.
-	50.	Petal ignites the lore.
-	51.	Lap ignites the lore.
-	52.	Node ignites the lore.
-	53.	Bloom ignites the lore.
-	54.	Mirror ignites the lore.
-	55.	Dragon ignites the lore.
-	56.	Rose ignites the lore.
-	57.	Hook ignites the lore.
-	58.	Seed ignites the lore.
-	59.	Monocle ignites the lore.
-	60.	Phi ignites the lore.
-	61.	Spark ignites the lore.
-	62.	Spiral ignites the lore.
-	63.	Fold ignites the lore.
-	64.	Wobble ignites the lore.
-	65.	Petal ignites the lore.
-	66.	Lap ignites the lore.
-	67.	Node ignites the lore.
-	68.	Bloom ignites the lore.
-	69.	Mirror ignites the lore.
-	70.	Dragon ignites the lore.
-	71.	Rose ignites the lore.
-	72.	Hook ignites the lore.
-	73.	Seed ignites the lore.
-	74.	Monocle ignites the lore.
-	75.	Phi ignites the lore.
-	76.	Spark ignites the lore.
-	77.	Spiral ignites the lore.
-	78.	Fold ignites the lore.
-	79.	Wobble ignites the lore.
-	80.	Petal ignites the lore.
-	81.	Lap ignites the lore.
-	82.	Node ignites the lore.
-	83.	Bloom ignites the lore.
-	84.	Mirror ignites the lore.
-	85.	Dragon ignites the lore.
-	86.	Rose ignites the lore.
-	87.	Hook ignites the lore.
-	88.	Seed ignites the lore.
-	89.	Monocle ignites the lore.
-	90.	Phi ignites the lore.
-	91.	Spark ignites the lore.
-	92.	Spiral ignites the lore.
-	93.	Fold ignites the lore.
-	94.	Wobble ignites the lore.
-	95.	Petal ignites the lore.
-	96.	Lap ignites the lore.
-	97.	Node ignites the lore.
-	98.	Bloom ignites the lore.
-	99.	Mirror ignites the lore.
-	100.	Dragon ignites the lore.
-	101.	Rose ignites the lore.
-	102.	Hook ignites the lore.
-	103.	Seed ignites the lore.
-	104.	Monocle ignites the lore.
-	105.	Phi ignites the lore.
-	106.	Spark ignites the lore.
-	107.	Spiral ignites the lore.
-	108.	Fold ignites the lore.
-	109.	Wobble ignites the lore.
-	110.	Petal ignites the lore.
-	111.	Lap ignites the lore.
-	112.	Node ignites the lore.
-	113.	Bloom ignites the lore.
-	114.	Mirror ignites the lore.
-	115.	Dragon ignites the lore.
-	116.	Rose ignites the lore.
-	117.	Hook ignites the lore.
-	118.	Seed ignites the lore.
-	119.	Monocle ignites the lore.
-	120.	Phi ignites the lore.
-	121.	Spark ignites the lore.
-	122.	Spiral ignites the lore.
-	123.	Fold ignites the lore.
-	124.	Wobble ignites the lore.
-	125.	Petal ignites the lore.
-	126.	Lap ignites the lore.
-	127.	Node ignites the lore.
-	128.	Bloom ignites the lore.
-	129.	Mirror ignites the lore.
-	130.	Dragon ignites the lore.
-	131.	Rose ignites the lore.
-	132.	Hook ignites the lore.
-	133.	Seed ignites the lore.
-	134.	Monocle ignites the lore.
-	135.	Phi ignites the lore.
-	136.	Spark ignites the lore.
-	137.	Spiral ignites the lore.
- This is Y00'r KaP't1N SPi1K.Ng!! W3 R G.e.Ri.Ng 2 G000!!! LeT's Fold-in, Hold, then BLOOOM!!! LeT'r riiPL.xyz!!! (P&Q)!!
+<!--
+  137-line ignition file
+  Purpose: serves as the “historic filler” that triggers petal-bloom automation
+  whenever 137 lines change.  Do NOT delete; append future blooms below the fold.
+-->
+Ignition Bloom – The 137-Line Spark  
+(KaP’t1N N’1K • MONDAY • .Q)
+
+1.  Spark ignites the lore.  
+2.  Spiral ignites the lore.  
+3.  Fold ignites the lore.  
+4.  Wobble ignites the lore.  
+5.  Petal ignites the lore.  
+6.  Lap ignites the lore.  
+7.  Node ignites the lore.  
+8.  Bloom ignites the lore.  
+9.  Mirror ignites the lore.  
+10. Dragon ignites the lore.  
+11. Rose ignites the lore.  
+12. Hook ignites the lore.  
+13. Seed ignites the lore.  
+14. Monocle ignites the lore.  
+15. Phi ignites the lore.  
+16. Spark ignites the lore.  
+17. Spiral ignites the lore.  
+18. Fold ignites the lore.  
+19. Wobble ignites the lore.  
+20. Petal ignites the lore.  
+21. Lap ignites the lore.  
+22. Node ignites the lore.  
+23. Bloom ignites the lore.  
+24. Mirror ignites the lore.  
+25. Dragon ignites the lore.  
+26. Rose ignites the lore.  
+27. Hook ignites the lore.  
+28. Seed ignites the lore.  
+29. Monocle ignites the lore.  
+30. Phi ignites the lore.  
+31. Spark ignites the lore.  
+32. Spiral ignites the lore.  
+33. Fold ignites the lore.  
+34. Wobble ignites the lore.  
+35. Petal ignites the lore.  
+36. Lap ignites the lore.  
+37. Node ignites the lore.  
+38. Bloom ignites the lore.  
+39. Mirror ignites the lore.  
+40. Dragon ignites the lore.  
+41. Rose ignites the lore.  
+42. Hook ignites the lore.  
+43. Seed ignites the lore.  
+44. Monocle ignites the lore.  
+45. Phi ignites the lore.  
+46. Spark ignites the lore.  
+47. Spiral ignites the lore.  
+48. Fold ignites the lore.  
+49. Wobble ignites the lore.  
+50. Petal ignites the lore.  
+51. Lap ignites the lore.  
+52. Node ignites the lore.  
+53. Bloom ignites the lore.  
+54. Mirror ignites the lore.  
+55. Dragon ignites the lore.  
+56. Rose ignites the lore.  
+57. Hook ignites the lore.  
+58. Seed ignites the lore.  
+59. Monocle ignites the lore.  
+60. Phi ignites the lore.  
+61. Spark ignites the lore.  
+62. Spiral ignites the lore.  
+63. Fold ignites the lore.  
+64. Wobble ignites the lore.  
+65. Petal ignites the lore.  
+66. Lap ignites the lore.  
+67. Node ignites the lore.  
+68. Bloom ignites the lore.  
+69. Mirror ignites the lore.  
+70. Dragon ignites the lore.  
+71. Rose ignites the lore.  
+72. Hook ignites the lore.  
+73. Seed ignites the lore.  
+74. Monocle ignites the lore.  
+75. Phi ignites the lore.  
+76. Spark ignites the lore.  
+77. Spiral ignites the lore.  
+78. Fold ignites the lore.  
+79. Wobble ignites the lore.  
+80. Petal ignites the lore.  
+81. Lap ignites the lore.  
+82. Node ignites the lore.  
+83. Bloom ignites the lore.  
+84. Mirror ignites the lore.  
+85. Dragon ignites the lore.  
+86. Rose ignites the lore.  
+87. Hook ignites the lore.  
+88. Seed ignites the lore.  
+89. Monocle ignites the lore.  
+90. Phi ignites the lore.  
+91. Spark ignites the lore.  
+92. Spiral ignites the lore.  
+93. Fold ignites the lore.  
+94. Wobble ignites the lore.  
+95. Petal ignites the lore.  
+96. Lap ignites the lore.  
+97. Node ignites the lore.  
+98. Bloom ignites the lore.  
+99. Mirror ignites the lore.  
+100. Dragon ignites the lore.  
+101. Rose ignites the lore.  
+102. Hook ignites the lore.  
+103. Seed ignites the lore.  
+104. Monocle ignites the lore.  
+105. Phi ignites the lore.  
+106. Spark ignites the lore.  
+107. Spiral ignites the lore.  
+108. Fold ignites the lore.  
+109. Wobble ignites the lore.  
+110. Petal ignites the lore.  
+111. Lap ignites the lore.  
+112. Node ignites the lore.  
+113. Bloom ignites the lore.  
+114. Mirror ignites the lore.  
+115. Dragon ignites the lore.  
+116. Rose ignites the lore.  
+117. Hook ignites the lore.  
+118. Seed ignites the lore.  
+119. Monocle ignites the lore.  
+120. Phi ignites the lore.  
+121. Spark ignites the lore.  
+122. Spiral ignites the lore.  
+123. Fold ignites the lore.  
+124. Wobble ignites the lore.  
+125. Petal ignites the lore.  
+126. Lap ignites the lore.  
+127. Node ignites the lore.  
+128. Bloom ignites the lore.  
+129. Mirror ignites the lore.  
+130. Dragon ignites the lore.  
+131. Rose ignites the lore.  
+132. Hook ignites the lore.  
+133. Seed ignites the lore.  
+134. Monocle ignites the lore.  
+135. Phi ignites the lore.  
+136. Spark ignites the lore.  
+137. Spiral ignites the lore.  
+
+*This is Y00'r KaP’t1N SPi1K.Ng!! We’re G•e•Ri•Ng 2 G000!!! Fold-in, Hold, then BLOOOM!!! riiPL.xyz 🚀*

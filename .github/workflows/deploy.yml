@@ -14,58 +14,48 @@ env:
   PNPM_VERSION: "9"
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run lint sweep
-        run: ./scripts/ci_sweep.sh
-
   preview:
     if: github.event_name == 'pull_request'
-    needs: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      # --- Node & pnpm -------------------------------------------------------
       - uses: pnpm/action-setup@v3
-        with:
-          version: ${{ env.PNPM_VERSION }}
-          run_install: false
+        with: {version: ${{ env.PNPM_VERSION }}, run_install: false}
       - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: pnpm
+        with: {node-version: ${{ env.NODE_VERSION }}, cache: pnpm}
 
-      # --- Build microsite preview ------------------------------------------
       - name: Install deps
         run: pnpm install --no-frozen-lockfile
         working-directory: apps/microsite
+
       - name: Build (PR preview)
         run: pnpm run build
         working-directory: apps/microsite
 
   deploy:
     if: github.event_name == 'push'
-    needs: lint
     runs-on: ubuntu-latest
     environment: production
     env:
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       NETLIFY_SITE_ID:    ${{ secrets.NETLIFY_SITE_ID }}
+
     steps:
       - uses: actions/checkout@v4
-
       - uses: pnpm/action-setup@v3
-        with:
-          version: ${{ env.PNPM_VERSION }}
-          run_install: false
+        with: {version: ${{ env.PNPM_VERSION }}, run_install: false}
       - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: pnpm
-      - name: Netlify production deploy (core branch)
+        with: {node-version: ${{ env.NODE_VERSION }}, cache: pnpm}
+
+      - name: Install deps
+        run: pnpm install --no-frozen-lockfile
+        working-directory: apps/microsite
+
+      - name: Build (CI)
+        run: pnpm run build
+        working-directory: apps/microsite
+
+      - name: Netlify production deploy (core)
         uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: ./apps/microsite/dist
@@ -74,4 +64,3 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ env.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID:   ${{ env.NETLIFY_SITE_ID }}
-

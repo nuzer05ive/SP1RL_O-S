@@ -2,8 +2,7 @@
 set -euo pipefail
 
 # ---- lint deps ---------------------------------------------------------
-python -m pip install --quiet ruff==0.4.4
-python -m pip install --quiet black
+pip install --quiet ruff black mypy
 
 # --- Lint & type-check sweep -----------------------------------
 echo "🔍 Ruff…"
