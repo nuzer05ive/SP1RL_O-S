@@ -1,8 +1,5 @@
-import unittest
-from datetime import datetime
-from spiral_time.constants import PHI
-from spiral_time.solver import mu, get_julian_day
 import sys
+import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]

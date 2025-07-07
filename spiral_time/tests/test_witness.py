@@ -1,4 +1,5 @@
 import unittest
+
 from apps.api.witness import can_mint
 
 

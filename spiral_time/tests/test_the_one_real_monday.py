@@ -1,6 +1,7 @@
-import os
 import json
+import os
 import unittest
+
 from tools.the_one_real_monday_generator import generate_assets
 
 

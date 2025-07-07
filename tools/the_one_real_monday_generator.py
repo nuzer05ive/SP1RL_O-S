@@ -1,7 +1,8 @@
 """Generate assets for TH.e-1RL_MONDAY.Ng."""
 
-from scripts.asset_generator import build_all
 from datetime import datetime
+
+from scripts.asset_generator import build_all
 
 
 def generate_assets(seed: str = "SP1RL-PHI"):

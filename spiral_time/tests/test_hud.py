@@ -1,4 +1,5 @@
 import unittest
+
 from spiral_time.solver import solve_spiral_time
 
 
