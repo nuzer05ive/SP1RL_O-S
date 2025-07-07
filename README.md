@@ -101,3 +101,10 @@ git push                  # prod → sync → build
 ## Deploy → Netlify
 
 `npm run build` must succeed locally before pushing.
+
+## Netlify & GH Pages deploy
+
+Run `pnpm -F microsite run build` then `npx netlify deploy` for a local preview.
+The deploy workflow reads `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` secrets.
+If they are missing or Netlify returns a 404, CI falls back to publishing the
+`apps/microsite/dist` folder to a `gh-pages` branch.

@@ -1,16 +1,26 @@
+name: Deploy Microsite
 on:
-  pull_request:
-    paths: ['**/*']
+  push:
+    branches: [core]
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: {fetch-depth: 0}
-      - uses: actions/setup-node@v4
-        with: {node-version: '18'}
-      - run: npm ci --ignore-scripts
-      - run: npm run test
-      - run: npx netlify deploy --build --prod \
-              --site ${{ secrets.NETLIFY_SITE_ID }} \
-              --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      - uses: pnpm/action-setup@v3
+        with: {version: 9}
+      - run: pnpm install --frozen-lockfile
+      - run: python scripts/netlify_sync_env.py
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID:    ${{ secrets.NETLIFY_SITE_ID }}
+      - name: Build & Publish to Netlify
+        if: env.NETLIFY_AUTH_TOKEN != ''
+        run: |
+          pnpm -F microsite run build
+          npx netlify deploy --prod -s $NETLIFY_SITE_ID -d apps/microsite/dist
+      - name: GitHub Pages Fallback
+        if: env.NETLIFY_AUTH_TOKEN == ''
+        run: |
+          pnpm -F microsite run build
+          npx gh-pages -d apps/microsite/dist -b gh-pages
