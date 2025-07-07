@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v3
         with: {version: 9, run_install: false}
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
       # --- sync any new secrets ---
       - run: python scripts/netlify_sync_env.py
       # --- build & upload preview ---

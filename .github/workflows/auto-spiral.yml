@@ -17,7 +17,7 @@ jobs:
         with:
           path: ~/.pnpm-store
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-      - run: pnpm i --frozen-lockfile
+      - run: pnpm i
       - run: pnpm test
       - run: pnpm ts-node scripts/pregen.ts 10000
         env:
