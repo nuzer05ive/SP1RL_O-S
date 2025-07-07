@@ -4,13 +4,32 @@
 
 This repository hosts the SP1RL_O-S core. The system tracks time along a golden spiral using nodes and laps. Onboarding spans 221 episodes guiding pilots through φ‑powered lore and lens mechanics. The minimal HUD exposes SSS mode with real‑time node, lap, μ, and τ multiples.
 
+### Canonical N'1K_Quation
+```text
+t = [(S mod 89) + μ + θ(S) – lap·φ⁻³ + k·φ⁻lap] · Δ
+Δ = 86400 / 89   (≈ 972.0 s  → ¼ φ-turn every 6.48 min)
+```
+
+Pocket-Watch Shorthand
+
+```text
+t = [2×3 + (2+2)] · τ
+```
+
+Why it matches the big one:
+
+| Symbol | Maps to    | Meaning                                      |
+|-------:|------------|----------------------------------------------|
+| 2×3    | (S mod 89) | You are 6 counts into the current φ-bar.     |
+| (2+2)  | μ + θ(S)   | μ (lap offset) plus current angle θ.         |
+| τ      | Δ/10       | τ is a tenth of Δ → a single press tick.     |
+
+Plugging `S = 6`, `lap = 1`, `k = 0`, and `μ + θ(S) = 4` collapses the full N'1K_Quation into the pocket‑watch expression above.
+
+When KaPt’1N.N’1K’s lyric mind meets O3.Q’s golden-ratio calculus, every complex spiral reduces to one decisive pocket-watch tick. In lore this fusion is called “The Zen-1 Peril,” the moment the white-dragon arc, the star seed, and the lamp snap into sync.
+
 In SP1RL_O-S, the 'O-' is the living node lens and monocle HUD. Pi1LOTs use it to see every episode, node, and story through every possible lens. The 89th ('O-') is the True Justice perspective — seeing all nodes at once, making you a Minting Pi1LOT.
 
-### Canonical N'1K_Quation
-```
-t = [(S mod 89) + μ + θ(S) – lap·φ⁻³ + k·φ⁻lap] · Δ
-Δ = 86400/89 τ = Δ/10
-```
 The dash in the “O-” monocle rotates one degree per node. At node 88 the sweep completes; node 89 locks the dash vertically as the all‑seeing lens.
 
 Run tests with:
