@@ -1,69 +1,64 @@
-"""Sync .env.example with Netlify site environment variables."""
+"""Sync workflow and config placeholders to Netlify env vars."""
 
 from __future__ import annotations
 
 import os
-import sys
+import re
 from pathlib import Path
 
 import requests
-from tabulate import tabulate
+import tomli
+
+PATTERN = re.compile(r"{{\s*\$([A-Z0-9_]+)\s*}}")
 
 
-def load_env_example(path: Path) -> dict[str, str]:
-    env = {}
-    for line in path.read_text().splitlines():
-        if not line or line.startswith("#"):
-            continue
-        if "=" not in line:
-            continue
-        key, val = line.split("=", 1)
-        env[key] = val
-    return env
+def scan_file(path: Path) -> set[str]:
+    try:
+        text = path.read_text()
+    except Exception:
+        return set()
+    if path.suffix == ".toml":
+        try:
+            text = str(tomli.loads(text))
+        except tomli.TOMLDecodeError:
+            pass
+    return set(PATTERN.findall(text))
 
 
-def get_netlify_vars(site_id: str, token: str) -> dict[str, str]:
+def collect_vars() -> set[str]:
+    vars: set[str] = set()
+    for ext in ("*.yml", "*.yaml", "*.toml"):
+        for p in Path(".").rglob(ext):
+            vars.update(scan_file(p))
+    return vars
+
+
+def sync_to_netlify(site_id: str, token: str, vars: set[str]) -> int:
+    if not vars:
+        print("No env vars found")
+        return 0
+    payload = [
+        {"key": name, "values": [{"value": os.getenv(name, ""), "context": "all"}]}
+        for name in sorted(vars)
+    ]
     url = f"https://api.netlify.com/api/v1/sites/{site_id}/env"
-    resp = requests.get(url, headers={"Authorization": f"Bearer {token}"})
+    resp = requests.put(url, json=payload, headers={"Authorization": f"Bearer {token}"})
+    if resp.status_code == 404:
+        print("Netlify site not found (404) – skipping")
+        return 0
     resp.raise_for_status()
-    data = resp.json()
-    return {item["key"]: item["values"][0]["value"] for item in data}
-
-
-def create_or_update(
-    site_id: str, token: str, key: str, value: str, existing: dict[str, str]
-):
-    base = f"https://api.netlify.com/api/v1/sites/{site_id}/env"
-    headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
-    if key in existing:
-        if existing[key] == value:
-            return "unchanged"
-        resp = requests.put(f"{base}/{key}", headers=headers, json={"value": value})
-        resp.raise_for_status()
-        return "updated"
-    resp = requests.post(base, headers=headers, json={"key": key, "value": value})
-    resp.raise_for_status()
-    return "added"
+    print(f"Synced {len(payload)} vars")
+    return 0
 
 
 def main() -> int:
-    token = os.environ.get("NETLIFY_AUTH_TOKEN")
-    site_id = os.environ.get("NETLIFY_SITE_ID")
+    token = os.getenv("NETLIFY_AUTH_TOKEN")
+    site_id = os.getenv("NETLIFY_SITE_ID")
     if not token or not site_id:
-        print("NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID are required", file=sys.stderr)
-        return 1
-
-    env_path = Path(".env.example")
-    local = load_env_example(env_path)
-    remote = get_netlify_vars(site_id, token)
-
-    rows = []
-    for key, val in local.items():
-        action = create_or_update(site_id, token, key, val, remote)
-        rows.append([key, action])
-
-    print(tabulate(rows, headers=["Key", "Action"]))
-    return 0
+        print("NETLIFY credentials missing – skipping")
+        return 0
+    vars = collect_vars()
+    return sync_to_netlify(site_id, token, vars)
 
 
 if __name__ == "__main__":

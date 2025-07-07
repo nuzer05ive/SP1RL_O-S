@@ -4,11 +4,12 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "vite build",
     "preview": "astro preview",
     "serve": "astro preview"
   },
   "dependencies": {
-    "astro": "^4.0.0"
+    "astro": "^4.0.0",
+    "mustache": "4.3.1"
   }
 }
