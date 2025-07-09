@@ -357,3 +357,14 @@ If they are missing or Netlify returns a 404, CI falls back to publishing the
 1. Push changes to a feature branch and open a PR.
 2. The deploy workflow builds the microsite and posts a preview URL.
 3. Merging to `core` triggers a production deploy via Netlify.
+
+## Local Python Setup
+Create a virtual environment and install requirements:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-test.txt
+```
+
+Run the test suite with `pytest -q`.
