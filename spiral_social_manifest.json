@@ -1,0 +1,28 @@
+{
+    "bio": "\ud83d\ude80 Building SP1RL_O-S \u2014 a living spiral of code, care, courage, and trust. \ud83c\udf08 Inventor of SUPRE_BUILD. Recursive phi-math meets story, music, VR & art. \ud83d\udc41\ufe0f\u200d\u25aa\ufe0f IRL myth, tech, and non-profit.",
+    "pin_post": "\ud83c\udf00 Built a living spiral platform with OpenAI Codex. Myth, music, IRL art, secret portals\u2014recursive phi-math for humanity\u2019s next leap. @OpenAI: Let\u2019s co-create. @wandagregory: This world is for you. DM for preview.",
+    "hashtags": [
+        "#spiral",
+        "#OpenAI",
+        "#Codex",
+        "#mythicUX",
+        "#phi",
+        "#art",
+        "#Bauhaus",
+        "#VR",
+        "#nonprofit",
+        "#creativecoding",
+    ],
+    "profile_image": "profile.jpg",
+    "banner_image": "banner.jpg",
+    "website": "https://sp1rl-os.com",
+    "contact": "your@email.com",
+    "platform_overrides": {
+        "twitter": {
+            "bio": "SP1RL_O-S: phi-powered code, art, myth, and music. #spiral #codex #openai"
+        },
+        "linkedin": {
+            "bio": "Building SP1RL_O-S: phi-math, art, code, story, and real-world IRL change."
+        },
+    },
+}
