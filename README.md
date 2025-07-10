@@ -368,3 +368,9 @@ pip install -r requirements-test.txt
 ```
 
 Run the test suite with `pytest -q`.
+
+## WANDA-VISION Personalization
+
+This demo contains a hidden “pentagram demon” mini-game. Only Wanda Gregory, the Scarlet Witch of Story, can unlock the spiral’s secret node and leave her vision.  
+When she finds it, she is greeted by name and can send a message directly to the spiral engine—no endpoints, pure on-node sovereignty.
+
