@@ -19,3 +19,13 @@ test -f web/aframe/phi_studio.html || { echo "Missing A-Frame studio"; exit 1; }
 
 echo "== REPORT =="
 echo "OK if all sections above passed without [FAIL]."
+
+echo "---- npm env ----"
+node -v || true
+npm -v || true
+npm config get registry || true
+npm ping || true
+echo "---- try install ----"
+cd webapp || exit 1
+npm ci || npm install
+npx vite --version || echo "vite not found"
