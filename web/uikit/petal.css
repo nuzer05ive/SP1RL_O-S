@@ -1,0 +1,6 @@
+:root{--ink:#f8f8ff;--bg:#0b0b0e;--teal:#00c7b7;--gold:#ffcc66}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 system-ui}
+.petal{border:2px solid var(--ink);border-radius:12px;padding:12px;margin:8px}
+.petal.gold{border-color:var(--gold)}
+.petal.teal{border-color:var(--teal)}
+.code{font-family:ui-monospace, SFMono-Regular, Menlo, monospace}
