@@ -389,3 +389,10 @@ pip install fastapi uvicorn opencv-python pytest
 uvicorn apps.docbuilder.api:app --reload
 bash tools/one_shot_troubleshoot.sh
 ```
+
+## v0.2 — Spiral Stamp + Deploy + Ring Controls
+
+- SP1RL_Ti1M.e stamp minted at each GRACE sign-off (`apps/docbuilder/spiral_stamp.py`)
+- Netlify CI deploy via GitHub Actions
+- A-Frame ring/gesture controls (`ring-controls`) and HUD scrubber
+- Starter corpus loader for instant demos
