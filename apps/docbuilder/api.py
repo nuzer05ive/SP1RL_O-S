@@ -25,6 +25,6 @@ def bloom_propose(inp: DraftIn):
 
 @app.post("/grace/signoff")
 def grace_signoff(inp: DraftIn):
-    path = signoff_path(inp.title, depth="phi43")
-    doc = emit_runtime_docs(inp.title, path)
-    return {"path": path, "docs": doc}
+    charter = signoff_path(inp.title, depth="phi43")
+    doc = emit_runtime_docs(inp.title, charter)
+    return doc

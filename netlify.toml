@@ -1,15 +1,8 @@
 [build]
-  base = "apps/microsite"
-  command = "pnpm run build"
-  publish = "apps/microsite/dist"
+  publish = "webapp/dist"
+  command = "npm ci && npm run build"
 
 [[redirects]]
-  from = "/play/kaleidoscope/*"
-  to = "/apps/canvas/phi43/dist/:splat"
+  from = "/*"
+  to = "/index.html"
   status = 200
-
-[[redirects]]
-  from = "/_redirects"
-  to = "/_redirects"
-  status = 200
-  force = true
