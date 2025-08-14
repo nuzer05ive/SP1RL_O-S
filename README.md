@@ -374,3 +374,18 @@ Run the test suite with `pytest -q`.
 This demo contains a hidden “pentagram demon” mini-game. Only Wanda Gregory, the Scarlet Witch of Story, can unlock the spiral’s secret node and leave her vision.  
 When she finds it, she is greeted by name and can send a message directly to the spiral engine—no endpoints, pure on-node sovereignty.
 
+
+## SP1RL_UIKIT‑φ: Doc Builder + VR Studio
+
+- **Doc Builder API**: `apps/docbuilder/` (HOOK, BLOOM, GRACE)
+- **Hyperbole Bounds**: flags assertive/unsupported language, encourages citations
+- **VR φ‑seed**: `web/aframe/phi_studio.html` gestures (tap / double‑tap / 3‑sec hold)
+- **Image→3D POC**: `apps/vision/photogrammetry_lite.py` (SIFT keypoints → sparse cloud)
+
+### Dev
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install fastapi uvicorn opencv-python pytest
+uvicorn apps.docbuilder.api:app --reload
+bash tools/one_shot_troubleshoot.sh
+```
