@@ -396,3 +396,18 @@ bash tools/one_shot_troubleshoot.sh
 - Netlify CI deploy via GitHub Actions
 - A-Frame ring/gesture controls (`ring-controls`) and HUD scrubber
 - Starter corpus loader for instant demos
+
+## Webapp quickstart
+```bash
+# one-time
+nvm use || true
+corepack disable || true
+cd webapp
+npm ci
+npm run dev   # localhost:5173
+npm run build # outputs webapp/dist
+
+CI/Netlify pins Node 20 and registry to avoid corporate mirrors blocking npmjs.org.
+
+> If a `package-lock.json` does not exist yet, generate it via `npm i --package-lock-only` in `webapp/` and commit.
+```

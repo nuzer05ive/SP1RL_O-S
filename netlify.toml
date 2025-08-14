@@ -1,6 +1,11 @@
 [build]
+  base = "webapp"
   publish = "webapp/dist"
   command = "npm ci && npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_CONFIG_REGISTRY = "https://registry.npmjs.org/"
 
 [[redirects]]
   from = "/*"
