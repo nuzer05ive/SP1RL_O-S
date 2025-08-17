@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SP1RL Deploy Portal</title>
+  <link rel="stylesheet" href="portal.css" />
+</head>
+<body>
+  <header>
+    <h1>Deploy Portal</h1>
+    <span id="status" class="chip ok">OK</span>
+  </header>
+  <nav>
+    <button data-tab="modules" class="tab-btn">Modules</button>
+    <button data-tab="swap" class="tab-btn">Hot-Swap</button>
+    <button data-tab="pkg" class="tab-btn">Package/Deploy</button>
+    <button data-tab="settings" class="tab-btn">Settings</button>
+  </nav>
+  <section id="modules" class="tab active">
+    <ul id="module-list"></ul>
+  </section>
+  <section id="swap" class="tab">
+    <div id="dropzone">Drop .js file here</div>
+    <select id="module-select"></select>
+    <div class="actions">
+      <button id="load-ram" class="primary">Load to RAM</button>
+      <button id="persist-sw" class="ghost">Persist to SW Cache</button>
+    </div>
+  </section>
+  <section id="pkg" class="tab">
+    <button id="export-zip" class="primary">Export ZIP</button>
+    <button id="deploy-netlify" class="ghost">Deploy to Netlify</button>
+  </section>
+  <section id="settings" class="tab">
+    <label>Netlify token <input id="netlify-token" type="password" /></label>
+    <label>Site ID <input id="netlify-site" /></label>
+    <label><input type="checkbox" id="use-sw" /> Use Service Worker overrides</label>
+  </section>
+  <pre id="logs"></pre>
+  <script type="module" src="portal.js"></script>
+</body>
+</html>

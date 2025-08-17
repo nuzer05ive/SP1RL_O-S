@@ -1,30 +1,40 @@
 const REGISTRY_URL = '/SP1RL_O-S-core/codex/_registry/manifest.json';
 const IMPORT_MAP_URL = '/SP1RL_O-S-core/codex/_runtime/importmap.json';
 const cache = {};
-let map = {};
+const map = new Map();
 
-export async function init() {
+function emit(detail) {
+  window.dispatchEvent(new CustomEvent('SP1RL_BUS_V1', { detail }));
+}
+
+async function init(opts = {}) {
   try {
     const [manifest, base] = await Promise.all([
       fetch(REGISTRY_URL).then(r => r.json()),
       fetch(IMPORT_MAP_URL).then(r => r.json())
     ]);
-    map = { ...(base.imports || {}) };
+    const imports = { ...(base.imports || {}) };
     (manifest.modules || []).forEach(m => {
-      map[m.id] = m.entry;
+      imports[m.id] = m.entry;
     });
+    Object.keys(imports).forEach(k => map.set(k, imports[k]));
   } catch (_) {
     try {
       const base = await fetch(IMPORT_MAP_URL).then(r => r.json());
-      map = { ...(base.imports || {}) };
+      Object.keys(base.imports || {}).forEach(k => map.set(k, base.imports[k]));
     } catch (e) {
-      map = {};
+      map.clear();
     }
+  }
+  if (opts.useSW && 'serviceWorker' in navigator) {
+    try {
+      await navigator.serviceWorker.register('/SP1RL_O-S-core/codex/_registry/deploy/sw.js');
+    } catch (_) {}
   }
 }
 
-export async function load(id) {
-  const entry = map[id];
+async function load(id) {
+  const entry = map.get(id);
   if (!entry) {
     return {};
   }
@@ -40,24 +50,24 @@ export async function load(id) {
   }
 }
 
-export async function hotSwap(id, newEntry) {
-  map[id] = newEntry;
+async function hotSwap(id, newEntry) {
+  map.set(id, newEntry);
   delete cache[id];
   return load(id);
 }
 
-export function unload(id) {
+function unload(id) {
   delete cache[id];
 }
 
-export function require(ids) {
-  return {
-    async withFallbacks() {
-      const mods = {};
-      for (const id of ids) {
-        mods[id] = await load(id);
-      }
-      return mods;
-    }
-  };
+async function require(ids) {
+  const mods = {};
+  for (const id of ids) {
+    mods[id] = await load(id);
+  }
+  emit({ type: 'sp1rl/modules-loaded', ids });
+  return mods;
 }
+
+const SP1RL = { init, load, hotSwap, unload, require, map };
+export default SP1RL;

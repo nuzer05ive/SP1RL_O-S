@@ -12,16 +12,27 @@
     <span class="badge">mints: <span id="m-count">0</span></span>
     <span class="badge">treasury: <span id="t-count">0</span></span>
   </div>
+  <button id="open-registry">Registry</button>
   <button id="fire">fire !</button>
   <canvas id="spiral"></canvas>
   <canvas id="chart"></canvas>
   <ul id="treasury"></ul>
+  <div id="registry-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);">
+    <iframe src="/SP1RL_O-S-core/codex/_registry/deploy/portal.html" style="width:100%;height:100%;border:0;"></iframe>
+  </div>
   <script type="importmap" src="/SP1RL_O-S-core/codex/_runtime/importmap.json"></script>
   <script type="module">
-    window.SP1RL = await import('sp1rl:loader');
+    window.SP1RL = (await import('sp1rl:loader')).default;
     await SP1RL.init();
-    window.MODS = await SP1RL.require(['teal-math@stable','plots@stable']).withFallbacks();
+    window.MODS = await SP1RL.require(['teal-math@stable','plots@stable']);
   </script>
   <script src="app.js"></script>
+  <script>
+    const openBtn = document.getElementById('open-registry');
+    const overlay = document.getElementById('registry-overlay');
+    openBtn.addEventListener('click', () => overlay.style.display = 'block');
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.style.display = 'none'; });
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.style.display = 'none'; });
+  </script>
 </body>
 </html>
