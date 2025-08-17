@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "sp1rl:loader": "/SP1RL_O-S-core/codex/_runtime/module-loader.js"
+  }
+}
