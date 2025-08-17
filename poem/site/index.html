@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SP1RL‑OS | “You said:” — Stanza Scroll</title>
+  <meta name="description" content="Stanza-by-stanza parallax presentation of the poem in a simple SP1RL‑OS branded style." />
+  <style>
+    :root{ --bg-0:#081013; --bg-1:#0b171a; --ink:#e9fcf7; --muted:#9bded3; --teal:#14b8a6; --gold:#f4d35e; --maxw: 980px; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{ margin:0; color:var(--ink);
+      background: radial-gradient(1200px 800px at 110% -10%, #0f2621 0%, transparent 60%),
+                 radial-gradient(900px 700px at -10% 110%, #0a1715 0%, transparent 60%),
+                 linear-gradient(180deg, var(--bg-0), var(--bg-1));
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif; line-height:1.55; letter-spacing:.2px;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+    header{ position:sticky; top:0; z-index:40; backdrop-filter: blur(10px);
+      background: linear-gradient(to right, rgba(8,16,19,.7), rgba(11,23,26,.55));
+      border-bottom:1px solid rgba(255,255,255,.08); }
+    .bar{ max-width:var(--maxw); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:12px; justify-content:space-between; }
+    .logo{ display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.4px; text-transform:uppercase; font-size:14px; }
+    .logo-badge{ width:26px; height:26px; border-radius:50%; background:
+      conic-gradient(from 137.5deg, var(--teal), #0cc0ab 25%, #23e0cd 50%, var(--gold) 75%, var(--teal) 100%);
+      border:1px solid rgba(255,255,255,.25); box-shadow:0 0 0 2px rgba(20,184,166,.15), 0 4px 18px rgba(0,0,0,.35) inset; }
+    .hdr-actions{ display:flex; align-items:center; gap:8px; }
+    button,.mode{ appearance:none; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.03);
+      color:var(--ink); border-radius:999px; padding:8px 12px; font:600 12px/1 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"; letter-spacing:.3px; cursor:pointer; }
+    button:hover,.mode:hover{ background:rgba(255,255,255,.07) }
+    .mode{ display:inline-flex; align-items:center; gap:8px }
+    .dot{ width:8px; height:8px; border-radius:50%; background:var(--teal); box-shadow:0 0 0 3px rgba(20,184,166,.15) }
+    .hero{ position:relative; overflow:hidden; border-bottom:1px solid rgba(255,255,255,.08);
+      background: radial-gradient(700px 300px at 50% -50px, rgba(20,184,166,.18), transparent 60%); }
+    .hero-inner{ max-width:var(--maxw); margin:0 auto; padding:48px 16px 28px; display:grid; gap:6px; }
+    .eyebrow{ color:var(--muted); font-size:12px; letter-spacing:.45px; text-transform:uppercase }
+    h1{ margin:0; font-weight:800; line-height:1.15; letter-spacing:.2px; font-size:clamp(28px, 4vw, 40px); text-shadow:0 2px 0 rgba(0,0,0,.35); }
+    .subtitle{ color:#bcefe6; max-width:60ch; opacity:.9; font-size:14px }
+    main{ position:relative }
+    .stanza{ position:relative; min-height:100svh; display:grid; place-items:center; padding:64px 16px; border-bottom:1px solid rgba(255,255,255,.07); overflow:hidden; }
+    .stanza::before{ content:""; position:absolute; inset:-20%; background:
+      radial-gradient(550px 260px at 30% 10%, rgba(244,211,94,.06), transparent 60%),
+      radial-gradient(700px 300px at 80% 90%, rgba(20,184,166,.08), transparent 60%);
+      transform:translate3d(0, var(--parallax, 0px), 0); transition:transform .3s ease-out; pointer-events:none; }
+    .card{ max-width:var(--maxw); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.12); border-radius:18px; box-shadow:0 10px 28px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05);
+      padding:28px clamp(16px, 4vw, 40px); position:relative; overflow:hidden; }
+    .card::after{ content:""; position:absolute; inset:0; background: radial-gradient(400px 140px at 85% 0%, rgba(20,184,166,.12), transparent 55%); pointer-events:none; }
+    .count{ position:absolute; top:14px; right:16px; font-size:12px; color:var(--muted); letter-spacing:.5px; text-transform:uppercase; }
+    .label{ font-weight:700; color:var(--gold); letter-spacing:.4px; margin-bottom:8px; text-transform:uppercase; font-size:12px; }
+    .text{ font-size:clamp(18px, 2.2vw, 22px); line-height:1.6; white-space:pre-wrap; opacity:0; transform:translateY(12px) scale(.995);
+      transition:opacity .9s cubic-bezier(.2,.7,0,1), transform .9s cubic-bezier(.2,.7,0,1); }
+    .text.reveal{ opacity:1; transform:translateY(0) scale(1) }
+    .carousel-wrap{ position:fixed; inset:auto 0 12px 0; z-index:60; display:none; justify-content:center; pointer-events:none; }
+    .carousel{ width:min(100%, var(--maxw)); border-radius:16px; overflow:hidden; pointer-events:auto; border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); box-shadow:0 10px 30px rgba(0,0,0,.45); }
+    .track{ display:flex; transition:transform .5s cubic-bezier(.2,.7,0,1); will-change:transform }
+    .pane{ width:100%; padding:24px clamp(16px, 4vw, 32px); display:grid; gap:8px; }
+    .controls{ display:flex; align-items:center; justify-content:space-between; padding:8px 10px 12px; border-top:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.12)); }
+    .dots{ display:flex; gap:6px; flex-wrap:wrap; max-width:75% }
+    .dotbtn{ width:8px; height:8px; border-radius:50%; border:1px solid rgba(255,255,255,.35); background:rgba(255,255,255,.08); cursor:pointer; padding:0; }
+    .dotbtn.active{ background:var(--teal); border-color:transparent; box-shadow:0 0 0 3px rgba(20,184,166,.25) }
+    .navbtn{ display:inline-flex; align-items:center; justify-content:center; width:36px; height:28px; border-radius:999px; cursor:pointer; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.05); }
+    .mode-toggle{ margin-left:8px; border-color:rgba(244,211,94,.35); box-shadow:0 0 0 3px rgba(244,211,94,.12) inset; }
+    @media (prefers-reduced-motion: reduce) { .text{ transition:none } .track{ transition:none } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div class="logo">
+        <span class="logo-badge" aria-hidden="true"></span>
+        <span>SP1RL‑OS</span>
+      </div>
+      <div class="hdr-actions">
+        <span class="mode" id="modeIndicator"><span class="dot"></span> Scroll (Parallax)</span>
+        <button class="mode-toggle" id="toggleMode" title="Toggle Carousel / Scroll">Toggle Carousel</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Poem title">
+    <div class="hero-inner">
+      <div class="eyebrow">You said:</div>
+      <h1>We make heavens landing… (stanza presentation)</h1>
+      <p class="subtitle">This page loads <code>/poem.txt</code> at runtime and splits it into stanzas by blank lines. Text is used <em>verbatim</em>.</p>
+    </div>
+  </section>
+
+  <main id="scrollMount" aria-live="polite"></main>
+
+  <div class="carousel-wrap" id="carouselWrap" aria-hidden="true">
+    <div class="carousel" role="dialog" aria-label="Stanza carousel">
+      <div class="track" id="track"></div>
+      <div class="controls">
+        <button class="navbtn" id="prev" title="Previous stanza" aria-label="Previous stanza">‹</button>
+        <div class="dots" id="dots" aria-label="Stanza positions"></div>
+        <button class="navbtn" id="next" title="Next stanza" aria-label="Next stanza">›</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const scrollMount = document.getElementById('scrollMount');
+    const wrap = document.getElementById('carouselWrap');
+    const track = document.getElementById('track');
+    const dots = document.getElementById('dots');
+    const modeIndicator = document.getElementById('modeIndicator');
+    const toggleBtn = document.getElementById('toggleMode');
+    let carouselOn = false, stanzas = [], idx = 0;
+
+    async function loadPoem(){
+      try{
+        const res = await fetch('poem.txt', {cache:'no-store'});
+        const raw = await res.text();
+        // Split on blank lines into stanzas, trim but preserve inner spacing & emoji
+        stanzas = raw.replace(/\r/g,'').split(/\n\s*\n/g).map(s=>s.trim());
+        renderScroll();
+      }catch(e){
+        stanzas = ["ERROR: Could not load poem.txt. Place your full poem at /site/poem.txt (UTF-8).\n\nFormat: separate stanzas with a blank line."]; renderScroll();
+      }
+    }
+
+    function renderScroll(){
+      scrollMount.innerHTML = '';
+      stanzas.forEach((txt, i) => {
+        const sec = document.createElement('section'); sec.className = 'stanza';
+        const card = document.createElement('div'); card.className = 'card';
+        const lbl = document.createElement('div'); lbl.className = 'label'; lbl.textContent = `Stanza ${i+1}`;
+        const cnt = document.createElement('div'); cnt.className = 'count'; cnt.textContent = `${i+1} / ${stanzas.length}`;
+        const p = document.createElement('div'); p.className = 'text'; p.textContent = txt;
+        card.append(lbl, p, cnt); sec.append(card); scrollMount.append(sec);
+      });
+      // Reveal
+      const reveal = new IntersectionObserver(entries=>{ entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('reveal'); }); },{threshold:.2});
+      document.querySelectorAll('.text').forEach(t=>reveal.observe(t));
+    }
+
+    // Parallax
+    addEventListener('scroll', ()=>{
+      document.querySelectorAll('.stanza').forEach((s)=>{
+        const r = s.getBoundingClientRect(); const mid = r.top + r.height/2 - innerHeight/2;
+        s.style.setProperty('--parallax', `${mid * -0.04}px`);
+      });
+    }, {passive:true});
+
+    // Carousel
+    function renderCarousel(){ track.innerHTML=''; dots.innerHTML='';
+      stanzas.forEach((txt,i)=>{ const pane=document.createElement('div'); pane.className='pane';
+        const label=document.createElement('div'); label.className='label'; label.textContent=`Stanza ${i+1}`;
+        const t=document.createElement('div'); t.className='text reveal'; t.textContent=txt;
+        const count=document.createElement('div'); count.className='count'; count.textContent=`${i+1} / ${stanzas.length}`;
+        pane.append(label,t,count); track.append(pane);
+        const b=document.createElement('button'); b.className='dotbtn'+(i===0?' active':''); b.setAttribute('aria-label',`Go to stanza ${i+1}`);
+        b.addEventListener('click',()=>go(i)); dots.append(b);
+      }); go(0,true);
+    }
+    function go(n,immediate=false){ idx=(n+stanzas.length)%stanzas.length; const pct=-idx*100;
+      track.style.transition= immediate? 'none':''; track.style.transform=`translateX(${pct}%)`;
+      [...dots.children].forEach((d,i)=>d.classList.toggle('active', i===idx)); setTimeout(()=>{ track.style.transition=''; },0);
+    }
+    document.getElementById('prev').addEventListener('click',()=>go(idx-1));
+    document.getElementById('next').addEventListener('click',()=>go(idx+1));
+    addEventListener('keydown',(e)=>{ if(wrap.style.display!=='none'){ if(e.key==='ArrowLeft') go(idx-1); if(e.key==='ArrowRight') go(idx+1);} });
+
+    function setMode(on){ carouselOn=on; wrap.style.display= on? 'flex':'none'; document.body.style.paddingBottom = on? '140px':'0';
+      modeIndicator.innerHTML = on ? '<span class="dot" style="background:var(--gold)"></span> Carousel' : '<span class="dot"></span> Scroll (Parallax)';
+      wrap.setAttribute('aria-hidden', on? 'false':'true'); if(on) renderCarousel(); }
+    document.getElementById('toggleMode').addEventListener('click',()=>setMode(!carouselOn));
+
+    setMode(false); loadPoem();
+  </script>
+</body>
+</html>
