@@ -16,6 +16,12 @@
   <canvas id="spiral"></canvas>
   <canvas id="chart"></canvas>
   <ul id="treasury"></ul>
+  <script type="importmap" src="/SP1RL_O-S-core/codex/_runtime/importmap.json"></script>
+  <script type="module">
+    window.SP1RL = await import('sp1rl:loader');
+    await SP1RL.init();
+    window.MODS = await SP1RL.require(['teal-math@stable','plots@stable']).withFallbacks();
+  </script>
   <script src="app.js"></script>
 </body>
 </html>
