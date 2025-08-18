@@ -7,3 +7,8 @@ header h1 { flex: 1; font-size: 1.2rem; margin: 0; }
 .modal.hidden { display: none; }
 .modal-content { background: white; padding: 1rem; border-radius: 4px; display: flex; flex-direction: column; gap: 0.5rem; min-width: 200px; }
 .toggle { display: flex; align-items: center; gap: 0.25rem; }
+
+/* Memory panel & shard cards */
+.mem-panel { display:grid; gap:8px; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); }
+.shard.card { transition: box-shadow .2s ease; }
+.shard.card:hover { box-shadow: 0 0 0 1px #1b2736, 0 0 14px #10c6b233; }
