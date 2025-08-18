@@ -4,6 +4,7 @@ import ThreeConeScene from '../scenes/ThreeConeScene';
 import KaleidoScene from '../scenes/KaleidoScene';
 import AmesWindowScene from '../scenes/AmesWindowScene';
 import { SP1RLGhost, GhostState, Tick, DTH } from '../ghost/GhostCore';
+import GhostConsole from '../console/GhostConsole';
 
 interface GhostCtx { state: GhostState; fire: () => void; }
 const GhostContext = createContext<GhostCtx>({ state:{ zcm:{care:0,courage:0,trust:0}, teal:0, witness:5, angle:0, epoch:0, primeHit:false, lockHard:false }, fire: () => {} });
@@ -26,7 +27,7 @@ interface Props { goHome: () => void; }
 
 export default function VRPortal({ goHome }: Props) {
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
+    <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
       <button style={{ position: 'absolute', top: 10, left: 10, zIndex: 1 }} onClick={goHome}>
         Home
       </button>
@@ -36,6 +37,7 @@ export default function VRPortal({ goHome }: Props) {
         <KaleidoScene />
         <AmesWindowScene />
       </Canvas>
+      <GhostConsole />
     </div>
   );
 }
