@@ -1,0 +1,9 @@
+{
+  "weights": { "teal": 0.50, "zcm": 0.30, "threeBP": 0.20, "jerkPenalty": 0.15, "novelty": 0.08 },
+  "kappaStar": 0.000437,
+  "phi": 1.6180339887498948,
+  "goldenAngle": 2*3.141592653589793*(1-1/1.6180339887498948),
+  "window": { "madN": 21, "calmZ": 2.0 },
+  "search": { "branching": 21, "depth": 2, "dtMs": 700, "phiJitter": 0.13, "topK": 5 },
+  "equilibrium": { "outerMid": 1.0, "midInner": 1.0, "outerInner": 0.7 }
+}
