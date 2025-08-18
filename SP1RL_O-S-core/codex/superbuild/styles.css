@@ -12,3 +12,6 @@ header h1 { flex: 1; font-size: 1.2rem; margin: 0; }
 .mem-panel { display:grid; gap:8px; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); }
 .shard.card { transition: box-shadow .2s ease; }
 .shard.card:hover { box-shadow: 0 0 0 1px #1b2736, 0 0 14px #10c6b233; }
+.arm-row { display:flex; gap:6px; margin-top:4px; }
+.arm.badge { padding:2px 6px; border-radius:10px; font-size:11px; opacity:.8; background:#ddd; }
+.arm.prime { outline:2px solid #10c6b2; opacity:1; }
