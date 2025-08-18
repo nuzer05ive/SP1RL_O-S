@@ -7,7 +7,7 @@ const DEFAULT_BETA = { d1: 0.1, d2: 0.2, d3: 0.3 };
 export async function planNext(state, registry = {}, cfg = {}) {
   const modules = Object.keys(registry.modules || {});
   if (modules.length === 0) {
-    return { action: null, score: 0, rationale: {}, previewState: state };
+    return { action: null, score: 0, rationale: {}, arms: [], primeArm: 5, previewState: state };
   }
   const candidates = [];
   const branching = cfg.search?.branching || 5;
@@ -33,10 +33,29 @@ export async function planNext(state, registry = {}, cfg = {}) {
   }
   candidates.sort((a, b) => b.score.total - a.score.total);
   const best = candidates[0];
+  const arms = best.score.arms || [];
+  const ledger = state.ledger || cfg.ledger || {};
+  const phiConst = (1 + Math.sqrt(5)) / 2;
+  const g = Math.floor(((ledger.m || 0) * phiConst) % 5) + 1;
+  const passing = arms.filter(a => a.passTEAL && a.passZCM);
+  const dist = (a,b) => { const d=Math.abs(a-b); return Math.min(d,5-d); };
+  let primeArm = 5;
+  if (passing.length) {
+    let bestA = passing[0], bestD = dist(bestA.id,g);
+    for (const a of passing) {
+      const d = dist(a.id,g);
+      if (d < bestD) { bestA = a; bestD = d; }
+    }
+    const ties = passing.filter(a => dist(a.id,g) === bestD);
+    primeArm = ties.length === 1 ? bestA.id : 5;
+  }
+  best.score.primeArm = primeArm;
   return {
     action: best.action,
     score: best.score.total,
     rationale: best.score,
+    arms,
+    primeArm,
     previewState: best.nextState
   };
 }
@@ -61,7 +80,13 @@ export function scoreState(state, cfg = {}) {
   const jerkPenalty = average(slice3.map(Math.abs));
   const novelty = Math.random();
   const total = (w.teal || 0)*teal + (w.zcm || 0)*zcm + (w.threeBP || 0)*eq - (w.jerkPenalty || 0)*jerkPenalty + (w.novelty || 0)*novelty;
-  return { teal, zcm, threeBP: eq, jerkPenalty, novelty, total };
+  const arms = [1,2,3,4,5].map(id => ({
+    id,
+    score: [teal, zcm, (teal+zcm)/2, eq, novelty][id-1] || 0,
+    passTEAL: teal >= 0.5,
+    passZCM: zcm >= 0.5
+  }));
+  return { teal, zcm, threeBP: eq, jerkPenalty, novelty, total, arms };
 }
 
 export function simulate(state, action, cfg = {}) {

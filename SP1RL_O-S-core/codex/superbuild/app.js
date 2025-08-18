@@ -1,5 +1,5 @@
 import { } from './mod/teal_ng.v1.js'; // Auto‑TEAL planner integration
-import { encode, toHuman, quantizeToPhi43, chooseWing, renderShardCard, decode } from './mod/prime_address.v1.js';
+import { encode, toHuman, quantizeToPhi43, chooseWing, renderShardCard, decode, formatWitness } from './mod/prime_address.v1.js';
 import { colorFor, decorateShard } from './mod/address_palette.v1.js';
 
 let cfg = {};
@@ -49,10 +49,13 @@ function defaultRegistry() {
 }
 
 function applySuggestion(res, state) {
+  window.lastPrimeArm = res.primeArm || 5;
   document.querySelectorAll('.card').forEach((c) => {
     c.classList.remove('suggested');
     const pill = c.querySelector('.addr-pill');
     if (pill) pill.remove();
+    const armRow = c.querySelector('.arm-row');
+    if (armRow) armRow.remove();
   });
   const action = res.action || {};
   const card = document.querySelector(`.card[data-module="${action.moduleId}"]`);
@@ -71,6 +74,18 @@ function applySuggestion(res, state) {
     pill.style.cssText = 'display:inline-block;margin-top:4px;padding:2px 4px;font-size:10px;background:#eee;border-radius:4px;';
     pill.dataset.addr = toHuman(addr);
     card.appendChild(pill);
+    if (res.arms) {
+      const row = document.createElement('div');
+      row.className = 'arm-row';
+      res.arms.forEach((a) => {
+        const b = document.createElement('span');
+        b.className = 'arm badge';
+        if (a.id === res.primeArm) b.classList.add('prime');
+        b.textContent = `${formatWitness(a.id)} ${a.score.toFixed(2)}`;
+        row.appendChild(b);
+      });
+      card.appendChild(row);
+    }
   }
 }
 
@@ -133,10 +148,21 @@ document.addEventListener('fire', () => {
   const state = window.currentState || defaultState();
   const { row, col } = quantizeToPhi43(state.d2, state.d3);
   const wing = chooseWing(state.witnessVotes || 0);
-  const addr = { class: 'TP', p: state.kappa || 0, q: 0, row, col, wing, k: state.kappa || 0, petal: state.rings?.outer || 0, epoch: state.time || 0 };
+  let witness = window.forceWitness5 ? 5 : (window.lastPrimeArm || 5);
+  window.forceWitness5 = false;
+  const m = state.m || 0;
+  if (isPrime(m) && witness !== 5) {
+    console.warn('Epoch requires Arm-5; scheduling hinge tick');
+    window.forceWitness5 = true;
+  }
+  const addr = { class: 'TP', p: state.kappa || 0, q: 0, row, col, wing, k: state.kappa || 0, petal: state.rings?.outer || 0, epoch: state.time || 0, witness };
   const enc = encode(addr);
   const tick = { address: enc.human, address58: enc.b58 };
+  tick.witness = witness;
   window.lastTick = tick;
+  window.ledger = window.ledger || [];
+  window.ledger.push(tick);
+  if (witness === 5) window.lastWitness5Tick = tick;
   memAddrs.push(enc.human);
   memAddrs = memAddrs.slice(-20);
   localStorage.setItem('memAddrs', JSON.stringify(memAddrs));
@@ -189,4 +215,13 @@ function hydrateMemory() {
   memAddrs.forEach((h) => {
     try { appendShard(decode(h).obj); } catch (e) {}
   });
+}
+
+function isPrime(n) {
+  n = Math.floor(n);
+  if (n < 2) return false;
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) return false;
+  }
+  return true;
 }

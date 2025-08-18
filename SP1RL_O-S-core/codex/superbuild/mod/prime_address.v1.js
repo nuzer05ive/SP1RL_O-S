@@ -1,7 +1,9 @@
 // SP1RL · prime_address.v1.js  (ESM; no deps)
-export const VERSION = 0x01;
+export const VERSION = 0x02;
 export const CLASS = { TP:1, MP:2, PP:3 };
 export const CLASS_NAME = { 1:'TP', 2:'MP', 3:'PP' };
+export const WITNESS_NAMES = ['Lfix','Dfix','Void','Flux','Hinge'];
+export const formatWitness = (w)=> WITNESS_NAMES[(w|0)-1] || 'Unknown';
 const PHI = (1+Math.sqrt(5))/2, TAU = Math.PI*2, GOLDEN_ANGLE = TAU*(1-1/PHI);
 const K_STAR = 0.000437;
 const clamp=(x,a,b)=>Math.min(b,Math.max(a,x));
@@ -22,21 +24,22 @@ export const b64url = {
 /* CRC16-CCITT */
 export function crc16ccitt(u8){ let crc=0xFFFF; for(let b of u8){ crc^=(b<<8); for(let i=0;i<8;i++) crc=(crc&0x8000)?((crc<<1)^0x1021)&0xFFFF:(crc<<1)&0xFFFF; } return crc&0xFFFF; }
 /* Human form */
-const RX=/^PP:(TP\((\d+)\)|MP\((\d+)\)|PP\((\d+),(\d+)\))@φ43:(\d+):(\d+)~W:(L|R)~K:(\d+)~N:(\d+)~E:(\d+|->)$/;
-export function toHuman(o){ const body=o.class==='PP'?`PP(${o.p},${o.q||0})`:`${o.class}(${o.p})`; return `PP:${body}@φ43:${o.row}:${o.col}~W:${o.wing}~K:${o.k}~N:${o.petal}~E:${o.epoch||'->'}`; }
+const RX=/^PP:(TP\((\d+)\)|MP\((\d+)\)|PP\((\d+),(\d+)\))@φ43:(\d+):(\d+)~W:(L|R)~K:(\d+)~N:(\d+)~E:(\d+|->)~WIT:(\d+)$/;
+export function toHuman(o){ const body=o.class==='PP'?`PP(${o.p},${o.q||0})`:`${o.class}(${o.p})`; return `PP:${body}@φ43:${o.row}:${o.col}~W:${o.wing}~K:${o.k}~N:${o.petal}~E:${o.epoch||'->'}~WIT:${o.witness||o.witnessIndex||5}`; }
 export function fromHuman(s){ const m=RX.exec(s); if(!m) throw new Error('bad human address');
-  const [,clsRaw,tp,mp,p1,p2,row,col,wing,k,petal,epoch]=m; let cls,p,q=0;
+  const [,clsRaw,tp,mp,p1,p2,row,col,wing,k,petal,epoch,wit]=m; let cls,p,q=0;
   if(tp){cls='TP';p=+tp;} else if(mp){cls='MP';p=+mp;} else {cls='PP';p=+p1;q=+p2;}
-  return {class:cls,p,q,row:+row,col:+col,wing,k:+k,petal:+petal,epoch:(epoch==='->'?0:+epoch)}; }
-/* Binary V1 */
-export function encodeBytes(o){ const buf=new Uint8Array(1+1+4+4+1+1+1+2+4+4+2); let i=0; buf[i++]=0x01; buf[i++]=CLASS[o.class];
+  return {class:cls,p,q,row:+row,col:+col,wing,k:+k,petal:+petal,epoch:(epoch==='->'?0:+epoch),witness:+wit}; }
+/* Binary V2 (backward compatible decode for V1) */
+export function encodeBytes(o){ const buf=new Uint8Array(1+1+4+4+1+1+1+2+4+4+1+2); let i=0; buf[i++]=0x02; buf[i++]=CLASS[o.class];
   const dv=new DataView(buf.buffer); dv.setUint32(i,o.p>>>0,true); i+=4; dv.setUint32(i,(o.q||0)>>>0,true); i+=4;
   buf[i++]=o.row|0; buf[i++]=o.col|0; buf[i++]=(o.wing==='R')?1:0; dv.setUint16(i,o.k|0,true); i+=2; dv.setUint32(i,o.petal>>>0,true); i+=4;
-  dv.setUint32(i,(o.epoch||0)>>>0,true); i+=4; const crc=crc16ccitt(buf.slice(0,i)); dv.setUint16(i,crc,true); return buf; }
-export function decodeBytes(u8){ if(u8[0]!==0x01) throw new Error('bad version'); const dv=new DataView(u8.buffer,u8.byteOffset,u8.byteLength);
-  let i=0; i++; const cls=CLASS_NAME[u8[i++]]; if(!cls) throw new Error('bad class'); const p=dv.getUint32(i,true); i+=4; const q=dv.getUint32(i,true); i+=4;
+  dv.setUint32(i,(o.epoch||0)>>>0,true); i+=4; buf[i++]=(o.witness||o.witnessIndex||0); const crc=crc16ccitt(buf.slice(0,i)); dv.setUint16(i,crc,true); return buf; }
+export function decodeBytes(u8){ const dv=new DataView(u8.buffer,u8.byteOffset,u8.byteLength); let i=0; const ver=u8[i++];
+  const cls=CLASS_NAME[u8[i++]]; if(!cls) throw new Error('bad class'); const p=dv.getUint32(i,true); i+=4; const q=dv.getUint32(i,true); i+=4;
   const row=u8[i++],col=u8[i++],wing=(u8[i++]?'R':'L'); const k=dv.getUint16(i,true); i+=2; const petal=dv.getUint32(i,true); i+=4; const epoch=dv.getUint32(i,true); i+=4;
-  const crcR=dv.getUint16(i,true), crcC=crc16ccitt(u8.slice(0,u8.length-2)); return {obj:{class:cls,p,q,row,col,wing,k,petal,epoch}, validCRC:(crcR===crcC)}; }
+  let witness=5; if(ver>=0x02){ witness=u8[i++]; }
+  const crcR=dv.getUint16(i,true), crcC=crc16ccitt(u8.slice(0,u8.length-2)); return {obj:{class:cls,p,q,row,col,wing,k,petal,epoch,witness}, validCRC:(crcR===crcC)}; }
 export function encode(o){ if(!(o.class in {TP:1,MP:1,PP:1})) throw new Error('class TP|MP|PP'); if(o.row<1||o.row>43||o.col<1||o.col>7) throw new Error('φ43 out of range');
   const bytes=encodeBytes(o); return { human:toHuman(o), b58:b58encode(bytes), b64url:b64url.enc(bytes), bytes }; }
 export function decode(x){ if(typeof x==='string' && x.startsWith('PP:')) return {obj:fromHuman(x),validCRC:true,source:'human'};
