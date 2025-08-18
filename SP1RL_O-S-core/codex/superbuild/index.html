@@ -13,10 +13,22 @@
     <button id="settings-btn">Settings</button>
   </header>
   <main id="cards">
-    <div class="card" data-module="mod1">Module 1</div>
-    <div class="card" data-module="mod2">Module 2</div>
-    <div class="card" data-module="mod3">Module 3</div>
+    <div class="card" data-module="mod1">Module 1
+      <div class="actions"><button class="copy-addr">Copy Addr</button> <button class="rebuild-addr">Rebuild</button></div>
+    </div>
+    <div class="card" data-module="mod2">Module 2
+      <div class="actions"><button class="copy-addr">Copy Addr</button> <button class="rebuild-addr">Rebuild</button></div>
+    </div>
+    <div class="card" data-module="mod3">Module 3
+      <div class="actions"><button class="copy-addr">Copy Addr</button> <button class="rebuild-addr">Rebuild</button></div>
+    </div>
   </main>
+  <aside id="memory">
+    <details open>
+      <summary>Memory</summary>
+      <div id="memPanel" class="mem-panel"></div>
+    </details>
+  </aside>
   <div id="settings-modal" class="modal hidden">
     <div class="modal-content">
       <h2>TEAL.Ng Settings</h2>
@@ -33,6 +45,7 @@
       <button id="close-settings">Close</button>
     </div>
   </div>
+  <footer style="padding:4px;text-align:center"><a href="docs/ADDRESSING.md">Addressing docs</a></footer>
   <script type="module" src="app.js"></script>
 </body>
 </html>
