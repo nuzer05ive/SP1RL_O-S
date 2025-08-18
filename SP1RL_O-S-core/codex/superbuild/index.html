@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Super-Build</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Super‑Build</h1>
+    <label class="toggle"><input type="checkbox" id="auto-teal" /> Auto‑TEAL</label>
+    <button id="plan-btn">Plan</button>
+    <button id="settings-btn">Settings</button>
+  </header>
+  <main id="cards">
+    <div class="card" data-module="mod1">Module 1</div>
+    <div class="card" data-module="mod2">Module 2</div>
+    <div class="card" data-module="mod3">Module 3</div>
+  </main>
+  <div id="settings-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>TEAL.Ng Settings</h2>
+      <label>TEAL weight <input type="number" step="0.01" id="w-teal" /></label>
+      <label>ZCM weight <input type="number" step="0.01" id="w-zcm" /></label>
+      <label>3BP weight <input type="number" step="0.01" id="w-3bp" /></label>
+      <label>Jerk Penalty <input type="number" step="0.01" id="w-jerk" /></label>
+      <label>Novelty <input type="number" step="0.01" id="w-novelty" /></label>
+      <label>Branching <input type="number" id="branching" /></label>
+      <label>Depth <input type="number" id="depth" /></label>
+      <label>dtMs <input type="number" id="dtms" /></label>
+      <label>calmZ <input type="number" id="calmz" /></label>
+      <button id="save-settings">Save</button>
+      <button id="close-settings">Close</button>
+    </div>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
