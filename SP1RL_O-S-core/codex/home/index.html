@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SP1RL · Home Base Portal</title>
+  <link rel="stylesheet" href="home.css"/>
+</head>
+<body>
+  <header class="top">
+    <h1>SP1RL · Home Base</h1>
+    <div class="chips">
+      <span id="status" class="chip">offline</span>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Target</h2>
+      <div class="row">
+        <label>Repo</label>
+        <input id="repoUser" placeholder="github user/org" />
+        <input id="repoName" placeholder="repo name (SP1RL_O-S)" />
+      </div>
+      <div class="row">
+        <label>URL template</label>
+        <input id="urlTpl" placeholder="https://rawcdn.githack.com/{user}/{repo}/{branch}/SP1RL_O-S-core/{path}" />
+      </div>
+      <div class="row">
+        <label>GitHub Token (optional)</label>
+        <input id="ghToken" placeholder="ghp_****************" />
+        <button id="fetchBranches" class="ghost">Fetch Branches</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Branch & App</h2>
+      <div class="row">
+        <label>Branch</label>
+        <select id="branch"></select>
+        <button id="reload" class="ghost">Reload</button>
+      </div>
+      <div class="row">
+        <label>App path</label>
+        <select id="appPath">
+          <option value="codex/captain_mints/index.html">captain_mints</option>
+          <option value="codex/_registry/deploy/portal.html">registry_portal</option>
+          <option value="">(custom)</option>
+        </select>
+        <input id="customPath" placeholder="codex/…/index.html (optional)"/>
+      </div>
+      <div class="row">
+        <button id="openApp" class="primary">Open</button>
+        <button id="pin" class="ghost">Pin as default</button>
+      </div>
+    </section>
+
+    <section class="card wide">
+      <div class="bar">
+        <h2>Live App</h2>
+        <span id="current"></span>
+      </div>
+      <iframe id="stage" title="SP1RL App" sandbox="allow-scripts allow-same-origin"></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Branches (static)</h2>
+      <ul id="branchList"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Logs</h2>
+      <pre id="log"></pre>
+    </section>
+  </main>
+
+  <script type="module" src="home.js"></script>
+</body>
+</html>
