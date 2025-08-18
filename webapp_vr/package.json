@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "tsc src/ghost/__tests__/GhostCore.test.ts --module commonjs --target ES2019 --outDir dist-test && node -e \"require('fs').writeFileSync('dist-test/package.json','{\\\"type\\\":\\\"commonjs\\\"}')\" && node dist-test/ghost/__tests__/GhostCore.test.js"
   },
   "dependencies": {
     "react": "^18",
