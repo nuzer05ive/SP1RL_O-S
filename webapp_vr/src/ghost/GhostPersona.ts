@@ -1,7 +1,22 @@
 import { getAntonyms, biasMap } from "../state/AntonymStore";
 import { zcmScore, receipt, phiAngle, WOBBLE } from "./GhostMath";
+import { analyzeConstant, analyzeShard } from "../constants/SpiralConstants";
 export type GhostReply = { text:string; receipts:any[]; local:any; global:any };
 export function ghostAnswer(q:string, scope:{local:any; global:any}): GhostReply {
+  const trimmed = q.trim();
+  if (trimmed.startsWith("const")) {
+    const arg = trimmed.slice(5).trim();
+    const analysis = /^[-+0-9.]+$/.test(arg) && arg.match(/[0-9]/)
+      ? analyzeConstant(parseFloat(arg))
+      : analyzeShard(arg);
+    return {
+      text: JSON.stringify(analysis, null, 2),
+      receipts: [receipt("const", analysis)],
+      local: scope.local,
+      global: scope.global
+    };
+  }
+
   const ants = getAntonyms(); const bias = biasMap();
   const z = ants.zcm; const zcm = zcmScore(z);
   // Style steer: short/pointed if playful/bold/novel positive; more measured if negatives dominate.

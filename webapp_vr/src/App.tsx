@@ -1,3 +1,3 @@
 import React from "react";
-import MidgardRoute from "./routes/MidgardRoute";
-export default function App(){ return <MidgardRoute/>; }
+import SpiralConstantsLab from "./components/SpiralConstantsLab";
+export default function App(){ return <SpiralConstantsLab/>; }
