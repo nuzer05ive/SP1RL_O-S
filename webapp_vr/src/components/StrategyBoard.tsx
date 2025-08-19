@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import type { Weights } from "../strategy/Scoring";
 import workerUrl from "../strategy/worker/OptimizerWorker.ts?worker&url";
+import { getAntonyms } from "../state/AntonymStore";
 
 type Best = { plan: any; total: number };
 const DEF_W: Weights = { profit:1.0, effort:1.2, ttf:0.9, risk:0.8, leverage:1.0, harmony:0.7 };
@@ -22,8 +23,19 @@ export default function StrategyBoard(){
       if (e.data.type === "progress") setBest(e.data.best);
       if (e.data.type === "done"){ setBest(e.data.best); setRunning(false); wk.terminate(); }
     };
+    // bias weights from antonyms (Wizard-of-Oz mapping)
+    const ants = getAntonyms();
+    const b = Object.fromEntries(ants.pairs.map(p=>[p.key,p.w]));
+    const biasW = {
+      profit: w.profit * (1 + 0.25*((b.bold||0) + (b.novel||0))),
+      effort: w.effort * (1 + 0.25*((b.fast||0) - Math.abs(b.thorough||0))),
+      ttf:    w.ttf    * (1 + 0.20*((b.fast||0))),
+      risk:   w.risk   * (1 + 0.20*((-Math.abs(b.bold||0)) + (Math.abs(b.cautious||0)))),
+      leverage: w.leverage * (1 + 0.25*((b.open||0))),
+      harmony: w.harmony * (1 + 0.20*((b.playful||0) - Math.abs(b.solemn||0)))
+    } as Weights;
     wk.postMessage({
-      seed, weights:w,
+      seed, weights:biasW,
       assets: assets.split(/\n+/).filter(Boolean),
       beam: 14, iters: 60, maxPlans: 8
     });

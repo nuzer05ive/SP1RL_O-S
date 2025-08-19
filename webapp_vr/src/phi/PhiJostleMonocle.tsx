@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { stepFrame, type Token, type JostleCfg } from "./PhiJostleEngine";
+import { getAntonyms } from "../state/AntonymStore";
 
 function hex(c:[number,number,number]){ return `rgb(${c[0]},${c[1]},${c[2]})`; }
 
@@ -30,39 +31,43 @@ export default function PhiJostleMonocle(){
   useEffect(()=>{
     const cvs = canvasRef.current!;
     const ctx = cvs.getContext("2d")!;
-    const render = ()=>{
-      const t = tRef.current++;
-      driftRef.current += cfg.drift;
-      ctx.clearRect(0,0,cfg.width,cfg.height);
-      // bg
-      ctx.fillStyle = "rgb(8,12,20)"; ctx.fillRect(0,0,cfg.width,cfg.height);
-      // teal ring
-      ctx.strokeStyle = hex(TEAL as any); ctx.lineWidth = 2;
-      ctx.beginPath(); ctx.arc(cfg.origin[0], cfg.origin[1], cfg.teal.r, 0, Math.PI*2); ctx.stroke();
+      const render = ()=>{
+        const t = tRef.current++;
+        const b = Object.fromEntries(getAntonyms().pairs.map(p=>[p.key,p.w]));
+        const sat = 0.85 + 0.15*Math.max(0,b.playful||0);
+        const ring = cfg.teal.r * (1 - 0.06*Math.max(0,b.solemn?Math.abs(b.solemn):0));
+        const arc = Math.min(1, cfg.monocle.arc + 0.3*Math.max(0,b.abstract||0));
+        driftRef.current += cfg.drift;
+        ctx.clearRect(0,0,cfg.width,cfg.height);
+        // bg
+        ctx.fillStyle = "rgb(8,12,20)"; ctx.fillRect(0,0,cfg.width,cfg.height);
+        // teal ring
+        ctx.strokeStyle = hex(TEAL as any); ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.arc(cfg.origin[0], cfg.origin[1], ring, 0, Math.PI*2); ctx.stroke();
 
-      const pts = stepFrame(tokens, t, cfg, driftRef.current);
-      // draw teal lattice nodes when locked
-      for (const s of pts){
-        if (s.pos.locked){
-          ctx.fillStyle = hex(TEAL as any);
-          ctx.fillRect(s.pos.x-1.2, s.pos.y-1.2, 2.4, 2.4);
+        const pts = stepFrame(tokens, t, { ...cfg, monocle:{...cfg.monocle, arc} }, driftRef.current);
+        // draw teal lattice nodes when locked
+        for (const s of pts){
+          if (s.pos.locked){
+            ctx.fillStyle = hex(TEAL as any);
+            ctx.fillRect(s.pos.x-1.2, s.pos.y-1.2, 2.4, 2.4);
+          }
         }
-      }
-      // draw tokens
-      ctx.textAlign = "center"; ctx.textBaseline = "middle";
-      for (const s of pts){
-        const c = s.token.color;
-        const col = `rgba(${c[0]},${c[1]},${c[2]},0.92)`;
-        ctx.save();
-        ctx.translate(s.pos.x, s.pos.y);
-        ctx.rotate(s.pos.th);
-        ctx.font = `bold ${s.token.size}px system-ui`;
-        ctx.fillStyle = col;
-        ctx.fillText(s.token.text, 0, 0);
-        ctx.restore();
-      }
-      rafRef.current = requestAnimationFrame(render);
-    };
+        // draw tokens
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        for (const s of pts){
+          const c = s.token.color;
+          const col = `rgba(${Math.round(c[0]*sat)},${Math.round(c[1]*sat)},${Math.round(c[2]*sat)},0.92)`;
+          ctx.save();
+          ctx.translate(s.pos.x, s.pos.y);
+          ctx.rotate(s.pos.th);
+          ctx.font = `bold ${s.token.size}px system-ui`;
+          ctx.fillStyle = col;
+          ctx.fillText(s.token.text, 0, 0);
+          ctx.restore();
+        }
+        rafRef.current = requestAnimationFrame(render);
+      };
     rafRef.current = requestAnimationFrame(render);
     return ()=> cancelAnimationFrame(rafRef.current);
   }, [cfg, tokens]);
