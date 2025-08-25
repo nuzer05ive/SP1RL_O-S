@@ -1,0 +1,10 @@
+{
+  "name": "spirl_ghost_ts",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "route": "node codex.ts",
+    "tournament": "node codex.ts",
+    "codex:ingest": "node codex.ts"
+  }
+}

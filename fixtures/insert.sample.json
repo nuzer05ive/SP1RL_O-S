@@ -1,0 +1,12 @@
+{
+  "canon": "Our canon is sample markdown.",
+  "glyphs": [{"name":"hook","path":"assets/hook.svg"}],
+  "beats": [
+    {"petal":"trap","petal2":"release","diamond":"anchor"},
+    {"petal":"rise","petal2":"fall","diamond":"pivot"},
+    {"petal":"east","petal2":"west","diamond":"center"}
+  ],
+  "pairs": [{"a":"Midgard","b":"PR//M.e","weight":0.89}],
+  "switchARoo": true,
+  "meta": {"seed":221,"epoch":1,"author":"KaP’t1N"}
+}
