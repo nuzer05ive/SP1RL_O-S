@@ -1,0 +1,1 @@
+"""SPIRL Ghost package."""
