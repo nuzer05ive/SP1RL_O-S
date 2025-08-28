@@ -1,0 +1,19 @@
+{
+  "name": "spirl-video-synth",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev:api": "pnpm --filter ./apps/api dev",
+    "dev:web": "pnpm --filter ./apps/web dev",
+    "dev:viewer": "serve apps/viewer -l 5174",
+    "dev": "run-p dev:*",
+    "worker": "python workers/scan/run_worker.py",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "vitest": "^1.6.0"
+  }
+}
