@@ -1,0 +1,9 @@
+{
+  "name": "spirl-learning-rail",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "fixture": "python scripts/make_fixture.py",
+    "test": "node tests/stp.test.js && python -m pytest tests/bank_test.py"
+  }
+}
