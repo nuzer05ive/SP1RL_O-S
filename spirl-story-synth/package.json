@@ -1,0 +1,9 @@
+{
+  "name": "spirl-story-synth",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests && python -m unittest tests/test_scan.py"
+  }
+}
