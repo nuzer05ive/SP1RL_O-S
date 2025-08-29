@@ -1,0 +1,17 @@
+{
+  "name": "spirl-storyboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "node ./dist/index.js lint examples/*.yml",
+    "build": "tsc -p .",
+    "test": "vitest run",
+    "dev": "vitest"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
