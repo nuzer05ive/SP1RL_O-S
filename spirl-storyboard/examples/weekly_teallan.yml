@@ -1,0 +1,40 @@
+meta:
+  id: "teallan-2025-w35"
+  title: "KaP’t1N’s Quilt of 89²"
+  episode: "W35"
+  date: "2025-09-01"
+  cast: [ "Kap", "Greg", "Dewey", "Sophia", ".Q" ]
+
+cues:
+  - cue: SCROLL_OPEN
+    vo: "Silence. Or I roll the scroll shut."
+    bg: "sky-canvas"
+
+  - cue: COMMENTS_HOST
+    host: "Greg"
+    comments:
+      - { by: viewer, text: "Is that a tear or a flame?" }
+      - { by: viewer, text: "I see the 5+5+3 penguin bike wheels!" }
+      - { by: greg,   text: "Let me find out!!" }
+
+  - cue: TRAINING
+    track: "Bloom + floss"
+    morphs: [ "petal wrap", "floss spiral", "crystallize 89²", "quilt fold" ]
+
+  - cue: REVEAL
+    forms: [ "Diamond Square A", "Diamond Square B", "Bandana 4×2 bridge" ]
+    typewriter:
+      - "Ledger: 89² bundle minted"
+      - "Witness: .Q; ZCM badges updated"
+
+  - cue: LEDGER_CHECK
+    ledger: { entry: "W35_DIAMOND_BUNDLE", witness: ".Q" }
+
+  - cue: NFT_RAIN
+    sparkle: "rafters"
+    badges:
+      - { name: "TeaL.N.g Drop", desc: "story-care mint", zcm_hint: "story clarity empathy" }
+      - { name: "K Courage",     desc: "tool builder",    zcm_hint: "math action" }
+
+  - cue: OUTRO
+    cta: "All P’LoTs: play the new quest squares. Your memes = badges. Your tools = K. See you next TeLL’aLL."
