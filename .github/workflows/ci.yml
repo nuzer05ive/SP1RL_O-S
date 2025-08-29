@@ -6,13 +6,7 @@ on:
 
 jobs:
   test:
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ['3.9', '3.11']
-        os: [ubuntu-latest]
-    runs-on: ${{ matrix.os }}
-
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,20 +14,32 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: '3.11'
 
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: pip-${{ runner.os }}-${{ matrix.python-version }}-${{ hashFiles('**/requirements*.txt') }}
-          restore-keys: |
-            pip-${{ runner.os }}-${{ matrix.python-version }}-
+      - name: Ensure package has __init__
+        run: |
+          if [ -d spirl_ghost ] && [ ! -f spirl_ghost/__init__.py ]; then
+            touch spirl_ghost/__init__.py
+          fi
+
+      - name: Resolve PYTHONPATH
+        run: |
+          if [ -d src ]; then
+            echo "PYTHONPATH=$GITHUB_WORKSPACE/src" >> $GITHUB_ENV
+            echo "Using src/ layout"
+          else
+            echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+            echo "Using flat repo layout"
+          fi
 
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt || python -m pip install pytest
+          python -m pip install pytest
+          # If you *do* have packaging, this will install your project for real:
+          if [ -f pyproject.toml ] || [ -f setup.cfg ] || [ -f setup.py ]; then
+            python -m pip install -e .
+          fi
 
       - name: Run tests
         run: pytest -q
@@ -46,7 +52,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: out-${{ matrix.os }}-py${{ matrix.python-version }}
+          name: out
           path: out/**
           if-no-files-found: ignore
           retention-days: 7
