@@ -48,7 +48,7 @@ jobs:
         run: mkdir -p out
 
       - name: Run tests (JUnit + Coverage)
-        run: |
+        run: pytest --cov=spirl_ghost --cov-report=term-missing --cov-fail-under=100
           pytest \
             --junitxml=out/junit-${{ matrix.os }}-py${{ matrix.python-version }}.xml \
             --cov=spirl_ghost \
