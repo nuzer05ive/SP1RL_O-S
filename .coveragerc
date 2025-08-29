@@ -1,0 +1,11 @@
+[run]
+branch = True
+source = spirl_ghost
+
+[report]
+exclude_lines =
+    pragma: no cover
+    if __name__ == .__main__.:
+
+omit =
+    tests/*

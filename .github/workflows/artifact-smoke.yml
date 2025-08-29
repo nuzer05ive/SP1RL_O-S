@@ -1,0 +1,20 @@
+name: artifact-smoke
+on: { workflow_dispatch: {} }
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello" > hello.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hello
+          path: hello.txt
+  verify:
+    needs: smoke
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: hello
+          path: ./grab
+      - run: cat ./grab/hello.txt
