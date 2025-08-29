@@ -8,24 +8,21 @@ meta:
 cues:
   - cue: SCROLL_OPEN
     vo: "You only see the shadows…"
-    bg: "phi-splatter"
 
   - cue: COMMENTS_HOST
     host: "Greg"
     comments:
-      - { by: viewer, text: "It’s a regular coffee mug." }
-      - { by: viewer, text: "Nope, definitely a penguin." }
-      - { by: greg,   text: "Let me find out!!" }
-    riff: "Kill Tony–style minute on mugs vs birds"
+      - { by: viewer, user: "@ness", text: "It’s a coffee mug!" }
+      - { by: viewer, user: "@dot",  text: "That’s the penguin silhouette." }
+      - { by: greg,                 text: "Let me find out!!" }
 
-  - cue: TRAINING
-    track: "Dewey sax riff"
-    morphs: [ "2D silhouette", "inflate", "spin", "bridge handle→beak" ]
-    interject: [ "Greg: 'never drink out of a beak'" ]
+  - cue: MORPH_TRAINING
+    dewey_track: "SP1RL_Saxophone"
+    sophia_track: "A-BLOOM_Line"
+    sequence: [ "dot→line", "line→square", "square→diamond", "diamond→circle" ]
 
   - cue: REVEAL
     forms: [ "Mug", "Handle", "Penguin-bridge" ]
-    bridge: "handle aligns with beak at α"
     typewriter:
       - "Ledger: PENGUIN_MUG"
       - "Witness: .Q"
@@ -34,11 +31,21 @@ cues:
     ledger: { entry: "PENGUIN_MUG", witness: ".Q" }
 
   - cue: NFT_RAIN
-    sparkle: "top rafters"
+    sparkle: "rafters"
     badges:
       - { name: "MugLife",   desc: "cozy story vibe", zcm_hint: "story ambience cozy" }
       - { name: "BirdBrain", desc: "penguin pun",     zcm_hint: "sarcasm lol" }
 
+  - cue: SFX
+    names: [ "BELL_TOLL", "SEAGULLS", "FOG_HORN", "CLAP", "CONFETTI_POP", "LAUGH" ]
+
+  - cue: GUESS_PREVIEW
+    teaser:
+      silhouette: "blob-crown-left, two circles bottom, tear-oval"
+      hint: "mug-handle"
+      tease_id: "tease-001"
+
   - cue: OUTRO
-    cta: "Congrats @username! Drop your guess for tomorrow, and Greg will let-me-find-out again."
+    cta: "Don’t forget to like & subscribe, matey!"
     confetti: true
+

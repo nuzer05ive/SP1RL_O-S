@@ -1,0 +1,50 @@
+meta:
+  id: "spq-2025-08-30"
+  title: "Next Mystery"
+  episode: "S1E13"
+  date: "2025-08-30"
+  prev_id: "spq-2025-08-29"
+  cast: [ "Kap", "Greg", "Dewey", "Sophia", ".Q" ]
+
+cues:
+  - cue: SCROLL_OPEN
+    vo: "Silence. Or I roll the scroll shut."
+    bg: "sky-canvas"
+
+  - cue: COMMENTS_HOST
+    host: "Greg"
+    comments:
+      - { by: viewer, user: "@ness", text: "I said mug and penguin!!" }
+      - { by: viewer, user: "@dot",  text: "It was obviously the handle-beak bridge." }
+      - { by: greg,                 text: "Let me find out… again!!" }
+
+  - cue: AWARD_MFT
+    winner: { user: "@ness", guess: "coffee mug", award: "MFT Golden Badge" }
+
+  - cue: MORPH_TRAINING
+    dewey_track: "SP1RL_Saxophone"
+    sophia_track: "A-BLOOM_Line"
+    sequence: [ "dot→line", "line→square", "square→diamond", "diamond→circle" ]
+
+  - cue: REVEAL
+    forms: [ "Mystery_A", "Mystery_B", "bridge" ]
+    typewriter: [ "Ledger: NEXT_MYSTERY", "Witness: .Q" ]
+
+  - cue: LEDGER_CHECK
+    ledger: { entry: "NEXT_MYSTERY", witness: ".Q" }
+
+  - cue: NFT_RAIN
+    badges:
+      - { name: "TeaL Drop",   desc: "story-care", zcm_hint: "story empathy" }
+      - { name: "K Courage",   desc: "tool-builder", zcm_hint: "math action" }
+
+  - cue: SFX
+    names: [ "BELL_TOLL", "SEAGULLS", "FOG_HORN", "CLAP", "CONFETTI_POP", "LAUGH" ]
+
+  - cue: GUESS_PREVIEW
+    teaser: { silhouette: "looks nothing like it", hint: "??", tease_id: "tease-002" }
+
+  - cue: OUTRO
+    cta: "Drop your guesses in the comments for a chance to win!"
+    confetti: true
+
