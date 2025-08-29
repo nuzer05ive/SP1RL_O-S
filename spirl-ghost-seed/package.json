@@ -1,0 +1,10 @@
+{
+  "name": "spirl-ghost-seed",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "seed": "bash scripts/seed.sh conversations.json out",
+    "test": "bash tests/run_tests.sh"
+  }
+}

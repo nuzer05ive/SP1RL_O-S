@@ -1,0 +1,16 @@
+[
+  {
+    "id":"c1","title":"Noether & ether","create_time":1710000000,
+    "messages":[
+      {"author":{"role":"user"},"content":{"parts":["Did Noether invent ether?"]}},
+      {"author":{"role":"assistant"},"content":{"parts":["No-ether. She dissolved it: symmetry births conservation."]}}
+    ]
+  },
+  {
+    "id":"c2","title":"Goo theorem","create_time":1710000100,
+    "mapping":{
+      "k1":{"message":{"author":{"role":"user"},"content":{"parts":["Tell me the goo theorem lol!!"]}}},
+      "k2":{"message":{"author":{"role":"assistant"},"content":{"parts":["Sure. Obviously. It defines sarcasm :)"]}}}
+    }
+  }
+]
