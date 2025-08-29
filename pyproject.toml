@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spirl-ghost"
+version = "0.0.0"
+description = "SP1RL_GHOST core package"
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.setuptools.packages.find]
+include = ["spirl_ghost*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
