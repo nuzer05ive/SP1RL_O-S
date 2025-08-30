@@ -3,15 +3,16 @@ name: CI
 on:
   pull_request:
   push:
+  workflow_dispatch:
 
 jobs:
+  # Part 1 — Breath-in: test matrix writes raw coverage data
   test:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ['3.9', '3.11']
-        os: [ubuntu-latest]
-    runs-on: ${{ matrix.os }}
+        python-version: ['3.9', '3.11', '3.12']
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -28,40 +29,63 @@ jobs:
             touch spirl_ghost/__init__.py
           fi
 
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: pip-${{ runner.os }}-${{ matrix.python-version }}-${{ hashFiles('**/requirements*.txt') }}
-          restore-keys: |
-            pip-${{ runner.os }}-${{ matrix.python-version }}-
-
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
-          if [ -f requirements-dev.txt ]; then python -m pip install -r requirements-dev.txt; fi
-          python -m pip install -U pytest pytest-cov
-          python -m pip install -e .
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
+          pip install -U pytest pytest-cov coverage
+          pip install -e .
 
-      - name: Prepare report dir
-        run: mkdir -p out
+      - name: Run tests with coverage (unique data file)
+        env:
+          # Make each matrix write a different data file
+          COVERAGE_FILE: .coverage.py${{ matrix.python-version }}
+        run: |
+          pytest --cov=spirl_ghost --cov-report=term-missing --cov-fail-under=100
 
-      - name: Run tests (JUnit + Coverage)
-        run: pytest --cov=spirl_ghost --cov-report=term-missing --cov-fail-under=100
-          pytest \
-            --junitxml=out/junit-${{ matrix.os }}-py${{ matrix.python-version }}.xml \
-            --cov=spirl_ghost \
-            --cov-report=xml:out/coverage-${{ matrix.os }}-py${{ matrix.python.version }}.xml \
-            --cov-report=html:out/htmlcov-${{ matrix.os }}-py${{ matrix.python-version }} \
-            --cov-report=term-missing
-
-      - name: Upload test reports
+      - name: Upload raw coverage data
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-reports-${{ matrix.os }}-py${{ matrix.python-version }}
-          path: out/**
-          if-no-files-found: ignore
+          name: coverage-data
+          path: .coverage.py*
+          if-no-files-found: error
           retention-days: 7
-          compression-level: 6
+
+  # Part 2/3 — Hold/Gate + Breath-out: combine & publish once
+  coverage-combine:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup Python (for coverage tools)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install coverage
+        run: pip install coverage
+
+      - name: Download all coverage data
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-data
+          path: covdata
+          merge-multiple: true
+
+      - name: Combine, report, enforce 100%
+        run: |
+          mkdir -p out
+          coverage combine covdata
+          coverage report --fail-under=100 | tee out/coverage-summary.txt
+          coverage xml -o out/coverage-combined.xml
+          coverage html -d out/htmlcov
+
+      - name: Publish combined artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-combined
+          path: out/**
+          retention-days: 7
