@@ -38,8 +38,8 @@ export default function Workshop() {
       <h1>Workshop</h1>
       <label>
         Builder:
-        <select value={kind} onChange={e => setKind(e.target.value as BuilderKind)}>
-          {kinds.map(k => (
+        <select value={kind} onChange={(e) => setKind(e.target.value as BuilderKind)}>
+          {kinds.map((k) => (
             <option key={k} value={k}>
               {k}
             </option>
@@ -51,7 +51,7 @@ export default function Workshop() {
         <input
           type="number"
           value={hinge}
-          onChange={e => setHinge(parseFloat(e.target.value))}
+          onChange={(e) => setHinge(parseFloat(e.target.value))}
         />
       </label>
       <label>
@@ -59,7 +59,7 @@ export default function Workshop() {
         <input
           type="number"
           value={slider}
-          onChange={e => setSlider(parseFloat(e.target.value))}
+          onChange={(e) => setSlider(parseFloat(e.target.value))}
         />
       </label>
       <button onClick={preview}>Preview</button>
@@ -78,6 +78,9 @@ export default function Workshop() {
           </p>
         </div>
       )}
+      <p>
+        Explore <a href="/hdpc">HDPC</a> and <a href="/zenava">ZeN_AVA</a> flows.
+      </p>
     </div>
   );
 }

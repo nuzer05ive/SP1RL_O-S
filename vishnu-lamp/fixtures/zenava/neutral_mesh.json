@@ -1,0 +1,11 @@
+{
+  "meshes": [
+    {
+      "kind": "mobius",
+      "geom": {
+        "positions": [0, 0, 0, 1, 0, 0, 0, 1, 0],
+        "indices": [0, 1, 2]
+      }
+    }
+  ]
+}

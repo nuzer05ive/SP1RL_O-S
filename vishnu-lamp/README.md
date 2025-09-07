@@ -15,3 +15,12 @@ pnpm --filter ./apps/viewer dev
 
 pnpm -w test
 ```
+
+## Offline Mode
+
+When the registry is offline, skip installs and call the API with fixtures:
+
+```bash
+curl -X POST :3000/hdpc/intent -d @fixtures/hdpc/intent.json -H 'Content-Type: application/json'
+curl -X POST :3000/zenava/arcade -d @fixtures/zenava/arcade_k.json -H 'Content-Type: application/json'
+```

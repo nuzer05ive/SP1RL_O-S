@@ -1,0 +1,13 @@
+{
+  "scene_id": "s1",
+  "constraints": {
+    "humane": true,
+    "moral": "help others",
+    "dilemma": "save one or many",
+    "stakes": "high"
+  },
+  "hats": [
+    {"name": "straw", "pass": true, "score": 0.1},
+    {"name": "silk", "pass": false, "score": 0.9}
+  ]
+}
