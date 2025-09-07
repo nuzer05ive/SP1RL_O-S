@@ -23,4 +23,11 @@ When the registry is offline, skip installs and call the API with fixtures:
 ```bash
 curl -X POST :3000/hdpc/intent -d @fixtures/hdpc/intent.json -H 'Content-Type: application/json'
 curl -X POST :3000/zenava/arcade -d @fixtures/zenava/arcade_k.json -H 'Content-Type: application/json'
+# Ghost's Whisper
+curl -X POST :3000/ghost/extract -d @fixtures/soul/text_seed.json -H 'Content-Type: application/json'
+# then use returned seed.id
+curl -X POST :3000/bloom/update -d '{"seedId":"<seed-id>"}' -H 'Content-Type: application/json'
+curl -X POST :3000/mint -d @fixtures/soul/mint_ok.json -H 'Content-Type: application/json'
+# Seam-Gate worker upload
+curl -X POST :3000/upload -d @fixtures/upload/sample_upload.json -H 'Content-Type: application/json'
 ```
