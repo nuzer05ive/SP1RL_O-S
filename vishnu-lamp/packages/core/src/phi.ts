@@ -1,13 +1,23 @@
 export const PHI = (1 + Math.sqrt(5)) / 2;
 
-export function beattySequences(k: number): { A: number[]; B: number[] } {
-  const A: number[] = [];
-  const B: number[] = [];
+export function beattyFront(k: number): number[] {
+  const arr: number[] = [];
   for (let n = 1; n <= k; n++) {
-    A.push(Math.floor(n * PHI));
-    B.push(Math.floor(n * PHI * PHI));
+    arr.push(Math.floor(n * PHI));
   }
-  return { A, B };
+  return arr;
+}
+
+export function beattyBack(k: number): number[] {
+  const arr: number[] = [];
+  for (let n = 1; n <= k; n++) {
+    arr.push(Math.floor(n * PHI * PHI));
+  }
+  return arr;
+}
+
+export function beattySequences(k: number): { A: number[]; B: number[] } {
+  return { A: beattyFront(k), B: beattyBack(k) };
 }
 
 export function fractionalParts(n: number): number[] {
@@ -20,7 +30,7 @@ export function fractionalParts(n: number): number[] {
 }
 
 export function phiWindow(n: number, theta: number, delta: number): boolean {
-  const ang = (2 * Math.PI * ((n * PHI) % 1));
+  const ang = 2 * Math.PI * ((n * PHI) % 1);
   const diff = Math.abs(Math.atan2(Math.sin(ang - theta), Math.cos(ang - theta)));
   return diff <= delta;
 }

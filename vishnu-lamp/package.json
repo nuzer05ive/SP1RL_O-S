@@ -2,14 +2,25 @@
   "name": "vishnu-lamp",
   "private": true,
   "version": "0.1.0",
+  "packageManager": "pnpm@9.7.0",
+  "engines": {
+    "node": ">=18.19 <23"
+  },
   "scripts": {
-    "dev": "pnpm --filter @vishnu/api dev",
-    "test": "vitest run",
-    "typecheck": "tsc -p packages/core/tsconfig.json"
+    "test": "vitest --run",
+    "typecheck": "tsc -b --pretty false",
+    "lint": "eslint ."
+  },
+  "pnpm": {
+    "packageImportMethod": "clone-or-copy",
+    "neverBuiltDependencies": []
   },
   "devDependencies": {
-    "typescript": "5.4.5",
-    "vitest": "1.2.2",
-    "tsx": "4.7.2"
+    "@types/node": "18.19.32",
+    "@vitest/coverage-v8": "1.2.2",
+    "eslint": "8.57.0",
+    "prettier": "3.2.5",
+    "typescript": "5.5.4",
+    "vitest": "1.2.2"
   }
 }
