@@ -1,3 +1,18 @@
+export interface ScenePatch {
+  [key: string]: unknown;
+}
+
+export interface WitnessState {
+  drift: number;
+}
+
+export interface FoldSpec {
+  hinge?: number;
+  slider?: number;
+  string?: number;
+  accordion?: number;
+}
+
 export interface WalEvent {
   id: string;
   t: string;
