@@ -1,0 +1,15 @@
+{
+  "name": "vishnu-lamp",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "pnpm --filter @vishnu/api dev",
+    "test": "vitest run",
+    "typecheck": "tsc -p packages/core/tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "5.4.5",
+    "vitest": "1.2.2",
+    "tsx": "4.7.2"
+  }
+}
