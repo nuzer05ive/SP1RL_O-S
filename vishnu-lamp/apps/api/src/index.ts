@@ -1,5 +1,6 @@
 import express from 'express';
 import commitRouter from './commit';
+import sceneRouter from './scene';
 
 const app = express();
 app.use(express.json());
@@ -9,6 +10,7 @@ app.get('/healthz', (_req, res) => {
 });
 
 app.use('/', commitRouter);
+app.use('/', sceneRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

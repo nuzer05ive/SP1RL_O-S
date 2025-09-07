@@ -9,7 +9,8 @@
   "scripts": {
     "test": "vitest --run",
     "typecheck": "tsc -b --pretty false",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "diag": "bash scripts/diag-registry.sh"
   },
   "pnpm": {
     "packageImportMethod": "clone-or-copy",
