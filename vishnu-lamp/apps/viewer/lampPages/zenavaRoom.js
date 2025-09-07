@@ -1,18 +1,30 @@
 import * as THREE from 'three';
-import { buildFromFold } from '@vishnu/core';
+import neutral from '../../fixtures/zenava/neutral_mesh.json' assert { type: 'json' };
 import { vertexSource as skinVertex, fragmentSource as skinFragment } from '../shaders/skin.js';
+import { vertexSource as shimmerVertex, fragmentSource as shimmerFragment } from '../shaders/shimmer.js';
+import { vertexSource as sackVertex, fragmentSource as sackFragment } from '../shaders/yellowSack.js';
 
 export function zenavaRoom(scene) {
-  const [mesh] = buildFromFold({ kind: 'mobius', hinge: 1 });
-  const geom = new THREE.BufferGeometry();
-  const pos = new Float32Array(mesh.geom.positions);
-  geom.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  geom.setIndex(mesh.geom.indices);
-  const material = new THREE.ShaderMaterial({
-    vertexShader: skinVertex,
-    fragmentShader: skinFragment,
+  const meshes = neutral.meshes || [];
+  const shaders = [
+    { v: skinVertex, f: skinFragment },
+    { v: shimmerVertex, f: shimmerFragment },
+    { v: sackVertex, f: sackFragment },
+  ];
+  meshes.forEach((m, i) => {
+    const geom = new THREE.BufferGeometry();
+    geom.setAttribute(
+      'position',
+      new THREE.BufferAttribute(new Float32Array(m.geom.positions), 3)
+    );
+    geom.setIndex(m.geom.indices);
+    const sh = shaders[i % shaders.length];
+    const material = new THREE.ShaderMaterial({
+      vertexShader: sh.v,
+      fragmentShader: sh.f,
+    });
+    const mesh = new THREE.Mesh(geom, material);
+    scene.add(mesh);
   });
-  const m = new THREE.Mesh(geom, material);
-  scene.add(m);
-  return mesh;
+  return meshes;
 }

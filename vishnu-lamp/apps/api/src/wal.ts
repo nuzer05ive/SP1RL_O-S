@@ -1,5 +1,28 @@
 import { promises as fs } from 'fs';
-import { WalEvent } from '@vishnu/core';
+
+export type WalEventType =
+  | 'ARM'
+  | 'COMMIT'
+  | 'HDPC_INTENT'
+  | 'HDPC_DESIGN'
+  | 'HDPC_TRIALS'
+  | 'HDPC_FINALIZE'
+  | 'ZENAVA_ARCADE'
+  | 'ZENAVA_FABRICATE'
+  | 'ZENAVA_FINALIZE';
+
+export interface WalEvent {
+  id: string;
+  t: string;
+  type: WalEventType;
+  scene_id: string;
+  user_id: string;
+  req_id: string;
+  model_semver: string;
+  kernel_digest: string;
+  payload: Record<string, unknown>;
+  status: 'OK' | 'FAILED';
+}
 
 const WAL_PATH = new URL('../../data/wal.log', import.meta.url);
 
@@ -14,7 +37,7 @@ export async function readAll(): Promise<WalEvent[]> {
       .trim()
       .split('\n')
       .filter(Boolean)
-      .map((l) => JSON.parse(l));
+      .map((l) => JSON.parse(l) as WalEvent);
   } catch {
     return [];
   }
