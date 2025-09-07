@@ -9,7 +9,14 @@ export type WalEventType =
   | 'HDPC_FINALIZE'
   | 'ZENAVA_ARCADE'
   | 'ZENAVA_FABRICATE'
-  | 'ZENAVA_FINALIZE';
+  | 'ZENAVA_FINALIZE'
+  | 'GHOST_EXTRACT'
+  | 'BANDIT_STEP'
+  | 'BLOOM_UPDATE'
+  | 'RECOMMEND'
+  | 'MINT'
+  | 'UPLOAD_RECEIVED'
+  | 'UPLOAD_FABRICATED';
 
 export interface WalEvent {
   id: string;
