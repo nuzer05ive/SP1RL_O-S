@@ -1,25 +1,26 @@
+require 'json'
+
 module SketchupBuilders
-  BASE = {
-    geom: {
-      positions: [0, 0, 0, 1, 0, 0, 0, 1, 0],
-      indices: [0, 1, 2],
-      uvs: [0, 0, 1, 0, 0, 1],
-    },
-  }
+  FIXTURE_DIR = File.expand_path('../../fixtures/sketchup', __dir__)
+
+  def self.load_fixture(name)
+    path = File.join(FIXTURE_DIR, "#{name}.json")
+    JSON.parse(File.read(path), symbolize_names: true)
+  end
 
   def self.build_cycloid(params = {})
-    { kind: 'cycloid', **BASE }
+    load_fixture('cycloid')
   end
 
   def self.build_mobius(params = {})
-    { kind: 'mobius', **BASE }
+    load_fixture('mobius')
   end
 
   def self.build_petal_bloom(params = {})
-    { kind: 'petal_bloom', **BASE }
+    load_fixture('petal_bloom')
   end
 
   def self.build_yellow_sack(params = {})
-    { kind: 'yellow_sack', **BASE }
+    load_fixture('yellow_sack')
   end
 end

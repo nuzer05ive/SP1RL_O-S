@@ -31,3 +31,20 @@ curl -X POST :3000/mint -d @fixtures/soul/mint_ok.json -H 'Content-Type: applica
 # Seam-Gate worker upload
 curl -X POST :3000/upload -d @fixtures/upload/sample_upload.json -H 'Content-Type: application/json'
 ```
+
+## SketchUp Integration
+
+1. Package `plugins/sketchup` as an RBZ or copy into your SketchUp `Plugins` folder.
+2. Launch SketchUp and choose **Plugins → Vishnu — SP1RL**.
+3. Select a builder and click **Build**. The resulting `NeutralMesh` JSON is written to `data/scenes/<builder>.json` for the Viewer.
+
+## Acceptance Flow
+
+Run the full pipeline when the registry is online:
+
+```bash
+curl -X POST :3000/hdpc/intent -d @fixtures/hdpc/intent.json -H 'Content-Type: application/json'
+curl -X POST :3000/zenava/arcade -d @fixtures/zenava/arcade_k.json -H 'Content-Type: application/json'
+curl -X POST :3000/soul/mint -d @fixtures/soul/mint_ok.json -H 'Content-Type: application/json'
+curl -X POST :3000/upload -d @fixtures/upload/sample_upload.json -H 'Content-Type: application/json'
+```

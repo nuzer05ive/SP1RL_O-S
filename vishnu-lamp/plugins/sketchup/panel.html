@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Vishnu — SP1RL</title>
+  <style>
+    body { font-family: sans-serif; margin: 1em; }
+    textarea { width: 100%; height: 200px; }
+  </style>
+</head>
+<body>
+  <h1>Vishnu — SP1RL</h1>
+  <select id="builder">
+    <option value="cycloid">Cycloid</option>
+    <option value="mobius">Möbius</option>
+    <option value="petal_bloom">Petal Bloom</option>
+    <option value="yellow_sack">Yellow Sack</option>
+  </select>
+  <button id="run">Build</button>
+  <pre id="output"></pre>
+  <script>
+    const btn = document.getElementById('run');
+    const out = document.getElementById('output');
+    btn.addEventListener('click', () => {
+      const kind = document.getElementById('builder').value;
+      if (window.sketchup && window.sketchup.build) {
+        window.sketchup.build(kind);
+      }
+    });
+    window.renderMesh = (mesh) => {
+      out.textContent = JSON.stringify(mesh, null, 2);
+    };
+  </script>
+</body>
+</html>
