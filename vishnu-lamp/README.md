@@ -48,3 +48,11 @@ curl -X POST :3000/zenava/arcade -d @fixtures/zenava/arcade_k.json -H 'Content-T
 curl -X POST :3000/soul/mint -d @fixtures/soul/mint_ok.json -H 'Content-Type: application/json'
 curl -X POST :3000/upload -d @fixtures/upload/sample_upload.json -H 'Content-Type: application/json'
 ```
+
+## Reactor (Shiva–Kershna)
+
+The reactor couples Shiva and Kershna phases into helical thrust and logs updates
+in the WAL under `REACTOR_UPDATE`. Visit the **Reactor** tab in the Lamp to dial
+phases, tweak chemistry, and watch the Y‑fork lamp spawn. Telemetry stores the
+latest reactor state in the ledger for replay. See [docs/reactor.md](docs/reactor.md)
+for the myth → math breakdown.

@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs';
+import type { ReactorState } from '@vishnu/core/reactorMath';
 
 export type WalEventType =
   | 'ARM'
@@ -16,7 +17,8 @@ export type WalEventType =
   | 'RECOMMEND'
   | 'MINT'
   | 'UPLOAD_RECEIVED'
-  | 'UPLOAD_FABRICATED';
+  | 'UPLOAD_FABRICATED'
+  | 'REACTOR_UPDATE';
 
 export interface WalEvent {
   id: string;
@@ -29,6 +31,7 @@ export interface WalEvent {
   kernel_digest: string;
   payload: Record<string, unknown>;
   status: 'OK' | 'FAILED';
+  telemetry?: { reactor?: ReactorState };
 }
 
 const WAL_PATH = new URL('../../data/wal.log', import.meta.url);
