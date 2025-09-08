@@ -1,0 +1,26 @@
+\chapter{Prime M\"obius Barcode (PMB): 2D \textrightarrow{} Higher-D Encoding}
+
+\section*{Layout}
+Outer \(\varphi\)-frame; perimeter ribbon with prime-indexed \emph{PrimeDots} \(p_n\);
+interior tiles carry channels \(\mathrm{K1..K4}\):
+\(\mathrm{K1}\) luma \(|c_k|\) (spectral magnitude),
+\(\mathrm{K2}\) chroma-\(a\) \(\arg(c_k)\) (phase stripes),
+\(\mathrm{K3}\) chroma-\(b\) (secondary band/material param),
+\(\mathrm{K4}\) aux (ID/CRC/Reed--Solomon parity over GF\((2^8)\)).
+
+\section*{Encode}
+Decompose asset patches to sinusoidal/SG basis with prime spacing to suppress aliasing; write magnitudes/phases into tiles; interleave parity across \(\varphi\)-windows.
+
+\section*{Seam decode}
+Lift only in gate regions \(|\mathrm{angdiff}(\varphi_{\rm loc},\alpha)|\le \Delta\) with \(\alpha=37.5^\circ\),
+\(\Delta=\frac{1}{2}\cdot 360^\circ \varepsilon\), \(\varepsilon\in\{0.0444,0.03934\}\).
+PLL with \(\theta'\) for drift-free reassembly.
+
+\section*{Integrity}
+Hash-chained decimal spine on the ribbon; parity across witness windows. Any tamper misaligns seam phase.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.78\linewidth]{../fig/pmb_layout.pdf}
+\caption{PMB schematic: ribbon dots (primes), \(\varphi\)-windows, tile bands, ECC.}
+\end{figure}
