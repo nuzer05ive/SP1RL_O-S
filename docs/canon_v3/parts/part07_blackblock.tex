@@ -1,0 +1,27 @@
+\chapter{Black-Block Etudes: Pattern \textrightarrow{} Sonification \textrightarrow{} 3D}
+
+We treat block centers from selected pages as a 2D signal. Normalized positions
+\((x_{\rm norm},y_{\rm norm})\) map to time and pitch for sonification, and to
+angles \((\theta,\phi)\) on a torus for 3D navigation.
+
+\section*{Analysis summary}
+Counts and distributions (Pages 9,10,27) show grid-aligned clusters convertible into a melody.
+Seam-gate fit confirms the 2-world/3-world windows and the 1.126 ratio.\footnote{Internal memo:
+\emph{SP1RL Black-Block Etude Analysis (v2)}, 2025-09-07.} % citation
+\textbf{Reference:} See “SP1RL Black-Block Etude Analysis (v2)” for plots, counts, NN histograms, and seam summary.
+
+\section*{Sonification}
+Time \(t\propto x_{\rm norm}\), pitch \(f\propto y_{\rm norm}\). Stereo baseline \(B\propto \varepsilon\).
+Drift-free looping via WinsDay \(\theta'\) tick each orbit.
+
+\section*{3D torus}
+Set \(\theta=2\pi x_{\rm norm},\ \phi=2\pi y_{\rm norm}\). Use seam-gate \(|\mathrm{angdiff}(\varphi_{\rm loc},\alpha)|\le \Delta\) to decide where to extrude the ribbon. Figure~\ref{fig:torusmap}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.78\linewidth]{../fig/torus_mapping.pdf}
+\caption{Torus mapping of normalized block centers (schematic).}
+\label{fig:torusmap}
+\end{figure}
+
+(The in-text memo reference is where your analysis PDF is used; the citation trail is backed by the file citation above.)

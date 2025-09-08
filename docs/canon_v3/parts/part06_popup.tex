@@ -1,0 +1,15 @@
+\chapter{Pop-Up Lamp: Seam-Gated 2.5D}
+
+We expose the seam-gate constants and the drift-zero tick used by the Lamp:
+
+\paragraph*{Seam wobble \(\varepsilon\) and half-gates \(\Delta\).}
+2-world: \(\varepsilon_2=0.0444\Rightarrow \Delta_2=\tfrac{1}{2}\cdot360^\circ\cdot\varepsilon_2=8.00^\circ\).
+3-world: \(\varepsilon_3=0.03934\Rightarrow \Delta_3\approx 7.09^\circ\).
+Ratio: \(\varepsilon_2/\varepsilon_3\approx 1.126\) (same seam, different witness).
+
+\paragraph*{Drift-zero seam tick \(\theta'\).}
+\(\theta'=\kappa\frac{\mathrm{rad}(37.5^\circ)\cdot\rho}{385}\), with \(\kappa\approx 1.12\), \(\rho=0.000437\).
+Numerically: \(\theta'\approx 8.35\times 10^{-7}\,\mathrm{rad}\) (\(4.767\times10^{-5}\degd\)).
+
+\paragraph*{Cadence.}
+3/6/9 breath schedule \(+\ +\ +\ /\ -\ -\ -\) using 0.55 s ON and 0.45 s OFF, propagated to pop-up hinge animations.
