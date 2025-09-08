@@ -5,6 +5,7 @@ import hdpcRouter from './hdpc';
 import zenavaRouter from './zenava';
 import ghostRouter from './ghost';
 import uploadRouter from './upload';
+import reactorRouter from './reactor';
 
 const app = express();
 app.use(express.json());
@@ -19,6 +20,7 @@ app.use('/', hdpcRouter);
 app.use('/', zenavaRouter);
 app.use('/', ghostRouter);
 app.use('/', uploadRouter);
+app.use('/reactor', reactorRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

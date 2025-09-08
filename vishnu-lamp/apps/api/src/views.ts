@@ -1,5 +1,6 @@
 import { promises as fs } from 'fs';
 import { readAll, WalEvent } from './wal';
+import type { ReactorState } from '@vishnu/core/reactorMath';
 import type { GhostSeed, WeakLabels, MintReceipt } from '../../packages/soul/src/types';
 
 const SCENE_DIR = new URL('../../data/scenes/', import.meta.url);
@@ -9,7 +10,12 @@ const UPLOAD_DIR = new URL('../../data/uploads/', import.meta.url);
 export interface SceneView {
   characters: any[];
   assets: any[];
+  reactor?: ReactorView;
   [key: string]: any;
+}
+
+export interface ReactorView extends ReactorState {
+  history: ReactorState[];
 }
 
 export interface SoulView {
@@ -37,10 +43,39 @@ export async function sceneSnapshot(sceneId: string): Promise<SceneView> {
   try {
     const data = await fs.readFile(path, 'utf-8');
     const json = JSON.parse(data) as SceneView;
-    return { characters: [], assets: [], ...json };
+    const history = await reactorHistory(sceneId);
+    const latest = history[history.length - 1];
+    return {
+      characters: [],
+      assets: [],
+      ...json,
+      reactor: latest ? { ...latest, history } : undefined,
+    };
   } catch {
-    return { characters: [], assets: [] };
+    const history = await reactorHistory(sceneId);
+    const latest = history[history.length - 1];
+    return {
+      characters: [],
+      assets: [],
+      reactor: latest ? { ...latest, history } : undefined,
+    };
   }
+}
+
+export async function reactorHistory(sceneId: string): Promise<ReactorState[]> {
+  const events = await readAll();
+  return events
+    .filter((e) => e.scene_id === sceneId && e.type === 'REACTOR_UPDATE')
+    .map((e) => e.telemetry?.reactor)
+    .filter(Boolean) as ReactorState[];
+}
+
+export function reducer(scene: SceneView, event: WalEvent): SceneView {
+  if (event.type === 'REACTOR_UPDATE' && event.telemetry?.reactor) {
+    const history = [...(scene.reactor?.history ?? []), event.telemetry.reactor];
+    return { ...scene, reactor: { ...event.telemetry.reactor, history } };
+  }
+  return scene;
 }
 
 export async function updateScene(
