@@ -10,12 +10,13 @@ import Theater from './pages/Theater';
 import Ledger from './pages/Ledger';
 import Portholes from './pages/Portholes';
 import Reactor from './pages/Reactor';
+import Chat from './pages/Chat';
 import './styles.css';
 
 const App = () => (
   <BrowserRouter>
     <nav>
-      <Link to="/">Seam</Link> | <Link to="/reactor">Reactor</Link>
+      <Link to="/">Seam</Link> | <Link to="/reactor">Reactor</Link> | <Link to="/chat">Chat</Link>
     </nav>
     <Routes>
       <Route path="/" element={<SeamGate />} />
@@ -27,6 +28,7 @@ const App = () => (
       <Route path="/ledger" element={<Ledger />} />
       <Route path="/portholes" element={<Portholes />} />
       <Route path="/reactor" element={<Reactor />} />
+      <Route path="/chat" element={<Chat />} />
     </Routes>
   </BrowserRouter>
 );

@@ -123,3 +123,46 @@ export async function writeUploadJob(job: UploadJob): Promise<void> {
   await fs.mkdir(UPLOAD_DIR, { recursive: true });
   await fs.writeFile(new URL(`${job.id}.json`, UPLOAD_DIR), JSON.stringify(job, null, 2));
 }
+
+interface ViewsState {
+  petal_index: Record<string, any>;
+}
+
+const state: ViewsState = { petal_index: {} };
+
+export function getState(): ViewsState {
+  return state;
+}
+
+export async function reduceViews(): Promise<void> {
+  const events = await readAll();
+  state.petal_index = {};
+  for (const e of events) {
+    if (e.type === 'CHAT_INSERTED') {
+      const { chunk } = e.payload as any;
+      const participants = Array.from(
+        new Set((chunk.turns || []).map((t: any) => t.role).filter(Boolean))
+      );
+      state.petal_index[chunk.id] = {
+        turns: chunk.turns,
+        participants,
+        closure: chunk.closure,
+      };
+    } else if (e.type === 'CHAT_SCORED') {
+      const { chunkId, scores } = e.payload as any;
+      const item = state.petal_index[chunkId];
+      if (item) {
+        item.scores = scores;
+        item.witnessSector = Math.floor(Date.now() / 137) % 8;
+        item.bloomLayer = scores.coherence > 0.75 ? 'outer' : 'inner';
+      }
+    } else if (e.type === 'CHAT_MINTED') {
+      const { chunkId, primeAddress } = e.payload as any;
+      const item = state.petal_index[chunkId];
+      if (item) {
+        item.minted = true;
+        item.primeAddress = primeAddress;
+      }
+    }
+  }
+}

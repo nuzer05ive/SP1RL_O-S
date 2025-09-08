@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs';
+import { randomUUID } from 'crypto';
 import type { ReactorState } from '@vishnu/core/reactorMath';
 
 export type WalEventType =
@@ -18,7 +19,10 @@ export type WalEventType =
   | 'MINT'
   | 'UPLOAD_RECEIVED'
   | 'UPLOAD_FABRICATED'
-  | 'REACTOR_UPDATE';
+  | 'REACTOR_UPDATE'
+  | 'CHAT_INSERTED'
+  | 'CHAT_SCORED'
+  | 'CHAT_MINTED';
 
 export interface WalEvent {
   id: string;
@@ -38,6 +42,22 @@ const WAL_PATH = new URL('../../data/wal.log', import.meta.url);
 
 export async function append(event: WalEvent): Promise<void> {
   await fs.appendFile(WAL_PATH, JSON.stringify(event) + '\n');
+}
+
+export async function appendEvent(
+  evt: Omit<WalEvent, 'id' | 't' | 'scene_id' | 'user_id' | 'req_id' | 'model_semver' | 'kernel_digest'>
+): Promise<void> {
+  const event: WalEvent = {
+    id: randomUUID(),
+    t: new Date().toISOString(),
+    scene_id: 'default',
+    user_id: 'u-0',
+    req_id: randomUUID(),
+    model_semver: 'v1.0.0',
+    kernel_digest: 'sha256:none',
+    ...evt,
+  };
+  await append(event);
 }
 
 export async function readAll(): Promise<WalEvent[]> {
