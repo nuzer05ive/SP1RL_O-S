@@ -56,3 +56,9 @@ in the WAL under `REACTOR_UPDATE`. Visit the **Reactor** tab in the Lamp to dial
 phases, tweak chemistry, and watch the Y‑fork lamp spawn. Telemetry stores the
 latest reactor state in the ledger for replay. See [docs/reactor.md](docs/reactor.md)
 for the myth → math breakdown.
+
+## Chat Braid
+
+Tag transcripts with `[iN] [oN] [oNYiN] [YaNg] [YiN]` and visit the Chat page to
+parse, score, and mint petals. See [docs/chat-braid.md](docs/chat-braid.md) for
+grammar and scoring details.

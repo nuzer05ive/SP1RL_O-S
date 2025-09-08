@@ -6,6 +6,7 @@ import zenavaRouter from './zenava';
 import ghostRouter from './ghost';
 import uploadRouter from './upload';
 import reactorRouter from './reactor';
+import chatRouter from './chat';
 
 const app = express();
 app.use(express.json());
@@ -21,6 +22,7 @@ app.use('/', zenavaRouter);
 app.use('/', ghostRouter);
 app.use('/', uploadRouter);
 app.use('/reactor', reactorRouter);
+app.use(chatRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
