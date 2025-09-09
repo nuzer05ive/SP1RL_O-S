@@ -1,0 +1,23 @@
+name: Preview (Artifact)
+on:
+  workflow_run:
+    workflows: [ CI ]
+    types: [ completed ]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  publish-preview:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download portal preview
+        uses: actions/download-artifact@v4
+        with:
+          name: portal-preview
+          path: ./preview
+      - name: Summarize
+        run: |
+          echo "Preview built. Browse artifact:" >> $GITHUB_STEP_SUMMARY
+          echo "- apps/portal/out (static)" >> $GITHUB_STEP_SUMMARY
+          echo "- operator shell: apps/portal/.out/operator-shell" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,35 @@
+name: CI
+on:
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+permissions:
+  contents: read
+  actions: read
+  checks: write
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: pnpm/action-setup@v3
+      - run: pnpm i --frozen-lockfile
+      - name: Typecheck & unit tests
+        run: |
+          chmod +x scripts/ci/verify.sh
+          scripts/ci/verify.sh
+      - name: Build portal (static export)
+        run: |
+          pnpm --filter ./apps/portal build || true
+          # If using Next: ensure next.config.mjs has `output: 'export'`
+      - name: Upload preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: portal-preview
+          path: |
+            apps/portal/out
+            apps/portal/.out/operator-shell
+          if-no-files-found: warn

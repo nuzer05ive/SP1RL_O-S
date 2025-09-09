@@ -1,0 +1,44 @@
+name: Promote to Pages
+on:
+  workflow_dispatch:
+    inputs:
+      artifact:
+        description: 'Artifact name (default: portal-preview)'
+        required: false
+        default: 'portal-preview'
+      bundlePath:
+        description: 'Deploy path (root or bundles/<id>)'
+        required: false
+        default: '/'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    environment:
+      name: pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ github.event.inputs.artifact || 'portal-preview' }}
+          path: ./site
+      - name: Prepare publish dir
+        run: |
+          mkdir -p ./publish${{ github.event.inputs.bundlePath || '/' }}
+          cp -r ./site/apps/portal/out/* ./publish${{ github.event.inputs.bundlePath || '/' }} || true
+          cp -r ./site/apps/portal/.out/operator-shell ./publish${{ github.event.inputs.bundlePath || '/' }} || true
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./publish
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
