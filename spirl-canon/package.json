@@ -1,0 +1,10 @@
+{
+  "name": "spirl-canon",
+  "private": true,
+  "scripts": {
+    "api:dev": "node apps/api/src/index.ts",
+    "viewer:open": "echo 'open apps/viewer/index.html in a browser'",
+    "test": "vitest --run",
+    "offline:check": "node --experimental-modules scripts/offline-receipts-check.mjs"
+  }
+}
