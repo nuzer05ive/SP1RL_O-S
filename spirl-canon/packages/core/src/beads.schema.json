@@ -1,0 +1,28 @@
+{
+  "$id": "spirl/recipe",
+  "type": "object",
+  "required": ["id", "name", "beads"],
+  "properties": {
+    "id": {"type": "string"},
+    "name": {"type": "string"},
+    "punchWindow": {
+      "type": "object",
+      "properties": {
+        "tStartSec": {"type": "number"},
+        "tEndSec": {"type": "number"}
+      }
+    },
+    "beads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "moduleId", "inputs"],
+        "properties": {
+          "id": {"type": "string"},
+          "moduleId": {"type": "string"},
+          "inputs": {"type": "object"}
+        }
+      }
+    }
+  }
+}
