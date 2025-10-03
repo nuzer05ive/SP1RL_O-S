@@ -1,15 +1,32 @@
-import { describe, it, expect } from 'vitest';
-import fs from 'fs';
+import { describe, expect, it } from 'vitest';
+import { readFileSync, existsSync } from 'fs';
 import path from 'path';
 
-describe('portal PWA', () => {
-  const root = path.resolve(__dirname, '../apps/portal/public');
-  it('has manifest', () => {
-    const manifest = JSON.parse(fs.readFileSync(path.join(root, 'manifest.webmanifest'), 'utf8'));
+const portalRoot = path.resolve(__dirname, '../apps/portal');
+
+function read(rel: string) {
+  return readFileSync(path.join(portalRoot, rel), 'utf8');
+}
+
+describe('Portal PWA shell', () => {
+  it('ships a manifest with installable metadata', () => {
+    const manifestPath = path.join(portalRoot, 'public/manifest.webmanifest');
+    expect(existsSync(manifestPath)).toBe(true);
+    const manifest = JSON.parse(read('public/manifest.webmanifest'));
     expect(manifest.name).toBe('SP1RL Portal');
+    expect(manifest.display).toBe('standalone');
+    expect(manifest.icons.length).toBeGreaterThanOrEqual(2);
   });
-  it('has service worker', () => {
-    const sw = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
-    expect(sw).toMatch('self.addEventListener');
+
+  it('provides a cache-first service worker for the operator shell', () => {
+    const sw = read('public/sw.js');
+    expect(sw).toContain("self.addEventListener('install'");
+    expect(sw).toContain("PRECACHE");
+    expect(sw).toContain("'/modules.json'");
+  });
+
+  it('exports static bundles via Next.js export mode', () => {
+    const cfg = read('next.config.mjs');
+    expect(cfg).toContain("output: 'export'");
   });
 });
