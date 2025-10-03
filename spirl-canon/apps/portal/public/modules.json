@@ -1,0 +1,29 @@
+[
+  {
+    "id": "oscillator",
+    "name": "Golden Oscillator",
+    "description": "Generates φ-locked tone streams.",
+    "inputs": [
+      { "name": "frequency", "type": "number", "default": 432 },
+      { "name": "waveform", "type": "string", "default": "sine" }
+    ]
+  },
+  {
+    "id": "lattice",
+    "name": "Lattice Stitch",
+    "description": "Sequencer weaving beads into φ grids.",
+    "inputs": [
+      { "name": "stages", "type": "number", "default": 3 },
+      { "name": "pattern", "type": "string", "default": "1-1-2-3-5" }
+    ]
+  },
+  {
+    "id": "render",
+    "name": "Render Bloom",
+    "description": "Renders the bundle locally using WASM shells.",
+    "inputs": [
+      { "name": "quality", "type": "number", "default": 0.8 },
+      { "name": "format", "type": "string", "default": "webm" }
+    ]
+  }
+]
